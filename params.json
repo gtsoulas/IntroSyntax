@@ -1,6 +1,6 @@
 {
-  "name": "Introsyntax",
-  "tagline": "The home of syntax sharing",
-  "body": "### Welcome IntroSyntax.\r\n\r\nYou will find what you need here for the L11C module.\r\n",
+  "name": "IntroSyntax",
+  "tagline": "The home of (first year) syntax sharing",
+  "body": "### Welcome to IntroSyntax.\r\n\r\nThis folder contains the source files for the slides and other material used in teahing first year syntax using Sportiche, Koopman and Stabler as textbook.\r\n\r\nThe slide sources are meant to be compiled with XeLaTeX and you will need to have the Fira Sans font family.  You will also need to use Norman Yeo's version of the linguex package (linguexsf.sty) to fix the fonts in examples.  The file is in this folder.\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
