@@ -1,0 +1,58 @@
+\documentclass[10pt,handout]{beamer}
+%{article}
+
+\usepackage{tipa}
+\usetheme[
+sectiontitleformat=regular,
+everytitleformat=regular,
+block=fill,
+sectionpage=progressbar,
+progressbar=foot,
+numbering=fraction,
+background=light]{metropolis}
+ 
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfpages}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+
+% Packages
+\usepackage{linguex}
+\usepackage{forest}
+%\usepackage[usenames, dvipsnames]{color}
+\usepackage{amsmath}
+\usepackage{centernot}
+
+\renewcommand{\firstrefdash}{}
+
+% Color math mode!
+\everymath{\color[rgb]{.19,.99,.95}}
+
+% Highlight formal text (light blue)
+\newcommand{\formal}[1]{\begin{color}[rgb]{.15,.4,.85}#1\end{color}}
+% Highlight and bold new terminology (red)
+\newcommand{\terminology}[1]{\alert{\textbf{#1}}}
+% Translates as (black triple arrow)
+\newcommand{\translates}[0]{$\color{black}\Rrightarrow$}
+% Set brackets
+\newcommand{\set}[1]{\{#1\}}
+% Set brackets, shaded
+\newcommand{\sett}[1]{\formal{\{#1\}}}
+% Set brackets, math mode
+\newcommand{\setm}[1]{$\{#1\}$}
+% Ordered pair angled brackets
+\newcommand{\oset}[1]{\langle #1\rangle}
+% Semantic double brackets
+\newcommand{\sem}[1]{\ensuremath{\llbracket #1 \rrbracket}}
+% Cardinality bars
+\newcommand{\card}[1]{\ensuremath{|#1|}}
+
+%%STRIKETHROUGH MACRO
+\def\str#1{{\setbox1=\hbox{#1}\leavevmode
+      \raise.45ex\rlap{\leaders\hrule\hskip\wd1}
+      \box1}}
+%

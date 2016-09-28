@@ -1,0 +1,194 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\ssz}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 2}\par
+\noindent Let's get some confusing terminology out of the way. Usages differ, but textbook we're using assumes the following: a \textsc{root} is the ``core'' word of a complex word, before any affixation. The root is simple, and cannot be decomposed into subparts. A \textsc{stem} is the part of a word that an affix attaches to. A stem can be simple or complex, depending on the affix in question. Take for example a word like \textit{deniable}. The root is \textit{deny}, which is also the stem when we're talking about the suffixation of \textit{-able}. However, in \textit{deniability}, \textit{deny} is still the root, but if we're talking about the suffixation of \textit{-ity}, then the stem is \textit{deniable}. In other words, the root is an \textbf{absolute} notion, and all words derived from a root will always have the same root; whereas the stem is a \textbf{relative} notion, which changes depending on the affixation process under discussion. Do not confuse this with the \textsc{root node} of a tree, which is the highest node of the tree. Another confusing term is \textsc{head}. The head is the element that determines the category of the larger structure. If we follow the RHHR, then somewhat counterintuitively, it is the suffix (and not the root) that is the head of a complex word. In the case of prefixes, it is the root that is the head.
+
+\hspace{1em}
+
+\noindent\textul{\textsc{practice,} p28}\par
+\begin{enumerate}[label=(\roman*)]
+  \item \textit{undeniability}
+    \begin{enumerate}[label=\arabic*.]
+      \item un-, deny (root), -able, -ity
+      \item
+      \hspace{-.5em}\begin{tabular}[t]{llll}          
+          deny & free & --- & --- \\
+          -able & suffix &  c-selects V & to form A (X-able means able to X) \\
+          un- & prefix & c-selects A & to form A (un-X means the opposite of X) \\
+          -ity & prefix & c-selects A & to form N (X-ity is the noun pertaining to the property of X)
+        \end{tabular}
+      \item \begin{forest} baseline
+        [N, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [A [Adv [un]] [A [V [deny]] [A [-able]]]] [N [-ity]]
+        ]
+        \end{forest}
+      \item 11 nodes
+      \item 4 leaves
+    \end{enumerate}
+
+  \item \textit{remagnetize}
+    \begin{enumerate}[label=\arabic*.]
+      \item re-, magnet (root), -ize
+      \item
+      \hspace{-.5em}\begin{tabular}[t]{llll}          
+          magnet & free & --- & --- \\
+          -ize & suffix &  c-selects N & to form V (X-ize means cause to have the property X) \\
+          re- & prefix & c-selects V & to form V (re-X means to repeat X)
+        \end{tabular}
+      \item \begin{forest} baseline
+        [V, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [Adv [re]] [V [N [magnet]] [V [-ize]]]
+        ]
+        \end{forest}
+      \item 8 nodes
+      \item 3 leaves
+    \end{enumerate}
+
+  \item \textit{post-modernism}
+    \begin{enumerate}[label=\arabic*.]
+      \item post-, modern (root), -ism
+      \item
+      \hspace{-.5em}\begin{tabular}[t]{llll}          
+          modern & free & --- & --- \\
+          post- & prefix & c-selects A & to form A (post-X means after X) \\
+          -ism & suffix &  c-selects A & to form N (X-ism refers to that which has property X)
+        \end{tabular}
+      \item \begin{forest} baseline
+        [N, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [A [Adv [post-]] [A [modern]]] [N [-ism]]
+        ]
+        \end{forest}
+      \item 8 nodes
+      \item 3 leaves
+    \end{enumerate}
+
+  \item \textit{disassembled}\par
+    \textbf{note:} This word is ambiguous between the past tense (\textit{John disassembled the robot}) and the participle form (\textit{the disassembled robot}). The past tense form is a T and the participle form is an A, since it can modify a noun. As a result, there are two possible trees: a root node of T$_1$ or A$_2$ corresponds to -ed$_1$ or -ed$_2$ respectively. Good for you if you noticed the ambiguity.
+
+    \begin{enumerate}[label=\arabic*.]
+      \item dis-, assemble (root), -ed
+      \item
+      \hspace{-.5em}\begin{tabular}[t]{llll}
+          assemble & free & --- & --- \\
+          dis- & prefix & c-selects V & to form V (dis-X means to reverse X) \\          -ed$_1$ & suffix &  c-selects V & to form T (X-ed is the past tense form)\\
+          -ed$_2$ & suffix &  c-selects V & to form A (X-ed is the participle)
+        \end{tabular}
+      \item \begin{forest} baseline
+        [T$_1$/A$_2$, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [V [Adv [dis-]] [V [assemble]]] [T$_1$/A$_2$ [-ed$_1$/-ed$_2$]]
+        ]
+        \end{forest}
+
+      \item 8 nodes
+      \item 3 leaves
+    \end{enumerate}
+\end{enumerate}
+
+\noindent\textul{\textsc{plurals, affix order, and locality,} p38}\par
+\begin{enumerate}[label=(\roman*)]
+  \item \begin{forest} baseline
+        [N, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [N [V [N [class]] [V [-ifi]]] [N [-cation]]] [N [-ist]]
+        ]
+        \end{forest}
+        \qquad\qquad(ii)\begin{forest} baseline
+        [Pl, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [N [N [V [N [class]] [V [-ifi]]] [N [-cation]]] [N [-ist]]] [Pl [-s]]
+        ]
+        \end{forest}
+
+  \item[] \hspace{-.5em}\begin{tabular}[t]{llll}
+        class & free & --- & --- \\
+        -ifi & suffix &  c-selects N & to form V (X-ify means to make something be in state X)\\
+        -cation & suffix &  c-selects V & to form N (X-cation refers to the act/state/result of doing X)\\
+        -ist & suffix &  c-selects N & to form N (X-ist is someone who does/plays/believes etc. X)\\
+        -s & suffix &  c-selects N & to form Pl (X-s is the plural of X)\\
+      \end{tabular}
+
+    \textbf{note:} There is another \textit{-s} suffix in English that is the third person singular present tense morpheme, which is different from plural \textit{-s} because it c-selects a V to form a T.
+
+  \item[(iii)] syntacticians, instrumentalists, statisticians, residencies, revisionists, revivalists, revolutionaries etc.
+
+  \item[(iv)] Yes, given only what we know now it's plausible (although ultimately shown to be incorrect) that plural and singular nouns are different categories because of the empirical observations concerning c-selection. If a plural suffix simply c-selects an N to form another N, we would predict the possibility of multiple plural suffixes, e.g. \textit{*rose-s-es}, or a plural suffix in the middle of a word. See the impermissible (starred) forms of \textit{classificationist} in the exercise text, e.g. \textit{*class-ifi-cation-s-ist}, where \textit{-ist} c-selects for an N but not Pl. There are a small class of exceptions that we will put aside, e.g. \textit{passersby}, \textit{commanders-in-chief}, \textit{menservants} (double pluralisation!). These almost always involve compounds that don't straightforwardly obey the RHHR or compounds with irregular nouns.
+    \begin{enumerate}
+      \item Plural nouns follow plural determiners, e.g. \textit{these/three/many} \rule{3em}{0.25pt}; collective nouns in English require plural noun complements, e.g. \textit{a gaggle/herd/murder of} \rule{3em}{0.25pt}; pronouns, when used to refer back to someone or something (called the antecedent), must match in number, e.g. \rule{3em}{0.25pt} \textit{put \textbf{their} books in the box}.\\
+          Some of you may have come up with environments involving a plural subject and a verb. While a frame like \rule{3em}{0.25pt} \textit{run} works with a plural subject, it also works with the first person singular \textit{I} and second person singular \textit{you}.
+      \item As far as we know, there are no English suffixes that exclusively c-select Pl, but Swedish has something like that, where apart from having prenominal determiner words (like English), the definite article can also appear as a suffix on the root noun. The article is sensitive to number: \textit{flask-a} `a bottle (indefinite singular)'/\textit{flask-or} `bottles' (indefinite plural) vs. {\textit{flask-a-n}} `the bottle' (definite singular)/\textit{flask-or-na} `the bottles' (definite plural). One could then argue that the \textit{-na} suffix c-selects for Pl.
+    \end{enumerate}
+\end{enumerate}
+
+\noindent\textul{\textsc{Benglish 2: Lenglish,} p39}\par
+\noindent This question really requires you to understand what's going on. It considers a hypothetical language that is identical to English, except that it follows a left-hand head rule (LHHR), i.e. the leftmost element is the head. Everything else is identical, including c-selection. This means that the general shape of a Lenglish tree is the mirror image of English, because the element on the left is the one that determines the category and core meaning of the resultant word. In other words, suffixes will never change the category of the stem, while prefixes do, and so, in order to create a Lenglish word that has the same meaning as its English equivalent, the morpheme order must be inverted---all suffixes are now prefixes and vice versa. As for compounds, while \textit{blackbird} is a type of bird in English, it's a shade of black in Lenglish. In Lenglish, a bird that's black in colour is called \textit{birdblack}. I'll provide two trees for comparison below, English on the left and Lenglish on the right. Note also that the plural \textit{-s} is labelled as Num(ber) here but Pl(ural) in the above question. As we progress, we will see that singular and plurals are subtypes of Number.
+
+\begin{enumerate}[label=\alph*.]
+  \item \textit{glob-al-iz-ation-s} $\to$ \textit{s-ation-ize-al-globe}\\
+    \begin{forest} baseline
+        [Num (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [N [V [A [N [globe]] [A [-al]]] [V [-ize]]] [N [-ation]]] [Num [-s]]
+        ]
+    \end{forest}\qquad\qquad
+    \begin{forest} baseline
+        [Num (Lenglish), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [Num [s-]] [N [N [ation-]] [V [V [ize-]] [A [A [al-]] [N [globe]]]]]
+        ]
+    \end{forest}
+  
+\newpage
+  \item \textit{table-cloth-s} $\to$ \textit{s-cloth-table}\\
+    Here we have a compound. Recall that in English, the RHHR applies, so in a compound XY, Y is the head, meaning that the compound is a type of Y that's modified by X. Whereas in Lenglish, the LHHR applies, so in a compound XY, X is the head, and XY is a type of X. So \textit{tablecloth} in Lenglish is a table made of cloth, not a cloth for tables.\\
+    \begin{forest} baseline
+        [Num (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [N [N [table]] [N [cloth]]] [Num [-s]]
+        ]
+    \end{forest}\qquad\qquad
+    \begin{forest} baseline
+        [Num (Lenglish), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [Num [s-]] [N [N [cloth]] [N [table]]]
+        ]
+    \end{forest}
+
+  \item \textit{re-under-go} $\to$ \textit{go-under-re}\\
+  Recall that in Lenglish, prefixes become suffixes and suffixes become prefixes.\\
+    \begin{forest} baseline
+        [V (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [Adv [re-]] [V [P [under-]] [V [go]]]
+        ]
+    \end{forest}\qquad\qquad
+    \begin{forest} baseline
+        [V (Lenglish), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [V [V [go]] [P [-under]]] [Adv [-re]]
+        ]
+    \end{forest}
+
+  \item \textit{twenty-five-th} $\to$ \textit{th-five-twenty}\\
+  There is a problem here in treating both the numerals and the \textit{-th} ordinal suffix as Num. Can you see what it is? Can you think of a solution?\\
+  (Hint: think of the issue with plural \textit{-s}) \\
+    \begin{forest} baseline
+        [Num (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [Num [Num [twenty]] [Num [five]]] [Num [-th]]
+        ]
+    \end{forest}\qquad\qquad
+    \begin{forest} baseline
+        [Num (Lenglish), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [Num [th-]] [Num [Num [five]] [Num [twenty]]]
+        ]
+    \end{forest}
+\end{enumerate}
+
+\end{document} 		

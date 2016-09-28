@@ -1,0 +1,609 @@
+\input{../../../../preambles/slides-preamble.tex}
+
+\begin{document}
+\title{The internal Structure of  $\left\{\begin{array}{l}VP, DP, NP\\AP, PP\end{array}\right\}$}
+\date{Autumn 2016}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../../../../graphics/logo}}
+\maketitle
+
+\section{Introduction}
+
+\begin{frame}
+  {Heads and Constituents}
+One of the most important conclusions that we reached last week is that:
+
+\begin{itemize}
+\item Constituents are headed
+\item Every constituent has a unique head
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Heads}
+
+We defined head as the central word of a constituent.  The words that determines:
+\begin{itemize}
+\item The category of the constituent
+\item The Distribution of the constituent
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{The basic structural shape}
+
+We also formulated the hypothesis that the general schema for the structure of phrases is this:
+
+  \begin{center}
+    \begin{forest}
+      [XP/X$^{max}$ [YP] [X' [X$^0$] [ZP]]] 
+    \end{forest}
+  \end{center}  
+
+If this is correct a number of questions immediately arise.  Here is one:
+
+\end{frame}
+
+
+\begin{frame}
+  {Inside the VP}
+
+How does a structure like this fit into the general schema:
+
+\begin{center}
+  \begin{forest}
+    [VP [V [Put]] [DP [D [a]] [NP [picture]]] [PP [P [on]]  [DP [D [your]] [NP [desk]]]][PP [P [before]] [NP [tomorrow]]]]
+  \end{forest}
+\end{center}
+
+Note that the node VP has four daughters: \emph{V, DP, PP, PP} 
+\end{frame}
+
+\begin{frame}
+  {Relations between daughters}
+
+V is the head of the constituent and, as we said the core that determines both identity and distribution.  But how about the other three phrases?  If the general schema is correct then we have to conclude that either:
+
+\begin{itemize}
+\item  DP and the two PPs are the complement of V
+\item One of the three is the complement, in which case:
+  \begin{itemize}
+  \item Which one?
+  \item How about the others?
+  \end{itemize}
+
+We can now take some steps to answer these questions.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  {Deciding....}
+How do we decide?  First of all we should try and figure out the constituent structure.  The tests that are directly and most prominently relevant to VPs are:
+
+\begin{itemize}
+\item VP ellipsis
+\item Coordination
+\item VP Preposing
+\item  \textit{Do So} Substitution.
+\end{itemize}
+
+Applying them gives us interesting results.
+\end{frame}
+
+\begin{frame}
+  {VP ellipsis}
+\ex.
+Bill will put a picture on your desk before tomorrow, but Sue will \str{put a picture on your desk before tomorrow} too
+
+\ex.
+Bill will put a picture on your desk before tomorrow, but Sue will \str{put a picture on your desk} before tomorrow too
+ 
+\ex.
+* Bill will put a picture on your desk before tomorrow, but Sue will \str{put a picture} on your desk before tomorrow too
+
+\ex.
+* Bill will put a picture on your desk before tomorrow, but Sue will \str{put} a picture on your desk before tomorrow too
+
+\end{frame}
+
+\begin{frame}
+  {\textit{Do So} Substitution}
+
+
+\ex.
+Bill will put a picture on your desk before tomorrow, but Sue will \underline{do so} too
+
+
+\ex.
+Bill will put a picture on your desk before tomorrow, but Sue will \underline{do so} before tomorrow too
+
+\end{frame}
+
+\begin{frame}
+{Coordination}
+
+\ex.
+Bill will \underline{put a picture on your desk} and \underline{leave}  before tomorrow
+
+
+\ex.
+Bill will \underline {put a picture on your desk before tomorrow} and \underline{leave}.
+
+\end{frame}
+
+\begin{frame}
+  {VP Preposing}
+\ex.
+Put a picture on your desk before tomorrow, Bill will \newline \str{Put a picture on your desk before tomorrow}
+
+\ex.
+Put a picture on your desk, Bill will \newline \str{Put a picture on your desk} before tomorrow
+
+\ex.
+* Put a picture, Bill will \str{Put a picture} on your desk before tomorrow
+
+\ex.
+* Put, Bill will \str{Put} a picture on your desk before tomorrow
+
+
+\end{frame}
+
+\begin{frame}
+  {What does it mean?}
+
+These tests show us that there are \underline{two} constituents in the sentence that respond positively to the tests that serve to isolate VPs.  In other words there are TWO VPs in this sentence.  The structure, therefore must be something like this
+
+\end{frame}
+
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [TP [DP [Bill, triangle]] [T' [T [will]] [VP [VP [V [put]][DP[a picture,triangle]][PP[on your desk, triangle]]] [PP[Before tomorrow, triangle]]]]]
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
+  What this shows us is that there is a different relationship between V and its sisters (\textit{a picture} and \textit{on your shelf}) on the one hand and with the PP \textit{before tomorrow} on the other.  The first two are required by the verb \textit{Put}.  They are obligatory and therefore must be sisters of V.
+
+\ex.
+* Bill will put on your desk
+
+\ex.
+* Bill will put a picture
+
+\end{frame}
+
+
+\begin{frame}
+  On the other hand, \textit{Before tomorrow} is not required and is freely ommissible:
+
+\ex.
+Bill will put a picture on your desk
+
+\end{frame}
+
+
+\begin{frame}
+  {Complements and Adjuncts}
+
+To capture this difference we introduce the concept of \terminology{an Adjunct}.
+
+\begin{block}
+  {Adjuncts}
+Adjuncts are constituents that are not directly selected by a head.  They are usually phrasal and they can be freely omitted without affecting the grammaticality of the sentence.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+  {Structures for adjunction}
+
+Adjuncts are sisters of phrases.  NOT of heads:
+
+\begin{center}
+\begin{tabular}{ll}
+  \begin{forest}
+    [XP [adjunct] [XP]]
+  \end{forest}
+  &
+\begin{forest}
+ [XP [XP] [adjunct] ]
+\end{forest}
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+  {Adjunction is unlimited}
+There is, in principle, no limit to how many adjuncts there can be to the same phrase in either order:
+\begin{center}
+\begin{forest}
+ [XP [XP [XP [XP [XP [XP] [adjunct]] [adjunct]] [adjunct]] [adjunct]] [adjunct]]]
+\end{forest}
+\end{center}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \begin{center}
+\begin{forest}
+ [XP [adjunct] [XP [adjunct] [XP  [adjunct] [XP  [adjunct] [XP  [adjunct] [XP  [\hspace*{2cm}, triangle]]]]]]]
+\end{forest}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+  {More on Adjuncts}
+
+Adjuncts are \terminology{Modifiers} of the XP they attach to.  Correspondingly, complements are called \terminology{arguments} of the selecting element.  Focusing on the VP, we usually have \textit{Temporal, Manner, Instrument, Locative, Purposive} and so on.
+
+\ex.
+\a. What john did \pause slowly, \pause with a knife \pause in the bathroom, \pause at midnight \pause was butter a piece of toast \pause for his brother to have for breakfast. 
+
+\end{frame}
+
+
+\begin{frame}
+  {More on Adjuncts}
+
+Complements and adjuncts bear different relationships to the element they combine with (this is a head in the case of complements and a phrase in the case of adjuncts)
+
+
+\end{frame}
+\begin{frame}
+  {Arguments vs. Adjuncts}
+\begin{itemize}
+\item Arguments (Complements) are selected by a head.  Adjuncts are not.
+\item Arguments refer to entities that are an integral part of the meaning of the selecting head.
+  \begin{itemize}
+  \item John ate kelp
+  \item John ate kelp in the balcony
+  \end{itemize}
+\end{itemize}
+
+There is a version of the verb \textit{eat}, called mistakenly \textit{intransitive eat} which is found in examples like this:
+
+\ex.
+John ate
+
+\end{frame}
+
+
+\begin{frame}
+ {Arguments vs. Adjuncts} 
+While the fact that John ate \underline{something} is implicit in the sentence, \textit{where}, \textit{when}, \textit{how}, and \textit{with what implement} he did his eating \textbf{is not}.
+
+\end{frame}
+
+\begin{frame}
+ {Arguments vs. Adjuncts}
+
+Given that complements are \textit{selected}, we always know their number:
+
+\begin{itemize}
+\item EAT selects one complement
+  \begin{itemize}
+  \item John eats kelp
+  \end{itemize}
+\item READ selects one complement
+  \begin{itemize}
+  \item Anna read \textit{War and Peace} 
+  \end{itemize}
+\item GIVE selects two complements
+  \begin{itemize}
+  \item Brian gave a book to Sue
+  \end{itemize}
+\item etc....
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Arguments vs. Adjuncts}
+As a result, once a verb has combined with its complements it is in a way closed off and cannot take any more of the same type:
+
+\ex.
+* Anna read [\textit{War and Peace}][\textit{Life and Faith}] 
+
+\ex.
+* Brian gave a book a fork to Sue to Mitch to Rumi
+
+
+\end{frame}
+
+\begin{frame}
+  {Arguments vs. Adjuncts}
+The same is crucially \textit{not} true of adjuncts
+
+\ex.
+Brian gave a book to sue [in the garden] [after the lecture] [during a thunderstorm] [a few minutes before the great vowel shift] 
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Conclusion 1}
+
+We can then clearly draw the following conclusion from what we saw so far:
+
+\begin{itemize}
+\item There is a difference in status between the different things that appear in a VP
+\item The arguments of the verb have a closer relationship with the Verb
+\item They are needed in order to obtain a grammatical sentence
+\item Adjuncts are modifiers.
+\item They provide supplementary but not necessary information.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Arguments vs. Adjuncts}
+
+There are cases however where we see that some verbs are compatible only with certain types of adjuncts.
+
+Verbs that imply an end point (\textbf{Telic}) are compatible with \textit{in} temporal PPs:
+
+\ex.
+John will finish his book in an hour
+
+but not with \textit{for} temporal PPs
+
+\ex.
+* John will finish his book for an hour 
+
+
+How are we to understand this?  Perhaps some sort of selection is at play too but perhaps not.
+
+\end{frame}
+
+
+\begin{frame}
+  {A question about selection}
+
+We said that heads select their complements.  But do they select their subjects?  This is a trickier question given that the subject is not a sister of the head.
+
+A case in point is where the subject of a verb must be animate:
+
+\ex.
+* The cup promised to drink the tea
+
+In this case we might say that the verb \textit{promise} selects a subject that is animate.  
+
+
+A better case can be made when we look at DPs
+
+
+
+\end{frame}
+
+\begin{frame}
+  {DP structure}
+
+So far we have suggested that examples like the following are DPs:
+
+\ex.
+\a. The car
+\b. Mary's car
+\c. The invasion of the city
+\d. That invasion of the city by the goblins
+\e. The goblin's invasion of the city
+\f. Egglantine's realisation that the goblins had invaded the city
+
+This means that the head of the phrase is whatever appears under D
+
+\end{frame}
+
+
+
+\begin{frame}
+{DP Structure}
+  \begin{center}
+    \begin{forest}
+      [DP [D [the]] [NP [N [car]]]]
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+{DP Structure}
+
+The interesting cases are the possessive (Saxon Genitive) ones:
+
+The pattern is the following:
+
+\ex.
+\a. The Book
+\b. Sue's book
+\c. *Sue's the book
+\d. *The Sue's book
+
+
+It looks like the definite article and \textit{Sue's} are in complementary distribution.  So we could suggest the following
+\end{frame}
+
+\begin{frame}
+{DP Structure}
+  \begin{center}
+    \begin{forest}
+      [DP [D [Sue's]] [NP [N [book]]]]
+    \end{forest}
+  \end{center}
+
+But this will not do because we know that what precedes \textit{'s} can be fully phrasal:
+
+\ex. The enemy's destruction of the city
+
+Clearly, the DP \textit{The enemy} will not fit in the head position reserved for \textit{The}
+
+\end{frame}
+
+\begin{frame}
+  {DP Structure}
+Another solution is to think of the \textit{'s} as occupying the D Position
+  \begin{center}
+    \begin{forest}
+      [DP [D ['s]] [NP [N [book]]]]
+    \end{forest}
+  \end{center}
+
+But 
+
+\ex. 's book
+
+Is ungrammatical.  Why?
+
+\end{frame}
+
+\begin{frame}
+Let's think in terms of selection.  We said that arguments are obligatory (and adjuncts are not).  We can interpret the fact that if the element preceding \textit{'s} is missing we have ungrammaticality as a violation of the selectional requirements of the head D (\textit{'s}).  
+
+\pause
+
+What would these requirements be?  
+
+\begin{itemize}
+\item \textit{'s} selects:
+  \begin{itemize}
+  \item An NP complement
+  \item A DP subject/specifier (which must be in the genitive case)
+  \end{itemize}
+
+The point in brackets can be seen when we consider the only examples where case is overt in English, i.e. the pronominal paradigm (read carefully p. 115 of the book) 
+
+\end{itemize}
+The structure thus:
+
+
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [DP [DP[John]] [D' [D ['s]] [NP [N [book]]]]]
+    \end{forest}
+  \end{center}
+  
+So there are two possible arguments is the DP.  Note that not all determiners select a subject/specifier.  In fact only \textit{'s} does.
+
+\end{frame}
+
+\begin{frame}
+  Are there adjuncts in the DP?  Yes, but the only one that is truly and uncontroversially an adjunct is the appositive relative:
+
+\ex.
+I met [Mary, who invented self freezing ice-cream]
+
+\ex.
+[Mary, who invented self freezing ice-cream] got the Nobel prize for chemistry.
+
+\end{frame}
+
+
+\begin{frame}
+  {NP structure}
+
+Turning now to NPs, the story is again the same.  The basic test for identifying NPs is replacement by \textit{one}.  Applying the test can show us which elements following the N are complements and which ones are adjuncts:
+
+\ex.
+\a. I ate the salty [fish]
+\b. I ate the salty \textit{one}
+
+
+\ex.
+\a. I ate the salty fish with garlic sauce
+\b. I ate the salty one with garlic sauce
+\c. I ate the one with garlic sauce (one=salty fish)
+
+So we see that things are parallel with the VP and here there are two NPs
+
+\end{frame}
+
+
+\begin{frame}
+  But notice the following:
+
+\ex.
+\a. I met the writer of novels
+\b. ?/* I met the one of poems
+
+\ex.
+\a. I met the writer of novels from Russia
+\b. I met the one from Russia
+\c. */? I met the one of novels 
+
+
+The idea here is that \textit{of novels} is a complement while \textit{from Russia} is an adjunct.
+
+\end{frame}
+
+\begin{frame}
+  In NPs, the complements to N can be CPs or PPs.  Adjuncts can be Adjectives (APs), PPs, and relative clauses (restrictive).
+\end{frame}
+
+\begin{frame}
+  {Adjective Phrases}
+
+\ex.
+\a. Sad
+\b. Very sad
+\c. Proud of Jim
+\d. Extremely fond of nutella
+\e. Interesting to whales
+\f. Proud that Mary succeeded
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Prepositional Phrases}
+PPs are in fact quite complex.  We will not discuss them here in detail though.  Prepositions can take a wide variety of complements:  DPs, PPs, NPs, CPs Adverbs etc...
+
+Prepositions often mirror verbal elements.
+
+\ex.
+\a. Up
+\b. Up [the rope]
+\c. In the kitchen
+\d.  From here
+\e. From [under the rug]
+\f. Right against the grain
+\b. Before The flood
+\b. With John sick
+
+\end{frame}
+
+\begin{frame}
+  Arguably, we also find in English \textit{Post-positions}:
+
+\ex.
+\a. Three years ago
+\b. Your objections notwithstanding
+
+
+They behave in the same way as prepositions in general but they appear at the end.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Conclusions}
+
+\begin{itemize}
+\item The basic conclusion that we should draw from this discussion is the different behaviour of Arguments and Adjuncts.  
+\item Arguments are selected.  Not only complements but also Subjects can be selected.
+\end{itemize}
+  
+\end{frame}
+\end{document}

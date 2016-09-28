@@ -1,0 +1,203 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{amsmath}
+\usepackage{tipa}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 7, part 1}\par
+\noindent The textbook has $e$ under the T nodes, rather than \textsc{pres/past}. Don't worry about this for now, it will be resolved in the next chapter.
+
+\vspace{1em}
+\noindent\textul{\textsc{practice}, p170}\par
+\noindent Make sure that you understand the subtle differences between the binding \textbf{domain} of an anaphor vs. a pronoun (p171).
+
+\setcounter{ExNo}{53}
+	\ex.\a.Mary$_i$ likes herself$_i$\\
+          \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[Mary]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[likes]] [DP[herself]]]]]
+          \end{forest}\\
+          The anaphor \textit{herself} is bound in its domain by \textit{Mary}. Principle A is obeyed and predicts grammaticality, since Principle A requires that an anaphor be bound in its domain.\\
+		\b.*Mary$_i$ likes her$_i$\\
+          \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[Mary]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[likes]] [DP[her]]]]]
+          \end{forest}\\
+          The pronoun \textit{her} is bound in its domain by \textit{Mary}. Principle B applies and predicts ungrammaticality if \textit{Mary} and \textit{her} are coreferential, since Principle B requires that a pronoun not be bound in its domain.
+
+\newpage
+
+	\ex.\a. [Our rabbit and the neighbor's cat]$_i$ like [each other]$_i$\\
+    \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+   [DP  [DP [DP [our]]  [D' [D ['s]] [NP [rabbit]] ] ]    [Conj [and]] [DP [DP [D [the]] [NP [neighbor]]] [D' [D ['s]]  [NP [cat] ] ] ]]
+   [T' [T [\textsc{pres}]] [VP [V [like]] [DP[each other,triangle]]  ]]
+       ]
+       \end{forest}\\
+       Note how genitive pronouns are located in the subject position of the DP. In this case, the \textit{'s}, which is the D head, is just left unpronounced (see p115). The anaphor \textit{each other} is bound in its domain by the DP \textit{Our rabbit and the neighbor's cat}, obeying principle A.\\
+    	\b. *[Our rabit and the neighbor's cat]$_i$ like them$_i$\\
+        \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+   [DP  [DP [DP [our]]  [D' [D ['s]] [NP [rabit]] ] ]    [Conj [and]] [DP [DP [D [the]] [NP [neighbor]]] [D' [D ['s]]  [NP [cat] ] ] ]]
+   [T' [T [\textsc{pres}]] [VP [V [like]] [DP [them]]  ]]
+       ]
+       \end{forest}\\
+       Ungrammaticality is predicted by principle B, since \textit{them} is bound in its domain.
+
+\newpage
+	\ex.\a. [The boys]$_i$ fought with [each other]$_i$.\\
+    \begin{forest}baseline
+    [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+    [DP [D [the]] [NP [boys]]]
+    [T' [T [\textsc{past}]]  [VP  [V [fought]] [PP [P [with]] [DP[each other,triangle]]] ] ]
+    ]
+    \end{forest}\\
+    The anaphor \textit{each other} is bound in its domain by the DP \textit{the boys}. Principle A applies and predicts grammaticality, since Principle A requires that an anaphor be bound in its domain.\\
+    	\b. *[The boys]$_i$ fought with them$_i$.\\
+        \begin{forest}baseline
+    [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+    [DP [D [the]] [NP [boys]]]
+    [T' [T [\textsc{past}]]  [VP  [V [fought]] [PP [P [with]] [DP [them]]] ] ]
+    ]
+    \end{forest}\\
+    The pronoun \textit{them} is bound in its domain by \textit{the boys}. Principle B applies and predicts ungrammaticality if \textit{them} and \textit{the boys} is coreferential, since Principle B requires that a pronoun not be bound in its domain.
+
+
+	\ex.\a. I saw John$_j$. *Bill$_i$ likes himself$_j$. \\
+    \begin{forest}baseline
+     [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+     [DP [I]]  [T' [T [\textsc{past}]] [VP [V [saw]] [DP [John]]] ]
+     ]
+    \end{forest}\\
+    \begin{forest}baseline
+     [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+     [DP [Bill]]  [T' [T [\textsc{pres}]] [VP [V [likes]] [DP [himself]]] ]
+     ]
+    \end{forest}\\
+    In the first tree, the R-expression \textit{John} is not bound. Principle C applies and predicts the grammaticality. In the second tree, the anaphor \textit{himself} is not bound by anything in its domain which is the whole TP [Bill likes himself].   According to the index, \textit{himself} is coreferential with the DP \textit{John}, which is not in the domain of the anaphor. This violates Principle A, hence the second sentence is ungrammatical.\\
+    	\b. I saw John$_j$. Bill$_i$ likes him$_j$. \\
+\begin{forest}baseline
+     [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+     [DP [I]]  [T' [T [\textsc{past}]] [VP [V [saw]] [DP [John]]] ]
+     ]
+    \end{forest}\\
+    \begin{forest}baseline
+     [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+     [DP [Bill]]  [T' [T [\textsc{pres}]] [VP [V [likes]] [DP [him]]] ]
+     ]
+    \end{forest}\\
+    In the second tree, the pronoun \textit{him} is not bound in its domain. The index shows that \textit{him} is coreferential with \textit{John} which is outside  the domain of \textit{him}.  Principle B  is not violated, hence the second sentence is grammatical.
+
+\newpage
+	\ex.\a. I saw John$_j$. *Himself$_j$ laughs.\\
+    \begin{forest} baseline
+    [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[I]] [T$'$ [T[\textsc{past}]]
+            [VP [V[saw]] [DP[John]]]]]
+           \end{forest}\\
+        \begin{forest} baseline
+[TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[Himself]] [T$'$ [T[\textsc{pres}]]
+            [VP [laughs]]]]
+           \end{forest}\\
+           The anaphor \textit{himself} is not bound in its domain by \textit{John}. Principle A applies and predicts ungrammaticality, since Principle A requires that an anaphor be bound in its domain.\\
+           \b. I saw John$_j$. He$_j$ is laughing.\\
+           \begin{forest} baseline
+           [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[I]] [T$'$ [T[\textsc{past}]]
+            [VP [V[saw]] [DP[John]]]]]
+          \end{forest}\\
+    \begin{forest} baseline
+    [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[He]] [T$'$ [T[be+\textsc{pres}]]
+            [VP[laughing]]]]
+          \end{forest}\\
+   The pronoun \textit{he} is not bound in its domain by \textit{John}. Principle B applies and predicts grammaticality, since Principle B requires that a pronoun cannot be bound in its domain. Note also the progressive auxiliary \textit{be}, which we put in T for now. In the next chapter, there will be a more complete account of auxiliaries.\\
+
+\ex.\a.The boy$_j$ likes himself$_j$.\\
+    \begin{forest} baseline
+    [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[D[The]][NP[boy]]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[likes]] [DP[himself]]]]]
+          \end{forest}\\
+         The anaphor \textit{himself} is bound in its domain by \textit{the boy}. Principle A applies and predicts grammaticality, since Principle A requires that an anaphor be bound in its domain.\\
+    	\b.*The boy$_j$ likes him$_j$.\\
+\begin{forest} baseline
+[TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[D[The]][NP[boy]]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[likes]] [DP[him]]]]]
+          \end{forest}\\
+     The pronoun \textit{him} is bound in its domain by \textit{the boy}. Principle B applies and predicts ungrammaticality, since Principle B requires that a pronoun cannot be bound in its domain.\\
+
+	\ex.\a.The girls$_j$ like themselves$_j$.\\
+    \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[D[The]][NP[girls]]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[like]] [DP[themselves]]]]]
+          \end{forest}\\
+          The anaphor \textit{themselves} is bound in its domain by \textit{the girls}. Principle A applies and predicts grammaticality, since Principle A requires that an anaphor be bound in its domain.\\
+    	\b.*The girls$_j$ like them$_j$.\\
+       \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[D[The]][NP[girls]]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[like]] [DP[them]]]]]
+          \end{forest}\\
+The pronoun \textit{them} is bound in its domain by \textit{the girls}. Principle B applies and predicts ungrammaticality, since Principle B requires that a pronoun cannot be bound in its domain.\\
+
+	\ex.\a.*John$_i$'s mother likes himself$_i$.\\
+          \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[DP[John]] [D' [D ['s]] [NP [mother]]]] [T'[T [\textsc{pres}]]             [VP [V [likes]] [DP [himself]]]]]
+          \end{forest}\\
+          The anaphor \textit{himself} is not bound in its domain by \textit{John}. c.f. (54a). Crucially, \textit{John} does not c-command \textit{himself}. A node X c-commands Y if a sister of X dominates Y, and the domain of an anaphor is the smallest XP that has a subject and has a DP c-commanding the anaphor. So, the only DP that c-commands the anaphor is \textit{John's mother}. However, they do not match in gender and so cannot corefer. Principle A is violated and ungrammatically results.
+       \b. John$_i$'s mother likes him$_i$.\\
+         \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP[DP[John]] [D' [D ['s]] [NP [mother]]]] [T'[T [\textsc{pres}]]             [VP [V [likes]] [DP [him]]]]]
+          \end{forest}\\
+ The pronoun \textit{him} is not bound in its domain by \textit{John}, c.f. (54b). Neither can \textit{John's mother} and \textit{him} corefer, since the gender differs. As such, Principle B is obeyed and grammaticality is predicted.\\
+
+     \ex.\a.John$_i$ believes that Bill$_j$ saw him$_i$.\\
+          \begin{forest} baseline
+             [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom, l sep=0.45em}
+             [DP[John]] [T' [T [\textsc{pres}]] [VP [V [believes]] [CP [C [that]] [TP [DP [Bill]] [T' [T [\textsc{past}]] [VP [V [saw]] [DP [him]]]]]]]]
+          ]         \end{forest}\\
+The pronoun \textit{him} is bound by its antecedent \textit{John}, but not in its domain. Note that \textit{him} cannot be bound by \textit{Bill}, which is in its domain. Principle B applies and predicts grammatically since Principle B requires that a pronoun not be bound in its domain.\\
+        \b.*John$_i$ believes that Bill$_j$ saw himself$_i$.\\
+          \begin{forest} baseline
+             [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom, l sep=0.45em}
+             [DP[John]] [T' [T [\textsc{pres}]] [VP [V [believes]] [CP [C [that]] [TP [DP [Bill]] [T' [T [\textsc{past}]] [VP [V [saw]] [DP [himself]]]]]]]]
+          ]         \end{forest}\\
+The anaphor \textit{himself} is bound by \textit{John}, but not in its domain (although it can be bound by \textit{Bill}). Principle A applies and predicts ungrammatically if \textit{himself} and \textit{John} are coreferential, since Principle A requires that an anaphor to be bound in its domain.
+
+\noindent\textul{\textsc{practice}, p171}\\
+\noindent For clarity, I've numbered the DPs below. Here, we want the DP$_3$ anaphor \textit{each other} to be bound by its antecedent DP$_1$ \textit{they} within its domain. We now need to check what DP$_3$'s domain is. By (66), the XPs that have a subject are TP and the DP$_2$ \textit{each other's books}. However, only TP has a subject and has a DP (DP$_1$) c-commanding DP$_3$. Therefore, the domain of the DP$_3$ anaphor is TP. Since DP$_3$ is bound within its domain, coreference is possible, and (64b) is grammatical.
+
+	\ex.[(64b)]They$_j$ like [[each other$_j$]'s books]\\
+          \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP$_1$[They]] [T$'$ [T[\textsc{pres}]]
+            [VP [V[like]]
+            	[DP$_2$ [DP$_3$[each other,triangle]] [D$'$ [D['s]] [NP[books]]]]]]]
+          \end{forest}
+
+	\ex.[(66)]The domain of a DP anaphor is the smallest XP that has a subject and that has a DP c-commanding the anaphor.
+
+
+\end{document} 

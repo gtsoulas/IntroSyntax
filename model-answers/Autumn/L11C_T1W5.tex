@@ -1,0 +1,343 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 3, part 2}\par
+\noindent In this set of exercises, we try to apply the full range of tests to various constituents. It's not only important to know how each test works, but it's also important to know what each test can and cannot do.
+
+\vspace{1em}
+\noindent\textul{\textsc{practice,} p76}\par
+\begin{enumerate}
+	\item The boy will bring my mother Bill's most recent book about global warming when he can.
+
+   \begin{forest} baseline
+	  [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+	 [DP [D [the]] [NP [boy]] ]	[T$'$ [T [will]] [VP [VP [V [bring]] [? [DP [D [my]] [NP[mother]]] [DP [D [Bill's]] [NP [AP [Adv [most]] [A [recent]]] [NP [NP [book]] [PP [P [about]] [DP [global warming]]]]]]]] [PP [? [when]] [DP [he]] [T [can]]]]]]
+   \end{forest}
+
+   \begin{enumerate}
+      \item \textbf{the boy}
+         substitution: \textit{the boy} can be substituted with \textit{he}, so \textit{the boy} is a DP.
+
+      \item \textbf{will bring my mother Bill's most recent book about global warming when he can}
+          
+         coordination: The boy \textit{will bring my mother Bill's most recent book about global warming when he can} and \textit{will send me a copy along the way.}
+         
+         \textbf{note:} some of you may find this a bit cumbersome, but it shouldn't be ungrammatical, I think. What's important is the the string of words starting with \textit{will} can be coordinated with another \textit{will} phrase.
+         
+         \textit{will bring my mother Bill's most recent book about global warming when he can} is a T'.
+
+      \item \textbf{bring my mother Bill's most recent book about global warming when he can}
+          
+         substitution: The boy will \textit{bring my mother Bill's most recent book about global warming when he can} and the girl will \textit{do so}, too.
+      
+         \textit{bring my mother Bill's most recent book about global warming when he can} is a VP.
+
+      \item \textbf{bring my mother Bill's most recent book about global warming}\\
+      substitution: The boy will \textit{bring my mother Bill's most recent book about global warming} when he can and the girl will \textit{do so} when she can,too.\\  \textit{bring my mother Bill's most recent book about global warming} is a VP.\\
+      \textbf{note:} at this point, this suggests that there are two VPs here, and that \textit{when he can} must attach to a VP to form a bigger VP.
+
+      \item \textbf{my mother Bill's most recent book about global warming}
+      The boy will bring \textit{my mother Bill's most recent book about global warming} when he can.\\
+      The boy will bring \textit{my father Jim's recent book about cooking} when he can.\\
+      The boy will bring \textit{my mother Bill's most recent book about global warming} and \textit{my father Jim's recent book about cooking} when he can.\\
+      \textit{my mother Bill's most recent book about global warming} is a constituent, but we do not know the category.
+      \textbf{note:} Some of you may have missed this and treated the V and both the direct object and indirect object as a ternary branching structure.
+
+      \item \textbf{my mother}\\
+      substitution: The boy will bring \textit{her} Bill's most recent book about global warming when he can.\\
+      \textit{the mother} is a DP\\
+      \textbf{note:} while pronouns are DPs, possessive pronouns can be shown to share a distribution with D.
+
+      \item\textbf{Bill's most recent book about global warming}
+      \textit{it}-cleft: It is \textit{Bill's most recent book about global warming} that the boy will bring my mother when he can.
+
+      pseudocleft: What the boy will bring my mother when he can  is \textit{Bill's most recent book about global warming}.
+
+      coordination: The boy will bring my mother \textit{Bill's most recent book about global warming} when he can.
+
+      The boy will bring my mother \textit{Jim's recent book about cooking} when  he can.
+
+      The boy will bring my mother \textit{Bill's most recent book about global warming} and \textit{Jim's recent book about cooking} when he can.
+
+      All the above tests show that \textit{Bill's most recent book about global warming} is a constituent. And we can test in other environment that
+      \textit{Bill's most recent book about global warming} is a DP because it can be replaced by a pronoun.
+
+      \item \textbf{most recent book about global warming}
+
+      coordination: The boy will bring my mother Bill's \textit{most recent book about global warming} when he can.
+
+      The boy will bring my mother Bill's \textit{handicraft}  when he can.
+
+      The boy will bring my mother Bill's \textit{most recent book about global warming} and \textit{handicraft} when he can.
+
+      \textit{most recent book about global warming} is a constituent. And we can independently test that \textit{handicraft} is an NP, so \textit{most recent book about global warming} is also an NP.
+
+      \item 	\textbf{book about global warming}
+
+         coordination: The boy will bring my mother Bill's most recent \textit{book about global warming}  when he can.
+
+         The boy will bring my mother Bill's most recent \textit{CD about nature}  when he can.
+
+         The boy will bring my mother Bill's most recent \textit{book about global warming} and \textit{CD about nature} when he can.
+
+         \textit{book about global warming} is a constituent.
+
+      \item \textbf{most recent}
+      
+         coordination: \textit{newest} and \textit{most recent} book\dots
+         
+         \textit{most recent} is an AP.
+
+      \item \textbf{book}\\
+      substitution: The boy will bring my mother Bill's most recent \textit{one} about global warming when he can.\\
+      \textit{book} is an NP.
+
+      \item \textbf{about global warming}
+
+      coordination: The boy will bring my mother Bill's most recent book \textit{about global warming} and \textit{about cooking} when he can.
+
+      \textit{about global warming} is a constituent and a PP.
+
+      \item\textbf{global warming}
+
+      substitution: \textit{global warming} can be replaced by \textit{it}, so it is a DP.\\
+      \textbf{note:} some of you may have noted that \textit{global warming} is an NP because there's no D here. That's ok too. We'll return to the issue of invisible Ds in the coming chapters.
+
+      \item\textbf{when he can}
+
+      substitution: \textit{when he can} can be replaced by \textit{then}, so it's a PP.
+
+   \end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+\noindent\textul{\textsc{further exercises,} p80--81}\par
+\begin{enumerate}
+	\item Early constituent structure
+
+   \begin{forest} baseline
+   	[S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+   	 [DP [D [the]] [NP [men]]] [T$'$ [T [will]] [VP [VP [V [bring]] [DP [me]] [DP [D [Bill's]] [NP [A [newest]] [NP [NP [book]] [?P [P [about]] [DP [D [the]] [NP [universe]]]]]]]] [PP [? [when]] [S [DP [they]] [T$'$ [T [have]] [VP [V [received]] [DP [it]] [PP [P [in]] [DP [D [the]] [NP [mail]]]]]]]]
+   	 ]]]
+   \end{forest}
+
+   \begin{enumerate}
+      \item \textit{the men} % Add {} in front of [ to ensure indentation in
+
+         \textit{They} will bring me Bill's newest book about the universe when they have received it in the mail.
+
+         \textbf {Substitution}: \textit{the men} can be substituted with \textit{they}, so it's a DP.
+
+      \item \textit{men}
+
+         The [\textit{men}] with glasses will bring me Bill's newest book about the universe when they have received it in the mail, and the [\textit{ones}] with mustache will bring me Bill's newest book about the universe when they have eaten breakfast.
+
+         \textbf {substitution}: If we modify \textit{men} with a PP, it can be substituted by \textit{ones}. Thus, it's an NP.
+
+      \item \textit{will bring me Bill's newest book about the universe when they have received it in the mail}
+
+         The men [\textit{will bring me Bill's newest book about the universe when they have received it in the mail}] and [\textit {might say hello to me}].
+
+         \textbf {coordination}: The sentence above shows that \textit{will bring me Bill's newest book about the universe when they have received it in the mail} have the same kind of constituent as \textit {might say hello to me}.
+
+      \item \textit{bring me Bill's newest book about the universe when they have received it in the mail}
+
+         The men will [\textit {bring me Bill's newest book about the universe when they have received it in the mail}], and the women will [\textit {do so}].
+
+         \textbf {substitution}: \textit {bring me Bill's newest book about the universe when they have received it in the mail} can be substituted by \textit {do so}, and it's a VP.
+
+      \item \textit {bring me Bill's newest book about the universe}
+
+         The men will \textit [{bring me Bill's newest book about the universe}] when they have received it in the mail, and the women will \textit [{do so}] when they have eaten dinner.
+
+         \textbf {Substitution}: \textit{bring be Bill's newest book about universe} can be substituted by \textit {do so} and so it's a VP.
+
+      \item \textit {me}
+
+         The men will bring [\textit {me}] and [\textit {you}] Bill's newest book about the universe when they have received it in the mail.
+
+         \textbf {Coordination}: The sentence above shows that \textit {me} and \textit {you} are the same kind of constituents, namely DPs.
+
+      \item \textit {Bill's newest book about the universe}
+
+         The men will bring me [\textit {Bill's newest book about the universe}] and [\textit{John's newest paper about the universe}] when they have received them in the mail.
+
+         \textbf {Coordination}: The above sentence shows that \textit {Bill's newest book about the universe} and \textit{John's newest paper about the universe} are the same kind of constituents, namely DPs.
+
+      \item \textit{newest book about the universe}
+
+         The men will bring me Bill'S [\textit {newest book about the universe}] and [\textit {oldest paper about the heaven} when they have received them in the mail.
+
+         \textbf {Coordination}: \textit {newest book about the universe} and \textit{oldest picture about the heaven} are the same kind of constituents, namely NPs.
+
+      \item \textit{book about the universe}
+
+         The men will bring me Bill's newest [\textit{book about the universe}] and [\textit{paper about the heaven}] when they have received them in the mail.
+
+         \textbf {Coordination}: \textit{book about the universe} and \textit{paper about the heaven} are the same kind of constituents, namely NPs.
+
+      \item \textit{about the universe}
+
+         The men will bring me Bill's newest book [\textit{about the universe}] and [\textit {on the language}] when they have received it in the mail.
+
+         \textbf {Coordination}: \textit{about the universe} and {on the language} are the same kind of constituents. But we are not able to determine their categories. If they are PPs, we should be able to substitute them with \textit {there} or \textit {then}.
+
+      \item \textit{the universe}
+
+         The men will bring me Bill's newest book about [\textit{it}] when they have received it in the mail.
+
+         \textbf {Substitution}: \textit{universe} can be substituted by \textit{it}, and so it's a DP.
+
+      \item \textit{they}
+
+         The men will bring me Bill's newest book about the universe when [\textit{them}] and [\textit{I}] have received it in the mail.
+
+         \textbf {Coordination}: \textit{them} and \textit{I} are the same kind of constituents, namely DPs.
+
+      \item \textit{when they have received it in the mail}
+
+         The men will bring me Bill's newest book about the universe [\textit {then}].
+
+         \textbf {Substitution}: \textit{when they have received it in the mail} can be substituted by \textit {then} and so it's a PP.
+
+      \item \textit{they have received it in the mail}
+
+         When [\textit{they have paid the publishers}] and [\textit{they have received it in the mail}]
+
+         \textbf{Coordination}: \textit{They have paid the publishers} is an S.
+
+      \item \textit{have received it in the mail}
+
+         They [\textit{have paid the publishers}] and [\textit{have received it in the mail}]
+
+         \textbf{Coordination}: \textit{Have received it in the mail} is a T$'$.
+
+      \item \textit{received it in the mail}
+
+         The men will bring me Bill's newest book about the universe when they have [\textit{paid the publishers}] and [\textit {received it in the mail}].
+
+         \textbf {Coordination}: \textit {received it in the mail} can be coordinated and so it's a VP.
+
+      \item \textit{in the mail}
+
+         The men will bring me Bill's newest book about the universe when they have received it [\textit {there}].
+
+         \textbf {Substitution}: \textit {in the mail} can be substituted by \textit {there}, and it's a PP.
+
+      \item \textit{the mail}
+
+         The men will bring me Bill's newest book about the universe when they have received it in [\textit {it}].
+
+         \textbf {Substitution}: \textit{the mail} can be replaced by \textit {it}, and it's a DP.
+
+      \item \textit{mail}
+
+         The men will bring me Bill's newest book about the universe when they have received it in the express [\textit{mail}] from Japan and the men will bring me Bill's newest book about the universe when they have received it in the normal [\textit{one}] from London.
+
+         \textbf {Substitution}: If we modify mail with a PP, \textit{mail} can be replaced by \textit{one}, and it's a NP.
+   \end{enumerate}
+
+
+	\item VP-ellipsis and \textit{do so} substitution 
+
+   \begin{enumerate}[label=(\alph*)]
+      \item I will fix the computer for Karim.
+         	
+         \begin{enumerate}[label=(\roman*)]
+            \item Will fix the computer for Karim\\
+               Ellipsis: *I will fix the computer for Karim, and John, too.\\
+               Do so: *I will fix the computer for Karim, and John did so.
+
+            \item Fix the computer for Karim\\
+               Ellipsis: I will fix the computer for Karim, and John will too.\\
+               Do so: I will fix the computer for Karim, and John will do so too.
+
+            \item Fix the computer\\
+               Ellipsis: *I will fix the computer for Karim, and John will for Mary.\\
+               Do so: I will fix the computer for Karim, and John will do so for Mary.
+         \end{enumerate}
+         
+      \item I will eat spaghetti on Sunday with Marco.
+         \begin{enumerate}[label=(\roman*)]
+            \item Will eat spaghetti on Sunday with Marco\\
+               Ellipsis: *I will eat spaghetti on Sunday with Marco, and Bill, too.\\
+               Do so: *I will eat\dots, and Bill did so, too.
+            
+            \item Will eat spaghetti\\
+               Ellipsis: *I will eat spaghetti on Sunday with Marco, and Bill on Monday with Jacko.\\
+               Do so: *I will eat\dots, and Bill does so on Monday with Jacko.
+               
+            \item Eat spaghetti on Sunday with Marco\\
+               Ellipsis: I will eat spaghetti on Sunday with Marco, and John will too.\\
+               Do so: I will eat spaghetti on Sunday with Marco, and John will do so too.
+
+            \item Eat spaghetti on Sunday\\
+               Ellipsis: *I will eat spaghetti on Sunday with Marco, and John will with Michael.\\
+               Do so: I will eat spaghetti on Sunday with Marco, and John will do so with Michael.
+
+            \item Eat spaghetti\\
+               Ellipsis: *I will eat spaghetti on Sunday with Marco, and John will on Monday with Michael.\\
+               Do so: I will eat spaghetti on Sunday with Marco, and John will do so on Monday with Michael.
+         \end{enumerate}
+         
+         \item I will speak to Hector about this.
+            \begin{enumerate}[label=(\roman*)]
+               \item Will speak to Hector about this\\
+                  Ellipsis: *I will speak to Hector about this, and Peter, too.\\
+                  Do so: *I will speak\dots, and Peter does so, too.
+                  
+               \item Speak to Hector about this\\
+                  Ellipsis: I will speak to Hector about this, and Peter will too.\\
+                  Do so: I will speak to Hector about this, and Peter will do so too.
+
+               \item Speak to Hector\\
+                  Ellipsis: * I will speak to Hector about this, and Peter will about that.\\
+                  Do so: I will speak to Hector about this, and Peter will do so about that.
+
+            \end{enumerate}
+            
+         \item Jessica loaned a valuable collection of manuscripts to the library.
+            \begin{enumerate}[label=(\roman*)]
+               \item Loaned a valuable collection of manuscripts to the library
+
+                  Ellipsis: Jessica loaned a valuable collection of manuscripts to the library, and Rebecca did too.\\
+                  \textbf{note:} Here we know we have ellipsis because we can insert \textit{loan\dots} in between \textit{did too} but we can't in the substitution test below.
+
+                  Do so: Jessica loaned a valuable collection of manuscripts to the library, and Rebecca did so too.
+
+               \item Loaned a valuable collection of manuscripts\\
+                  Ellipsis: *Jessica loaned a valuable collection of manuscripts to the library, and Rebecca to the museum.\\
+                  Do so: *Jessica loaned a valuable collection of manuscripts to the library, and Rebecca did so to the museum.
+
+               \end{enumerate}
+      \end{enumerate}
+
+   \textbf{Conclusions:}
+   \begin{enumerate}[label=(\roman*)]
+      \item Modal verbs and auxiliary verbs are excluded from VPs.
+
+      \item Some PPs (adjuncts) can be excluded from VPs, but some PPs (complements) cannot be excluded from VPs. We observe this with ditransitive verbs (\textit{loan}), where only the verb and direct object (\textit{a valuable collection of manuscripts} do not form a VP to the exclusion of the indirect object (\textit{to the library}).
+
+      \item When an experiment does not successfully apply to a VP, it does not show that the VP is not a constituent. Dialectal differences may result in varying judgements, but in general, the environments in which ellipsis is permitted are not always identical to the environments in which substitution is permitted.
+   \end{enumerate}
+\end{enumerate}
+
+
+            
+
+\end{document} 

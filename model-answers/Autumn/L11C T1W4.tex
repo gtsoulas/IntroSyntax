@@ -1,0 +1,244 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 3, part 1}\par
+\noindent Generally, we want to substitute strings of words with a single monomorphemic word that preserves the meaning of the sentence. This word is sometimes called a \textsc{proform}. There is one exception, where we use two words \textit{do so} to substitute for VPs (see p61). We'll see more of this when we talk about ellipsis. Substitution should be general and not specific to a particular construction, e.g. substituting \textit{two} for \textit{a couple of}. If the substitution test succeeds, the string we replaced is likely to be a constituent, although see question 5 for an example of a false positive. However, if the test fails, it doesn't mean that the string is not a constituent. Often, to make things sound more natural, we'll modify the sentence slightly. What is important, though, is that you're targeting the right string of words in your test.
+
+\begin{enumerate}
+   \item Nina laughed.
+      \begin{enumerate}
+         \item {}[\textit{She}] laughed.\\ % Add {} in front of [ to ensure indentation in \enumerate.
+            \textit{Nina} can be substituted by \textit{she} and so they share the same category DP.
+         \item Nina [\textit{laughed}] and Bill [\textit{did so}], too.\\
+            \textit{Laughed} can be substituted by \textit{did so} and so it's a VP. The \textit{do so} test is a special type of substitution that uses two words to replace a VP.
+         \item {}[\lbl{S} [\lbl{DP} Nina] [\lbl{VP} laughed]]\\
+            \begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [Nina]] [VP [laughed]]
+               ]
+            \end{forest}
+
+        If you've read ahead to p65, you'll see that sometimes there are lines coming down off node labels and sometimes triangles. A triangle indicates that there is more internal structure that isn't relevant to the structure we're talking about. So the tree above is more accurately represented as:
+
+            \begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [Nina,triangle]] [VP [laughed,triangle]]
+               ]
+            \end{forest}
+
+        \textbf{note:} To draw triangles using \textbf{mshang.ca/syntree}, use the \^{} notation by inputting:\\ {}[S [\^{}DP Nina] [\^{}VP laughed]]
+      \end{enumerate}
+
+   \item The explorers marched for three days.
+      \begin{enumerate}
+         \item {}[\textit{They}] marched for three days.\\
+            \textit{The explorers} is a DP.
+
+         \item ?The [\textit{ones}] marched for three days.\\
+         It's weird to replace \textit{explorers} with \textit{ones}, but if we test further, we'll see that it's only because of the sentential context. If we modify \textit{explorers} with a PP it gets easier:
+
+         \begin{quote}
+            The [\textit{explorers}] with funny hats marched for three days, and the [\textit{ones}] with oversized boots marched for four.
+         \end{quote}
+
+
+         We can therefore conclude that \textit{explorers} is an NP.
+
+         \item The explorers [\textit{marched for three days}], and the tourists [\textit{did so}], too.\\
+             The explorers [\textit{marched}] for three days, and the tourists [\textit{did so}] for four.\\
+             \textit{Marched for three days} and \textit{marched} are both VPs, i.e. a VP embedded in a bigger VP.
+
+         \item There's not much we can do with \textit{for three days}. Sometimes, \textit{then} can be used to substitute for a temporal expression, but only if the expression doesn't stretch over a period of time (durative).
+
+         \begin{quote}
+            The explorers will march [\textit{tomorrow/in three days/on Thursday}] $\to$\\
+            The explorers will march [\textit{then}]
+         \end{quote}
+
+            So, even if we intuitively know \textit{for three days} is a constituent, we can't prove this only with substitution. We'll need other tests that we'll learn as we progress.
+
+         \item {}[S [\lbl{DP} [\lbl{D} the] [\lbl{NP} explorers]] [\lbl{VP} [\lbl{VP} marched] [\lbl{P} for] [\lbl{Num} three] [\lbl{N} days]]]\\
+            \begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [D [the]] [NP [explorers]]] [VP [VP [marched]] [P [for]] [Num [three]] [N [days]]]
+               ]
+            \end{forest}
+
+      \end{enumerate}
+
+   \item Susan drove to Italy.
+      \begin{enumerate}
+         \item {}[\textit{She}] drove to Italy.\\
+         \textit{Susan} is a DP.
+
+         \item Susan drove to Italy, and Tom [\textit{did so}], too.\\
+         \textit{Drove to Italy} is a VP.
+
+         \item Susan drove [\textit{there}].\\
+         \textit{To Italy} is a PP.
+
+         \item ?Susan drove to [\textit{it}].\\
+         This is a bit awkward, but not completely bad. If you accept this, then we can conclude further that \textit{Italy} is a DP. In any case, it would be easy to show that \textit{Italy} can be pronominalised in other contexts.
+
+         \item ?Susan [drove] to Italy, and Bill \textit{did so} to France.\\
+         This is also rather awkward, but if you accept this, it would suggest that \textit{drive} is a VP, rather than just a V. We don't have enough syntactic machinery at this point to solve this (we'll revisit this in Chapter 8), so we'll assume for now that \textit{drive} is a V, not a VP, and that the PP \textit{to Italy} is the complement of the verb \textit{drive}.
+
+         \newpage
+         \item {}[\lbl{S} [\lbl{DP} Susan] [\lbl{VP} [\lbl{V} drove] [\lbl{PP} [\lbl{P} to] [\lbl{DP} Italy]]]]\\
+            \begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [Susan]] [VP [V [drove]] [PP [P [to]] [DP [Italy]]]]
+               ]
+            \end{forest}
+
+      \end{enumerate}
+
+   \item Every photographer looks after his cameras.
+      \begin{enumerate}
+         \item {}[\textit{He}] looks after his cameras.\\
+         \textit{Every photographer} is a DP.
+
+         \item \#{}Every[\textit{one}] looks after his cameras.\\
+         This is a very tricky case if we want to show that \textit{photographer} is an NP (even if we intuitively know that it is). The \# marking shows that this sentence is infelicitous (inappropriate not ungrammatical) in this context. There are two issues: first, \textit{everyone} is one word, not two, which changes the meaning of the sentence; second, recall that substitutions must be general but we observe that \textit{one} doesn't substitute for NPs involving other quantifiers: \textit{*most/all/two ones}. It does, however, work with the singular quantifier \textit{each one looks after\dots} We'll have to assume here that \textit{one}-substitution doesn't make a strong enough case and we'll probably want to resort to other tests, e.g. coordination \textit{every photographer and journalist}. We can, however, resort to modification again in an attempt to force \textit{every} and \textit{one} to be two words:
+
+         \begin{quote}
+            Every professional [\textit{photographer}] looks after his cameras, and every amateur [\textit{one}] does so too.
+         \end{quote}
+
+         Here, we use two substitutions to make the sentence sound natural, but we can clearly see \textit{one} substituting for \textit{photographer}. There, \textit{photographer} is an NP.
+
+         \item Every photographer looks after his cameras and every journalist [\textit{does so}], too.\\
+         \textit{Looks after his cameras} is a VP.
+
+         \item Every photographer looks after [\textit{them}].\\
+         \textit{His cameras} is a DP.
+
+         \item ?Every photographer looks after his cameras, and every journalist looks after his [\textit{ones}], too.\\
+             Slightly awkward, but again with modification we can show this to work:
+             \begin{quote}
+             Every photographer looks after his film [cameras], as well as his digital [\textit{ones}].
+             \end{quote}
+
+             We can conclude that \textit{cameras} is an NP.
+
+         \newpage
+         \item {}[\lbl{S} [\lbl{DP} [\lbl{D} every] [\lbl{NP} photographer]] [\lbl{VP} [\lbl{V} looks] [\lbl{P} after] [\lbl{DP} [\lbl{D} his] [\lbl{NP} cameras]]]]\\
+            \begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [D [every]] [NP [photographer]]] [VP [V [looks]] [P [after]] [DP [D [his]] [NP [cameras]]]]
+               ]
+            \end{forest}
+
+            Some of you may have had the feeling that \textit{look after} is a phrasal verb, so it's just one single V rather than being a V and P. Since you're only allowed to use substitution, there's actually no way to decide; nor is there a way to show that \textit{look after} is a constituent.
+
+      \end{enumerate}
+
+   \item The three little piglets ate a few ripe watermelons in front of the fence.
+      \begin{enumerate}
+         \item {}[\textit{They}] ate a few ripe watermelons in front of the fence.\\
+         \textit{The three little piglets} is a DP.
+
+         \item The [\textit{ones}] ate\dots\\
+         Again, using pure \textit{one}-substitution here is unnatural, but you can imagine a sentence like:
+
+         \begin{quote}
+            These [\textit{three little piglets}] ate watermelons and those [\textit{ones}] ate pineapples.
+         \end{quote}
+
+         The crucial question to ask yourself here is whether \textit{those ones} here means \textit{those three little piglets} or it only means \textit{those little piglets}. Your judgement will determine whether you include \textit{three} as part of the NP or not. There is evidence, however, to believe that quantifiers and numerals are not part of the NP, see commentary on \textit{a few ripe watermelons} below.
+
+         We can make case for \textit{these three [little piglets]\dots\ and those three [ones]\dots} and \textit{these three little [piglets]\dots\ and those three fat [ones]\dots} to show that we have NPs embedded inside NPs. Your judgements may vary but the general idea should be clear: \textit{little piglets} and \textit{piglets} are NPs.
+
+         \item The three little piglets [\textit{did so}].\\
+         \textit{Ate a few ripe watermelons in front of the fence} is a VP.
+
+         \item The three little piglets [\textit{did so}] in front of the fence.\\
+         \textit{Ate a few ripe watermelons} is also a VP.
+
+         \item The three little piglets ate [\textit{them}] in front of the fence.\\
+         \textit{A few ripe watermelons} is an DP.
+
+         \item The three little piglets ate a few [\textit{ones}] in front of the fence.
+         Again we have nested NPs: \textit{a few ones}, \textit{a few ripe ones}. There might be varying judgements, but \textit{watermelons} and \textit{ripe watermelons} are NPs. Importantly, note:
+
+         \begin{quote}
+            *The three little piglets ate a \textit{ones}.
+         \end{quote}
+
+         Whatever your judgements for the previous sentences, substituting \textit{few ripe watermelons} for \textit{ones} is completely bad. This suggests that \textit{few ripe watermelons} is not an NP.
+
+         \newpage
+         \item The three little piglets ate a few ripe watermelons [\textit{there}].\\
+             \textit{In front of the fence} is a PP. Note that the following are false positives:
+
+             \begin{quote}
+               \#The three little piglets ate a few ripe watermelons in \textit{there}.
+               \*The three little piglets ate a few ripe watermelons in front \textit{there}.
+             \end{quote}
+
+             In the first sentence, \textit{there} cannot substitute for \textit{front of the fence} because the meaning changes. The second sentence is ungrammatical because \textit{of the fence} isn't a constituent. If you examine the sentence carefully, you'll notice that \textit{in front of} behaves like a single preposition---it shares a distribution with single prepositions like \textit{behind, beside, under} etc.
+
+         \item The three little piglets ate a few ripe watermelons in front of [\textit{it}].\\
+             \textit{The fence} is a DP. We can also show that \textit{fence} is an NP if we modify it, e.g. \textit{the green fence} vs. \textit{the yellow one}. Based on what we've done in the previous sentences, see if you can make this work.
+
+         \item {}[\lbl{S} [\lbl{DP} [\lbl{D} the] [\lbl{Num} three] [\lbl{NP} [\lbl{A} little] [\lbl{NP} piglets]]] [\lbl{VP} [\lbl{VP} [\lbl{V} ate] [\lbl{DP} [\lbl{D} a] [\lbl{Num} few]\\ {}[\lbl{NP} [\lbl{A} ripe] [\lbl{NP} watermelons]]]] [\lbl{PP} [\lbl{P} in] [\lbl{P} front] [\lbl{P} of] [\lbl{DP} [\lbl{D} the] [\lbl{NP} fence]]]]]
+
+             \hspace{-2em}\begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [D [the]] [Num [three]] [NP [A [little]] [NP [piglets]]]]
+               [VP [VP [V [ate]] [DP [D [a]] [Num [few]] [NP [A [ripe]] [NP [watermelons]]]]]
+               [PP [P [in]] [P [front]] [P [of]] [DP [D [the]] [NP [fence]]]]]]
+            \end{forest}
+
+      \end{enumerate}
+
+   \item Under the bed is a good place to hide.
+      \begin{enumerate}
+         \item {}[\textit{There}] is a good place to hide.\\
+         \textit{Under the bed} is PP. It's important to note that we're using the stressed locative \textit{there} here, not the unstressed existential \textit{there}, e.g. \textit{there are aliens in space}.
+
+         \item Under [\textit{it}] is a good place to hide.\\
+         \textit{The bed} is a DP.
+
+         \item Sam was looking for [\textit{a good place to hide}] and under the bed was [\textit{it}].\\
+             We need to create a more natural context here if we want to do substitution but we should still be able to show that \textit{a good place to hide} is a DP.
+
+         \item Sam was looking for a good [\textit{place to hide}] but under the bed was a bad [\textit{one}].\\
+             \textit{Place to hide} is an NP. It's a bit trickier to find something to substitute for \textit{good place to hide}, even though we intuitively know it's an NP. Independently, we can come up with:
+
+             \begin{quote}
+               Here is a [\textit{good place to hide}], and there is another [\textit{one}].
+             \end{quote}
+
+             So, \textit{good place to hide} is an NP.
+
+         \item Under the bed is a good [\textit{hiding}] place.\\
+         Recall slide 40, where a relative clause was replaced by an adjectival modifier, this is something similar, which tentatively suggests that \textit{to hide} is a constituent (it actually has rather complex internal structure), although we don't know of what category yet. Good for you if you saw this! Even more extra credit if you saw that \textit{to} was the infinitival \textit{to} and not a preposition, i.e. it's a T not a P. Don't worry about this too much now, we'll see more in Chapter 4. We can also do \textit{a good [place] to hide and a good [one] to sleep} to independently prove that \textit{place} is an NP.
+
+         \item {}[\lbl{S} [\lbl{PP} [\lbl{P} under] [\lbl{DP} [\lbl{D} the] [\lbl{NP} bed]]] [\lbl{V} is] [\lbl{DP} [\lbl{D} a] [\lbl{A} good] [\lbl{NP} [\lbl{N} place] [\lbl{TP} [\lbl{T} to]\\ {}[\lbl{V} hide]]]]]\\
+            \begin{forest} baseline
+               [S, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [PP [P [under]] [DP [D [the]] [NP [bed]]]] [V [is]] [DP [D [a]] [A [good]][NP [NP [place]][TP [T [to]][V [hide]]]]]]
+            \end{forest}
+
+         \textbf{note:} Notice the special case with \textit{is}, which doesn't appear to form a VP with the DP following it. You can easily verify this through the failure of \textit{do so} substitution. Here we have a special type of sentence called a \textsc{copular} construction, which involves the copula verb \textit{be}, which behaves differently from normal verbs.
+      \end{enumerate}
+
+\end{enumerate}
+
+\end{document} 		

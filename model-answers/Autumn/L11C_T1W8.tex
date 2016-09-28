@@ -1,0 +1,229 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 5}\par
+
+\vspace{1em}
+\begin{enumerate}
+	\item \textbf{NP/DP constituency}
+    	\begin{enumerate}[label=(\alph*)]
+        	\item The \textul{old men}
+
+              \begin{forest} baseline
+                [NP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [AP[A[old]]] [NP[N[men]]]]
+              \end{forest}
+
+            \item The \textul{women and men}
+
+              \begin{forest} baseline
+                [NP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [NP[N[women]]][Conj [and]][NP[N[men]]]]
+              \end{forest}
+
+            \item The \textul{women and old men}
+
+              \begin{forest} baseline
+                [NP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [NP [N[women]]] [Conj [and]] [NP[AP[A[old]]] [NP[N[men]]]]]
+              \end{forest}
+
+\newpage
+            \item He is looking for \textul{very old or new editions}
+			
+            \begin{enumerate}[label=(\roman*)]
+            	\item \textbf{Meaning 1:}
+                He is looking for very old editions. He is also looking for new editions, but these editions don't need to be very new. The adjunct \textit{very} only modifies \textit{old}.
+
+                \begin{forest} baseline
+                  [NP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                  [AP [AP [AdvP [Adv [very]]] [AP[A[old]]]] [Conj
+                  [or]] [AP[A[new]]]] [NP[N[editions]]]]
+              	\end{forest}
+
+
+                \item \textbf{Meaning 2:}
+                He is looking for very old and very new editions. Here, \textit{very} modifies both \textit{old} and \textit{new}.
+
+                \begin{forest} baseline
+                	[NP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [AP [AdvP [Adv [very]]] [AP[AP[A[old]]][Conj [or]][AP[A[new]]]]] [NP[N[editions]]]]
+              	\end{forest}
+
+            \end{enumerate}
+        \end{enumerate}
+
+\newpage
+	\item[3.] \textbf{Ambiguity}
+
+		\ex.\label{3.1}A cousin of Bill's brother
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item Interpretation A: Tom is Bill's cousin. The person in question is Tom's brother: [A cousin of Bill]'s brother.\\
+				  Interpretation B: Charlie is Bill's brother. The person in question is Charlie's cousin: A cousin of [Bill's brother].
+
+            \item \hspace{3em}Interpretation A\hspace{7.5em} Interpretation B\\
+             	\begin{forest} baseline
+                  [DP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+[DP[D[A]][NP[N[cousin]][PP[P[of]][DP[Bill]]]]][D'[D['s]][NP[N[brother]]]]]
+              	\end{forest}
+                \qquad\qquad\begin{forest} baseline
+                [DP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+[D[A]][NP[N[cousin]][PP [P[of]]   [DP [DP [Bill]] [D' [D ['s]] [NP [N [brother]]]]]  ] ]]
+              	\end{forest}
+
+		\end{enumerate}
+
+        \ex.\label{intB}Whose brother did you meet a cousin of?
+		
+        \begin{enumerate}
+        	\item[(iii)] When we form \ref{intB}, interpretation A is no longer available. The answer to (2) can only be `Bill', not `a cousin of Bill'.
+
+			\item[(iv)] Recall that if you can move of a string of words, it suggests that the string is a constituent. Therefore, \textit{whose brother} is a constituent. Since the answer to \textit{whose} can only be \textit{Bill}, only the structure for Interpretation B allows for \textit{Bill's brother} to be a constituent. Interpretation A is impossible because \textit{Bill's brother} is not a constituent in that structure.
+
+        \end{enumerate}
+
+\newpage
+    \item[5.] \textbf{VP constituency}
+    \setcounter{ExNo}{0}
+
+	   	\ex.\a.\label{5.1}The girl will [sleep]
+        	\b.\label{5.2}The girl will sleep on the couch
+            \c.\label{5.3}The girl will sleep on the couch tomorrow
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item
+              \begin{forest} baseline
+                [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [DP [D [the]] [NP [N [girl]]]]
+                [T' [T [will]] [VP [V [sleep]]]]            ]
+              \end{forest}
+
+              \textbf{substitution:} The girl will [sleep] and the boy will [do so] too.
+
+              \textbf{ellipsis:} The girl will [sleep] and the boy will \textst{sleep} too.
+
+              note: This basically shows that intransitive verbs are VPs too, even if they only contain one word.
+
+			\item We apply constituency tests to \textit{sleep} and \textit{sleep on the couch}:
+            	
+				\ex.\a.The girl will [sleep on the couch] and the boy will [do so] too.
+                \b.The girl will [sleep on the couch] and the boy will [do so] on the floor.
+
+				Since both tests are grammatical, it shows that we have two VPs: \textit{sleep} and \textit{sleep on the couch}. This means that \ref{5.2} has the following structure:
+
+	            \begin{forest} baseline
+                  [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                  [DP [D [the]] [NP [N [girl]]]]
+                  [T' [T [will]] [VP [VP [V [sleep]]] [PP [P [on]] [DP [D [the]] [NP [N [couch]]]]] ] ]
+                  ]
+                \end{forest}
+
+         		The PP \textit{on the couch} is an adjunct because it is a sister of a VP rather than a sister of a head V.
+
+            \item Here, we can show that there are three VPs:
+
+			    \ex.\a.The girl will [sleep] on the couch tomorrow and the boy will [do so] on the floor on Sunday.
+	                \b.The girl will [sleep on the couch] tomorrow and the boy will [do so] on Sunday.\hspace{\fill}[substitution]                    			
+
+				\ex.The girl will [sleep on the couch tomorrow] and the boy will \textst{sleep on the couch tomorrow} too.\hspace{\fill}[ellipsis]
+
+           The tests above show that \textit{sleep}, \textit{sleep on the couch} and \textit{sleep on the couch tomorrow} are all VPs, and that the PP \textit{on the couch} and DP \textit{tomorrow} are both adjuncts.
+
+             \begin{forest} baseline
+               [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP [D [the]] [NP [N [girl]]] ]
+               [T' [T [will]] [VP [VP [VP [V [sleep]]] [PP [P [on]] [DP [D [the]] [NP [N [couch]]]]] ] [DP [tomorrow]]]]]
+            \end{forest}
+
+            \item The tree suggests that \textit{on the couch tomorrow}, \textit{the couch tomorrow} and \textit{couch tomorrow} are constituents. However, no constituency test shows that this is the case, For example:
+
+            \ex.*On the couch tomorrow, the girl will sleep.
+
+            \ex.*The girl will sleep on [it] = [the couch tomorrow].
+
+            Movement doesn't work, and neither does substitution, i.e. \textit{it} can only mean `the couch' but not `the couch tomorrow'.
+
+            \item The structure fails to express the fact that \textit{on the couch} is a constituent; it only shows that \textit{on the couch tomorrow} is a constituent. It also doesn't show that \textit{the couch} is a constituent.
+
+            \item No, for similar reasons to the \textit{whose brother} in question 3 above. According to wh-movement, wh-questioned strings are constituents (p74). However, in this tree, \textit{which couch} is not a constituent, so we will not be able to move \textit{which couch} to the front.
+
+        \end{enumerate}
+
+\newpage
+    \item[7.] \textbf{Complements and adjuncts (in DPs)}\\
+        For this question, judgements will vary from speaker to speaker. The general point to take away is that a string [NOUN \textit{of}-PP] generally involves an N that takes a PP complement. This means that \textit{one}-substitution must target the entire string [NOUN \textit{of}-PP] and not just NOUN alone. However, other PPs like \textit{from}-PPs are adjuncts, so a string containing [NOUN \textit{from}-PP] would behave differently---\textit{one}-substitution should be able to target just the NOUN, which means that NOUN is an NP (even if it's just one word).
+    \setcounter{ExNo}{0}
+
+        \ex.\a.\label{1a}Student of linguistics from Russia\\
+        	Since \ref{2c} is bad and we cannot substitute \textit{one} for \textit{student}, we can conclude that \textit{student} is not an NP. However, \ref{2d} shows that \textit{student of linguistics} is an NP. It follows that the PP \textit{of linguistics} is a complement and combines first with the N head \textit{student}. The PP \textit{from Russia} must therefore be an adjunct.
+        \b.\label{1b}A professor of linguistics from Russia\\
+        	Structurally identical to \ref{1a} with the addition of the indefinite article \textit{a}. Independent constraints concerning the use of the indefinite article prevent us from using \textit{one} substitution here: \textit{*a one from Russia}, although we can easily do \textit{the one from Russia}.
+        \b.\label{1c}A textbook of linguistics from Russia\\
+        	Similar arguments to \ref{1b}.
+        \b.*\label{1d}A knife of linguistics from Russia\\
+        	Here, the ungrammaticality is caused by something different. Recall that a head selects for its complement. So while students, professors and textbook can select for complements that denote academic subjects or topics, a knife obviously cannot since there is no semantic dependence between a knife and linguistics. We can, however, easily establish some other type of dependence, e.g. blade material, which works perfectly as a complement \textit{a knife of damascus steel}, which works perfectly. Since \textit{from Russia} is an adjunct that describes a locative origin, it works fine here: \textit{a knife of damascus steel from Russia}.
+        \b.*\label{1e}A thief of linguistics from Russia\\
+       		Similar reasoning to \ref{1d}, although this sentence is probably slightly less implausible (suppose linguistics was a closely guarded state secret).
+        \b.\label{1f}A student/professor/textbook/knife/thief/table from Russia\\
+        	As mentioned in \ref{1d}, \textit{from Russia} describes a locative origin, so meaning-wise, there should be few restrictions on its use as an adjunct, unless something cannot logically be from Russia, e.g. \textit{*a planet from Russia} vs. \textit{a planet from a distant galaxy} or something like that.
+        \b.*\label{1g}A student from Russia of Linguistics\\
+        	We have already established that \textit{of Linguistics} is a complement and \textit{from Russia} an adjunct. Furthermore, our syntactic theory predicts that complements must be closer to heads than adjuncts, and therefore the ungrammaticality of \ref{1g} is predicted because the adjunct intervenes between the head and complement.
+        \b.*\label{1h}Professor from Russia of Linguistics\\
+        	Same reasoning as \ref{1g}.
+\newpage
+        \b.\label{1i}A linguistics student from Russia\\
+        	This phrase has the same meaning as \ref{1a}. The difference rather than having a noun head and PP complement structure, we have a compound \textit{linguistics student}. The RHHR correctly predicts that this compound is a type of student, not a type of linguistics. Since it's a compound it should behave like a normal noun, i.e. combine with determiners and allow suitable adjuncts:\\
+            \begin{forest} baseline
+               [DP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [D [a]] [NP [NP [N (compound) [N [linguistics]] [N [student]]]] [PP [from Russia, triangle]]]]
+            \end{forest}
+        \b.\label{1j}A Russian linguistics student\\
+        	Since adjuncts can be on the left or right, there's no problem having an adjunct on the left, especially since adjectives appear to the left of NPs in English:\\
+            \begin{forest} baseline
+               [DP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [D [a]] [NP [AP [A [Russian]]] [NP [linguistics student, triangle]]]]
+            \end{forest}
+        \b.*\label{1k}A linguistics Russian student\\
+        	Since \textit{linguistics student} is a compound it can never be separated by any other element. This property can be clearly seen with other compounds, e.g. \textit{blackbird}. A `pool table made of wood' can be paraphrased as `wooden [pool table]' but not `*pool wooden table'.
+
+    \ex.\a.\label{2a}The Russian one\\
+    	This is grammatical because \textit{one} replaces either \textit{linguistics student} or \textit{student of linguistics}, both of which are NPs.
+    \b.*\label{2b}The linguistics one\\
+    	When \textit{linguistics} is used as a modifier on the left, it forms a compound as seen in \ref{1i} 		 and \ref{1j}. Since each component of the compound is an N not an NP, we don't expect \textit{one}-		substitution to work, as is the case here.\newpage
+    \b.??\label{2c}One of linguistics from Russia\\
+    	In the introduction to this question we said that there will be some speaker variation here. This is precisely the source of the variation, whether \textit{of}-PPs are treated as complements or adjuncts for that particular speaker. The majority of people will find \ref{2c} bad, but a small number of will find it marginal and an even smaller number (if any at all) will find it perfect.
+    \b.\label{2d}One from Russia\\
+    	If \textit{one} replaces \textit{student of linguistics}, which is an NP, then the grammaticality here is straightforwardly predicted.
+
+    \ex.\a.\label{3a}An Italian student of math\\
+    	Based on our discussion above a construction \textit{student of X} involves \textit{student} taking \textit{of X} as a complement:\\
+        \begin{forest} baseline
+          [DP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [D [an]] [NP [AP [A [Italian]]] [NP [N [student]] [PP [P [of]] [NP [N [math]]]]]]]
+        \end{forest}
+    \b.\label{3b}A math student from Italy\\
+    	When \textit{student of X} is is turned into \textit{X student}, then it is a compound. So the structure would be identical to \ref{1i}, substituting \textit{Italian} for \textit{Russian}, and \textit{math} for \textit{linguistics}.
+    \b.\label{3c}An Italian math student\\
+    	Same as \ref{1j}.
+    \b.*\label{3d}An math Italian student\\
+    	The use of \textit{an} instead of \textit{a} is possibly a typo and irrelevant here. Otherwise, same explanation as \ref{1k}.
+
+\end{enumerate}
+
+\end{document} 

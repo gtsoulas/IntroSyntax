@@ -1,0 +1,435 @@
+\input{../../slides-preamble.tex}
+
+
+\title{Binding Theory II}
+\date{Spring 2017}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../../../../graphics/logo}}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+  \frametitle{The Binding Theory}
+
+The binding theory concerns the distribution of nominal expressions and their referential possibilities, insofar as these are regulated by structural factors.
+\end{frame}
+
+
+\begin{frame}
+  From a binding-theoretic point of view, DPs are divided in three classes:
+
+  \begin{itemize}
+  \item Anaphors (i.e. reflexives and reciprocals)
+  \item Pronouns (i.e. personal pronouns)
+  \item R(eferential)-expressions (i.e. Names, definite descriptions)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  There are two major structural factors that enter the calculation:
+  \begin{itemize}
+  \item C-Command
+  \item Domains
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {C-Command}
+
+  \begin{block}
+    {C-command: Definition}
+A node X C-commands a node Y if the sister of X dominates Y
+  \end{block}
+
+
+  \begin{center}
+    \begin{forest}
+      [[X][Z [\ldots\ldots\ldots Y \ldots\ldots\ldots, triangle]]]
+    \end{forest}
+  \end{center}
+
+C-command is an extremely important notion that refers to the geometry of the tree.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Understanding Reflexives: first try}
+
+We can formulate the following principle (Call it Principle A):
+
+\begin{block}
+  {Principle A}
+\begin{itemize}
+\item The DP antecedent of a reflexive must C-command the reflexive.
+\item The reflexive must agree in Person, Number and Gender with its antecedent
+\item A reflexive must be coreferential with another DP in the same sentence
+\end{itemize}
+\end{block}
+
+
+We will not worry just yet about whether we can unify the three parts into one.
+\end{frame}
+
+
+\begin{frame}
+  Consider:
+
+
+\ex.  John$_i$ believes that Bill$_j$ saw himself$_j$
+
+\ex. * John$_i$ believes that Bill$_j$ saw himself$_k$
+
+
+\end{frame}
+
+\begin{frame}
+  But what about this sentence:
+
+
+\ex. 
+* John$_i$ believes that Bill$_j$ saw himself$_i$
+
+
+the reason why this sentence is not good is unclear (given the principles that we have so far developed)
+
+\end{frame}
+
+
+\begin{frame}
+  {Distance}
+
+We might think that \textit{John} is too far from the reflexive and that Bill (being closer) intervenes.  The following shows that this is probably the wrong idea:
+
+\ex.
+* John$_i$ believes that Mary$_j$ saw himself$_i$
+
+\end{frame}
+
+\begin{frame}
+  {A structural proposal}
+
+We can suggest the following:
+
+\ex.  
+The reflexive and its antecedent must be in all of the same TPs
+
+This will work for the previous example.  But what about the following:
+
+\ex.
+Mary$_i$ noticed John$_j$'s excessive appreciation of himself$_j$
+
+\ex.
+* Mary$_i$ noticed John$_j$'s excessive appreciation of herself$_i$
+
+\end{frame}
+
+
+\begin{frame}
+\begin{center}
+\scalebox{0.8}{
+    \begin{forest}
+      [TP [DP [Mary]] [T' [T [e]] [VP [V [noticed]] [DP [DP [John]] [D' [D ['s]] [NumP [Num] [NP[AP [A [excessive]]] [NP[N [appreciation]] [PP [P [of]][DP [herself]]]]]]]]]]]
+    \end{forest}
+}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  Imagine now that we treat the previous sentence in the same way as :
+
+\ex.
+[$_{TP}$ Mary$_i$ noticed that [$_{TP}$ John excessively appreciates herself$_i$]] 
+
+We can give a unified analysis if we suggest the following:
+
+\ex.
+The reflexive and its antecedent must be in all the same TPs and DPs.
+
+this does in fact make sense.  Why?
+
+Because TPs and DPs are the only constituents that have subjects.  
+\pause
+Ok, what does that really mean?
+
+\end{frame}
+
+\begin{frame}
+  The question regarding the distribution of reflexives and their potential antecedents is not simply to establish that a reflexive \textit{requires} an antecedent but also how far away, and within what sort of \textit{domain} is the antecedent to be found.  One way to define the relevant domain (given the data) is this:
+
+\begin{block}
+{Defining the domain}
+The reflexive and its antecedent must be in all the XPs tat have subjects.
+\end{block}
+  
+\end{frame}
+
+
+
+\begin{frame}
+  {Confirmation}
+
+\ex.
+John$_k$ loved [$_{DP}$ the new pictures of himself$_k$]
+
+\ex.
+I showed Mary$_k$  [$_{DP}$ several portraits of herself$_k$]
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Revising the principles on Reflexives}
+
+  \begin{enumerate}
+  \item A reflexive must be coreferential with another DP in the same sentence, its antecedent.
+  \item A reflexive must agree with its antecedent in person, number, and gender.
+  \item The DP antecedent of a reflexive must c-command the reflexive.
+  \item The reflexive and its antecedent must be in all the same XPs that have subjects.
+  \end{enumerate}
+
+
+1, 3, 4 above together are refered to as \textit{Principle A of the Binding Theory}
+
+\end{frame}
+
+\begin{frame}
+  {Generalising and Reformulating}
+
+Antecedents of reflexives don't have to be names or descriptions like:
+
+\ex. Denis
+
+\ex. The poet who wrote ``Ithaca''
+
+\end{frame}
+
+\begin{frame}
+
+Quantified antecedents are also fine:
+
+\ex.
+Every sailor likes himself
+
+\ex.
+No girl in the palace dresses herself
+
+
+These sentences do not mean:
+
+\ex.
+Every sailor likes every sailor
+
+\ex.
+No girl in the palace dresses no girl in the palace
+ 
+\end{frame}
+
+
+\begin{frame}
+
+Rather the meanings are:
+
+\ex.
+For every x, if x is a sailor, x likes x.
+
+\ex.
+For no x, if x is a girl in the palace, x dresses x.
+
+\end{frame}
+
+\begin{frame}
+  In these cases it is not right to talk about coreference since, if we say that  \textit{herself} refers to the same individual as \textit{no girl in the palace}, then there must be an individual such that \textit{no girl in the palace} refers to that individual.  But we cannot find such a thing.  The same reasoning applies to \textit{every sailor} and \textit{himself}.
+
+\end{frame}
+
+
+\begin{frame}
+  For these cases we borrow a notion from logic, namely the notion of \textit{variable binding}.  A reflexive/reciprocal will be then the same sort of thing as a logical variable and we will talk about it as being \textit{Bound} by its antecedent.  We have the following definition:
+
+
+  \begin{block}
+    {Bound}
+    A DP is \textit{bound} (by its antecedent) just in case there is a C-commanding DP which has the same index.
+  \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+{Summarising}
+\begin{block}
+  {Domain}
+The domain of a DP anaphor is the smallest XP with a subject that contains the DP anaphor.
+\end{block}
+\begin{block}
+  {Agreement}
+An anaphor must agree with its antecedent in Person, number and gender. (not case)
+\end{block}
+\begin{block}
+  {Principle A}
+An anaphor must be bound in its domain.
+\end{block}
+  
+\end{frame}
+
+\begin{frame}
+  {Pronouns}
+
+Consider the following examples:
+
+\ex.
+\a. Mary$_i$ likes herself$_i$
+\b. *Mary$_i$ likes her$_i$
+
+
+\ex.
+\a. I saw John$_i$.  Bill$_j$ likes him$_i$
+\b. I saw John$_i$.  Bill$_j$ likes himself$_j$
+
+
+\ex.
+\a. The girls$_i$ saw themselves$_i$
+\b. * The girls$_i$ saw them$_i$
+
+
+\ex.
+\a. [John and Bill]$_i$ like [each other]$_i$ 
+\b. *[John and Bill]$_i$ like [them]$_i$ 
+
+
+\end{frame}
+
+
+\begin{frame}
+  There is a pattern here.   Namely, that when we replace an anaphor with a pronoun the sentence becomes ungrammatical.
+\end{frame}
+
+
+\begin{frame}
+  We can summarise the pattern in the following principle:
+
+
+\ex. 
+Principle B.\\
+A pronoun cannot be bound in its domain (i.e. it cannot have a C-commanding antecedent in its domain)
+
+\end{frame}
+
+\begin{frame}
+  {A problem}
+
+\ex.
+\a. They$_j$ like [[their$_j$] books]
+\b. They$_j$ like [[each other$_j$]'s books]
+
+This meas that we need to modify slightly the notion of domain.
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+  \ex. 
+The domain of a DP pronoun is the smallest XP with a subject that contains the DP
+
+
+\ex.
+The domain of a DP anaphor is the smallest XP that has a subject and that has a DP C-commanding the anaphor.
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Non-Pronominal Expressions}
+
+\ex.
+* He$_j$ heard that [the idiot]$_j$ should win
+
+
+\ex.
+* He$_j$ saw John$_j$
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+  Note that, unlike what is happening with pronouns and anaphors, the domain here is larger:
+
+\ex.
+* He$_i$ knows that Mary likes  John$_i$
+
+\ex.
+* He$_i$ knows that [I said that [Mary likes  John$_i$]]
+
+
+\pause
+
+However, the following are fine:
+
+\ex.
+After you spoke to him$_i$, Richie$_i$ left very quickly
+
+\ex.
+The builder of his$_i$ house visited Peter$_i$
+
+
+What is the difference?
+\end{frame}
+
+
+\begin{frame}
+  It seems that the difference is again a structural one.  When the pronoun that is coindexed with a name C-commands the name coindexing is impossible.
+
+If, not, then it is possible.
+
+On the basis of this we can now formulate the final principle of the binding theory
+\end{frame}
+
+
+\begin{frame}
+  \ex.
+Principle C\\
+An R-expression cannot be bound
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Summarising the Binding Theory}
+
+The binding theory can be summarised then in the following simple principles:
+
+\begin{itemize}
+\item[]PRINCIPLE A: An Anaphor must be bound in its domain
+\item[]PRINCIPLE B: A pronoun must be free in its domain
+\item[]PRINCIPLE C: An R-expression cannot be bound
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Conclusion}
+
+To a very large degree, the interpretation of pronouns, anaphors and referential expressions as coreferential or not with another nominal expression is regulated by structural factors that are summarised in the three principles of the Binding theory.
+
+
+\end{frame}
+
+
+
+
+
+\end{document}

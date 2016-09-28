@@ -1,0 +1,459 @@
+\input{../../../../slides-preamble.tex}
+
+
+\title{Syntactic Analysis}
+\date{Autumn 2016}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../../../../../graphics/logo}}
+
+\begin{document}
+
+\maketitle
+
+\section{Some Lessons from Morphological Analysis}
+
+\begin{frame}
+  \frametitle{What you see is \textit{not} what you get}
+
+  \begin{itemize}
+  \item There is more structure to words than meets the eye. \pause
+  \item There are more morphemes than we can hear/read. \pause
+  \item With notions such as \terminology{C-selection}, \terminology{affixation}, \terminology{Compounding} morphology is both \textit{regular} and \textit{productive}.
+  \end{itemize}
+
+Speakers naturally recognise which morphological formations are allowed and which are not in their language.  We can ask: \textit{How do they do that?}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Knowledge of morphological processes}
+
+As speakers, we know the effects of regular morphological processes.  
+
+One of the effects of this is that we need to remember far fewer words than we otherwise would have.
+
+\end{frame}
+
+\begin{frame}
+  But not only that.  We can have a general understanding of the meaning of a word even if we don't know the meaning of the root:
+
+\ex. De-gandr-al-isa-tion
+
+(As far as I know there is no word \textit{gandr}) \ldots but if it comes to exist we will know the meaning of the derived words.  And we will also know that :
+
+\ex. * Gandr-de-tion-ise-al
+
+will be an ungrammatical element.
+\end{frame}
+
+\section{Beyond the word: Syntactic productivity}
+
+\begin{frame}
+This sort of  Productivity and regularity is a hallmark of human language. 
+\end{frame}
+\begin{frame}
+  \frametitle{Not only in Morphology}
+
+Moving away from words, we see that the same thing happens with sentences.
+
+Speakers have intuitions about which sentences (ordered strings of words) are grammatical and which ones are not.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Example}
+
+\ex.
+Every chemist will tell you that water is predominantly composed of molecules that contain two hydrogen atoms and one oxygen atom.
+
+\ex.
+Predominantly every of hydrogen that one two composed tell oxygen will atom atoms that chemist water every you is molecules that
+
+All speakers of English will recognise \LLast as a perfectly well formed sentence of English whereas \Last will be just a \textit{word salad}
+
+\pause
+
+How do we do that?
+\end{frame}
+
+\begin{frame}
+  Before we consider this more closely, it should be pointed out that this question was both one of the major motivations behind the theory of syntax that we will develop and that, to this day, it remains a matter of controversy.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Take 1}
+People remember sentences that they hear.  If a sentence that they are asked to judge is one that they have never heard before, or it is not very similar to what they have heard before they will judge it as unacceptable. 
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Not really\ldots}
+  \begin{itemize}
+  \item \textbf{Reason 1}:  There is an infinite number of well formed sentences that a speaker can recognise.  The storage capacity of the human brain is large but finite.  
+  \item \textbf{Reason 2}: If you ask a speaker to judge a sentence like :
+\ex.
+Frighten at without blue former studying
+
+The answer will be this is an \textit{ungrammatical} sentence not \textit{I have not heard this before}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  Equally, while most people have never heard the following, they have no problem as recognising it as a grammatical English Discourse.  It is also unlikely that they would have heard something very similar to it 
+
+\ex.
+The lower strata of the middle class — the small tradespeople, shopkeepers, and retired tradesmen generally, the handicraftsmen and peasants — all these sink gradually into the proletariat, partly because their diminutive capital does not suffice for the scale on which Modern Industry is carried on, and is swamped in the competition with the large capitalists, partly because their specialised skill is rendered worthless by new methods of production.
+
+ 
+\end{frame}
+
+\begin{frame}
+  So if the memory theory was correct then all ``unheard before'' sentences would have the same status.  This is contrary to our intuitions.
+
+  \begin{itemize}
+  \item \textbf{Reason 3}:  Most sentences in very large corpora appear only once and therefore unlikely to have been seen before.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Take 2}
+
+We don't remember sentences but \textit{frames} where actual words are replaced with their category.  So \Next will be remembered as \NNext
+
+\ex.
+The girl kissed the boy
+
+\ex. D N V D N
+
+
+No.  Because 
+
+\ex.
+* Many water wrote those ball
+
+is ungrammatical.
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusion}
+
+Any approach based on such premises is bound to fail (and does fail, it is not an interesting thing really to go through all of them).  To know a language is not to remember lots of sentences, just like to know addition and subtraction is not remembering lots and lots of sums. 
+\end{frame}
+
+\begin{frame}
+{All cognition works like this}
+  Just like every time you need to add two numbers you follow a procedure rather than retrieving the sum from memory, when you generate a sentence you apply a procedure, each time anew and you do not retrieve it from memory. The same is valid for all other cognitive modules: Vision, Music etc...
+\end{frame}
+
+
+\begin{frame}
+{The creative aspect of language use}
+In modern times, this insight goes back to the 17th century French philosopher Ren\'{e} Descartes and was forcefully re-introduced in modern thinking by Noam Chomsky.  It is called \textit{The creative aspect of language use}.  Each sentence is a new creation regardless of how many times you have heard or said it before.  
+\end{frame}
+
+
+\section{Understanding Sentence Structure}
+
+\begin{frame}
+  \frametitle{Expressing sentence structure}
+
+We saw already that we group phonemes together to make morphemes and morphemes to make words.  A natural extension of this idea would be to suggest also that words can be grouped in specific ways to make sentences. 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sentences are groups of groups (of groups) of words}
+
+If we just say that sentences are groups of words then we can have something like this (S=Sentence):
+
+\ex.
+
+\begin{center}
+  \begin{forest}
+    [S  [The] [donkey] [ate] [the] [carrot]]
+  \end{forest}
+\end{center}
+
+The problem with this structure is that it seems to suggest that there are no significant sub-groupings in the sentence and everything is at the same level.
+
+\end{frame}
+
+
+\begin{frame}
+  But this is not so, consider for example that if we swap the words before the verb and those after the verb we can get a grammatical sentence only in one case:
+
+\ex. 
+\a. * The the ate donkey carrot
+\b. * Carrot the ate donkey the
+\c. * Carrot donkey the the
+\d.  and so on until:  \pause
+\e. \textbf{The carrot ate the donkey}
+
+
+Which is, of course, a perfectly grammatical sentence, albeit somewhat odd semantically.......
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Oh well\ldots}
+  \begin{center}
+    \includegraphics[scale=.4]{carrot.jpg}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{How are we to interpret this?}
+
+The most reasonable way to interpret this is to recognise that there are sub-groupings of words in the sentence. 
+
+These sub-groups are called \terminology{Constituents}.   
+
+\end{frame}
+
+\begin{frame}
+{Constituent Structure I}
+
+So for your sentence, instead of :
+\ex.
+
+\begin{center}
+  \begin{forest}
+    [S  [The] [donkey] [ate] [the] [carrot]]
+  \end{forest}
+\end{center}
+
+We will have:
+\end{frame}
+\begin{frame}
+\frametitle{Constituent Structure II}
+
+\begin{center}
+\begin{forest}
+        [S,dont show before=6
+          [DP [the, dont show before=4] [donkey,dont show before=4]]
+          [VP,dont show before=3
+            [ate,dont show before=2]
+            [DP
+              [the,dont show before=1]
+              [carrot,dont show before=0]
+            ]
+          ]
+        ]
+\end{forest}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  We can also write this:
+\begin{center}
+  \begin{forest}
+    [S, s sep=50pt  [DP, tikz={\node [draw,circle,color=red,fit to tree]{};}
+ [the] [donkey] ] [V [ate]]  [DP, tikz={\node [draw,circle,color=green,fit to tree]{};}
+              [the]
+              [carrot]]]
+  \end{forest}
+\end{center}
+
+The difference is minimal and for our present concerns irrelevant.  The point is that both structures show the separate DP level groupings.  The difference is that the previous structure groups also \textit{ate the carrot} as one group.
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{center}
+\begin{forest}
+        [S, s sep=50pt
+          [DP,tikz={\node [draw,circle,color=red,fit to tree]{};} [the] [donkey]]
+          [VP, s sep=50pt, tikz={\node [draw,circle, color=yellow,fit to tree]{};}
+            [ate]
+            [DP,tikz={\node [draw,circle,color=green,fit to tree]{};}
+              [the]
+              [carrot]
+            ]
+          ]
+        ]
+\end{forest}
+
+\end{center}
+
+  
+\end{frame}
+
+
+
+\begin{frame}
+{Constituent Structure III}
+  
+Now the question becomes:
+
+\ex. How do we know what is a constituent?
+
+before we answer this let's clarify a few things.
+
+\end{frame}
+
+\begin{frame}
+  {Some Characteristics of Constituents}
+
+  \begin{itemize}
+  \item A constituent can be made of an arbitrary number of words
+  \item A single word can be a constituent
+  \item Usually (but not always) the parts of a constituent are adjacent to one another
+  \item A constituent can be manipulated as a single chunk
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Constituency Tests}
+There is a number of tests that we can use to determine whether a string of words is a constituent:
+
+\begin{enumerate}
+\item Substitution
+\item Ellipsis
+\item Coordination
+\item Movement
+\end{enumerate}
+
+Today we only focus on \textit{Substitution}
+
+\end{frame}
+
+\begin{frame}
+  {Substitution}
+
+\begin{itemize}
+\item The idea here is simple:  If we can replace a string of words by a single element that has no further internal structure (say a single mono-morphemic word) then we can conclude that the original string was a constituent.
+\item Moreover, we can also conclude that given that the single word and the whole constituent seem to have the same distribution, they are also of the same category.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  {Examples}
+Recall our original example:
+
+\ex.
+Every chemist will tell you that water is predominantly composed of molecules that contain two hydrogen atoms and one oxygen atom.
+
+The task here is to find groups of words that can be replaced by a single word without changing the meaning of the sentence significantly and without making any other change to the sentence.  The substituting word must play in the sentence the same role as the string of words that it replaces.
+
+\end{frame}
+
+
+\begin{frame}
+  \ex.
+\textcolor{red}{Every chemist} will tell you that water is predominantly composed of molecules that contain \textcolor{red}{two hydrogen atoms} and \textcolor{red}{one oxygen atom}.
+
+\begin{itemize}
+\item Every Chemist = They
+\item Two hydrogen atoms = This
+\item One oxygen atom = That
+\end{itemize}
+
+\ex.
+\textcolor{green}{They}  will tell you that water is predominantly composed of molecules that contain \textcolor{green}{this} and \textcolor{green}{that} 
+
+
+\end{frame}
+
+
+\begin{frame}
+{Example, cont'd}
+
+Note also:
+
+   \ex.
+Every chemist will tell you \textcolor{red}{that water is predominantly composed of molecules that contain two hydrogen atoms and one oxygen atom}.
+
+\ex. Every Chemist will tell you \textcolor{green}{it}
+
+
+
+\end{frame}
+
+\begin{frame}
+  So we have so far recognised the following constituents in the sentence:
+
+  \begin{itemize}
+  \item Every Chemist
+  \item Two hydrogen atoms
+  \item One oxygen atom
+  \item that water is predominantly composed of molecules that contain two hydrogen atoms and one oxygen atom
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ {A note on categories}
+
+In general we will use the following rough criterion
+
+\ex.
+If a multiword constituent (whose category we may not know) can be replaced by a single word, then we assume that the overall constituent is of the same category as the single word.  
+
+\begin{itemize}
+\item One Oxygen Atom = This
+\item This = D
+\item One oxygen atom = DP (where P is Phrase)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  {The process}
+\begin{itemize}
+\item[Step 1] Pick some adjacent words in a sentence
+\item[Step 2] Ask: Is there a single (preferably mono-morphemic) word that can replace that set of adjacent words in \textit{that} sentence, playing \textit{the same} role in the sentence and not changing significantly the meaning ? 
+\item[Step 3] Is the substitution general?  i.e. if you change some of the words to similar ones, does it still work (e.g change two hydrogen atoms to \textit{several/three/many/etc...} hydrogen/oxygen/water/wine atoms/molecules/bottles/etc..)
+\item[Step 4] If the answer to 2 and 3 is positive then you have a constituent \pause \textit{Well done!}
+\item[Step 5] If the answer to either 2 or 3 is negative then you do not have a constituent \pause \textit{Sorry!!}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+{We need to be carefull with these processes}
+  The process seems simple, however, interpreting the results of substitutions is not always simple.  Equally it is not always obvious what sort of liberties we should take with the test.
+\end{frame}
+
+
+\begin{frame}
+  {An example}
+Suppose we want to test for consituenthood the red portion of the example:
+
+   \ex.
+Every chemist will tell you that water is predominantly composed of molecules  \textcolor{red}{that contain two hydrogen atoms and one oxygen atom}.
+
+What we need is a single word that fulfils the same role in the sentence.  It is not easy to find one such word that would appear after the word \textit{molecules}.  \textbf{But} we can find one that immediately precedes it, i.e. an adjective:
+
+  \ex.
+Every chemist will tell you that water is predominantly composed of \textcolor{green}{complex} molecules.
+
+\end{frame}
+
+\begin{frame}
+  What can we conclude from that?
+Given that the meaning of the sentence does not seem to have changed significantly, and that the adjective is still adjacent to the noun, we can conclude that the string \textit{that contain two hydrogen atoms and one oxygen atom} is a constituent.  But can we conclude that it is also an adjective?  In some ways yes in others no.  We will leave this for later.
+
+\end{frame}
+
+\begin{frame}
+  {Conclusion}
+\begin{itemize}
+\item Sentences have a structure that is similar to that of words
+\item They are divided in smaller chunks that can be manipulated as single units.  These are the sentence's \terminology{constituents}
+\item Substitution by a single word is a test of constituenthood for any given string of words.
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}

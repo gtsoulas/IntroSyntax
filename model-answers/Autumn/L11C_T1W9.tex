@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 6, part 1}\par
+\noindent These questions (especially 3 and 4) are not so clear-cut. Rather than simple mechanical doing, they require more syntactic thinking and strategic use of the concepts and constituency tests that you've learnt. Remember that being able to understand why the answer is like so---or even why there is no clear answer---is more important than being able to simply arrive at an answer mechanically.
+
+\vspace{1em}
+\begin{enumerate}
+	\item[1.]\textbf{NP or DP?}
+
+    	\ex.Mary puts apples in the fridge in Los Angeles, but she puts them on the table in New York.
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item
+            The label of the coordinated constituent is TP. The verb has a present tense,and the head T projects a maximal projection (i.e. TP). Within the projection, the subject DP \textit{Mary} sits in the specifier position.
+
+            \item
+              \begin{forest} baseline
+                [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [DP[Mary]] [T$'$ [T[\textsc{pres}]] [VP [VP [V [puts]] [DP[D [$\emptyset$]] [NP[N$'$[N[apples]]]]]  [PP [P[in]] [DP[D [the]] [NP [fridge]]]]]  [PP [P[in]] [DP [L.A.]]]]]]
+              \end{forest}
+
+              \begin{enumerate}[label=(\alph*)]
+              	
+                \item\textit {in the fridge} behaves as a complement of the verb.
+                ``Mary puts apples in the fridge in L.A., and John does so, too, in York'' is fine. However, ``*Mary put apples in the fridge in L.A., and John does so on the table in York'' is degraded. \textit{Do so}-substitution suggests that \textit{put apples in the fridge} is a VP, but \textit{put apples} is not. We can, therefore, conclude that both \textit{apples} and \textit {in the fridge} are complements of \textit{put}.
+
+                \item \textit {in New York} behaves as an adjunct, because we can apply \textit{do so}-substitution to the exclusion of the PP: \textit{Mary puts apples in the fridge in New York, and John does so too in Boston} or \textit{\dots and John does so too}. This suggests that there are two VPs: \textit{put apples in the fridge} and and \textit{put apples in the fridge in New York}. The PP must be an adjunct to the VP.
+              \end{enumerate}
+
+\newpage
+            \item There's a typo here, it should be \textit{apples}, not \textit{tomatoes}. \textit{Apples} can be substituted by a pronoun \textit {them}, suggesting that \textit{apples} is ultimately a DP. However since we also can have a DP \textit{the apples}, in which \textit{apples} is an NP, it stands to reason that when no determiner is pronounced, a silent one present: [\lbl{DP} [\lbl{D} $\emptyset$] [\lbl{NP} apples]].
+
+            \item The structure is shown above. Note that it's also acceptable to abbreviate NP--N$'$--N with just NP.
+
+            \item Bare plurals in English have either a generic reading or an indefinite reading. The precise difference isn't particular important for us now (but see discussion on p134--135), but the basic point is that a bare plural can be substituted by a pronoun, which is a DP, but not by \textit{one}, which is an NP. The conclusion must be that bare plurals are DPs containing a silent D and an NP.
+
+		\end{enumerate}
+	
+    \item[3.]\textbf{Optionality and adjuncthood}
+    \setcounter{ExNo}{0}
+
+    	\ex.John seems (to me) to be smart
+    	
+    	For now, this question is unsolvable, but the syntactic thinking involved here is important. The biggest indicator that the PP \textit{to me} is an adjunct is the fact that the PP can appear in several different positions:
+
+		\ex.\a.To me, John seems to be smart.
+        	\b.John seems to be smart to me.
+
+        Complements seldom behave this way. At best, most complements can be fronted, e.g. \textit{Apples, I like}, but moving a  complement to the end of a sentence generally results in reduced grammaticality: \textit{??John gave to Mary the book}.
+
+		Second,\textit{to me} is optional. We can delete \textit{to me} and still get a grammatical sentence:
+
+		\ex.John seems to be smart.
+
+		However, there is a complicating factor. You may remember from previous weeks that because a complement is a sister to a head, it must closer to the head than an adjunct, which is a sister to a phrase (XP). For example, in (4), the DP \textit{a tree} is the complement, and it has to be closer to the head \textit{drew} than the adjunct PP \textit{on Sunday}.
+
+		\ex.\a.Homer drew a tree on Sunday.
+        	\b.*Homer drew on Sunday a tree.
+
+		If we argue that\textit{to me} is an adjunct, it shouldn't precede \textit{to be smart}, which is a complement. We'll revisit this issue in Chapter 8. To preview the discussion somewhat, sentences with verbs like \textit{seem} are more complicated (\textit{seem} is known as a raising verb, and the construction here is called raising-to-subject, see p212--215); we'll postpone a more detailed discussion of of the nature of the PP till then.
+
+\newpage
+    \item[4.]\textbf{Obligatoriness and complementhood?}
+    \setcounter{ExNo}{0}
+    	
+        \ex.\a.Bill worded the letter carefully
+        	\b.*Bill worded carefully
+            \b.*Bill worded the letter
+
+        Yes, the conclusion is justified, because if it's an adjunct, it must be optional and (1c) should be grammatical. We should then apply \textit{do so}-substitution to test for the number of VPs:
+
+        \ex.\a.Bill [worded the letter carefully] and Jim [did so], too.
+        	\b.*Bill [worded the letter] carefully but Jim [did so] carelessly.
+
+        Your conclusions will ultimately hinge on your judgement for (2b). Assuming that (2b) is ungrammatical for you, then you basically have a ditransitive-type structure,  which also explains the distribution in (1). The \textit{do so} test shows that [worded the letter carefully] is a VP, but it does not show that [worded the letter] is a VP too, which we would expect if \textit{carefully} is an adjunct. Now let's have a look at coordination.
+
+        \ex.*Bill [worded the letter] and [posted it] carefully.
+
+        This coordination test fails, which suggests that [worded the letter] is not a constituent, or it is not the same kind as [posted it], namely, a VP. Now we try coordination something else:
+
+        \ex.Bill worded [the letter carefully] but [the memo carelessly].
+
+        This shows [the letter carefully] is a constituent. This behavior is just like other ditransitive verbs such as \textit{give}:
+
+        \ex.Bill gave [the letter to John] and [the memo to Mark].
+
+        We already knew that in the \textit{give} case, both \textit{the letter} and \textit{to John} are complements of the verb. Then similarly, we can conclude that in the case of the verb \textit{word}, both \textit{the letter} and \textit{carefully} are complements. In other words, the verb \textit{word} takes a DP complement and an AdvP complement (which is quite rare):
+
+        \begin{forest} baseline
+          [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+          [DP[Bill]] [T$'$ [T[\textsc{past}]]
+          [VP [V [worded]] [DP [D[the]] [NP[letter]]] [AdvP[carefully]]]]]
+        \end{forest}
+
+
+\end{enumerate}
+
+\end{document} 

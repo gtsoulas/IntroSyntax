@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{amsmath}
+\usepackage{tipa}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 6, part 2}\par
+
+\vspace{1em}
+\begin{enumerate}
+	\item[2.]\textbf{Samoan determiners}
+
+    	\ex.\ag.{\textglotstop}aumai  se maile\\
+			get \textsc{se} dog \\
+            \trans{`Get (me) a/some dog.'}
+            \bg.{\textglotstop}aumai  ni maile\\
+			get \textsc{ni} dog \\
+            \trans{`Get (me) (some) dogs.'}
+            \bg.{\textglotstop}aumai  le maile\\
+			get \textsc{le} dog \\
+            \trans{`Get (me) the dog.'}
+            \bg.{\textglotstop}aumai maile\\
+			get dog \\
+            \trans{`Get (me) the dogs.'}
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item No, there is no plural marking on the noun with both singular and plural determiners.
+
+         \item Singular and plural are indicated by the determiners before the noun. Specifically, \textit{se} and \textit{le} indicate that the noun after them is singular, whereas \textit{ni} or no determiner suggest the noun in question is plural.
+
+         \item We should label these elements as D.
+
+         \item \begin{tabular}[t]{l|l|l|l|l}
+                  \textit{se} & free & D & [$-$def,sg] & c-selects NP \\
+                  \textit{ni} & free & D & [$-$def,pl] & c-selects NP \\
+                  \textit{le} & free & D & [$+$def,sg] & c-selects NP
+               \end{tabular}
+
+
+         \item Yes, since when the NP is bare, it has a definite and plural meaning, which is a distinct meaning from that of the other determiners. Since having no visible determiner results in a specific type of meaning (definite plural), it follows that (1d) has a silent D with the following lexical entry:
+
+             \begin{tabular}{l|l|l|l|l}
+               $\emptyset$ & free & D & [$+$def,pl] & c-selects NP
+             \end{tabular}
+
+         \item This question is fairly advanced and exploratory; it wants you think about how diverse languages can be. If we try to put English determiners in a table (we'll return to this in Chapter 8), we get the following:
+
+             \begin{tabular}{l|l|l|l|l}
+               \textit{a} & free & D & [$-$def,sg] & c-selects NP$_{sg}$ \\
+               $\emptyset$/\textit{some} & free & D & [$-$def] & c-selects NP$_{pl}$ or NP$_{sg}$, e.g. I bought $\emptyset$/some chairs$_{pl}$/gin$_{sg}$ \\
+               \textit{the} & free & D & [$+$def] & c-selects NP$_{pl}$ or NP$_{sg}$
+             \end{tabular}
+
+            What we can see here is that English determiners are, in a sense, less informative than Samoan ones. Because there is no singular or plural distinction in Samoan nouns, the burden falls on the determiner. Whereas in English, nouns can be overtly singular or plural, so the determiners themselves only need to encode for definiteness.
+
+            In particular, the silent D behaves differently in English than in Samoan. In English, the silent D has an indefinite (or generic) meaning, and combines with either a plural NP (bare plural) or a singular NP (if it's a mass noun). In Samoan, however, the silent D has a definite and plural meaning, the English equivalent of \textit{the} in \textit{the dogs}.
+
+            So, it appears that crosslinguistically, the distribution of silent heads is arbitrary (silent Ds are indefinite in English and definite in Samoan). That is, the specific nature of the silent D varies from language to language.
+
+            If we assume that determiners can be $\pm$definite and singular/plural, then we have four possible determiners: indefinite singular, indefinite plural, definite singular and definite plural. If strictly only one particular determiner can be silent, then we predict four different audible determiner systems, each with a different silent D.
+
+            \textbf{note:} Having said this, if we look more broadly at the crosslinguistic distribution, there are more than four systems---we find languages where more than one D is silent, or languages where nothing can be silent. If you're interested in this, you can explore the World Atlas of Language Structures (http://wals.info): click `Features' $>$ search for `definite', `indefinite', or `plural' to get a sense of the diversity out there. You can then appreciate why it is interesting, and somtimes very difficult, to come up with a unified theory of syntax that accounts for all the variation we see across the world's languages.
+		\end{enumerate}
+	
+    \item[5.]\textbf{Theta roles}\\
+    The answers are presented here first as a lexical entry for the relevant predicate (with the subject underlined), followed by the corresponding c-selected constituents underneath.
+
+    	\begin{enumerate}[label=(\roman*)]
+        \item \textbf{The short circuit caused the fire.}\\
+            \begin{tabular}{llll}
+               cause & V  & \textul{DP}$_{cause}$ & DP$_{theme}$ \\
+               & & the short circuit & the fire
+            \end{tabular}
+
+
+        \item\textbf{Mary is looking for Mr. Right.}\\
+            \begin{tabular}{llll}
+               look & V & \textul{DP}$_{agent}$ & PP$_{theme}$ \\
+               & & Mary & for Mr. Right \\
+            \end{tabular}
+
+        \item \textbf{Moritz is accustomed to finding strange people hiding in his closets.}\\
+            \begin{tabular}{lllll}
+               finding & V (gerund) & \textul{DP}$_{agent}$ & VP$_{theme}$ \\
+               & & Moritz & strange people hiding in his closets \\
+            \end{tabular}
+
+            This was a tricky one because there are two gerunds involved here, \textit{finding} and \textit{hiding}, which are verbs in the \textit{-ing} form that behave like nouns. It's under debate whether gerunds are Ns or Vs; this book assumes they are Vs (see p242). If so, then \textit{strange people hiding in his closets} is a VP with \textit{strange people} as its subject, not unlike a small clause. The entire gerund VP then functions as a theme of \textit{finding}.
+
+            The main verb \textit{accustom} takes a \textit{to}-PP complement, which contains the gerund VP \textit{finding strange people\dots}. In other words, \textit{to} is not an infinitival marker here. You can see why the nature of gerunds are debated---they look like verbs, but can, like a noun, be part of the complement of a preposition.
+
+            In this sentence, Moritz is clearly the one doing the finding, and so he's listed as the agent DP below the lexical entry above. However, there's no visible subject immediately on the left of \textit{finding}, but we can also say: `Moritz is accustomed to Bill finding strange people hiding in his closets'. So it's plausible that we have some type of silent DP subject here that corresponds to Moritz. We'll need more syntactic technology for a full analysis of this, which will only happen in Chapter 9.
+
+            \item \textbf{Denis prefers for the understudy to bring him his socks.}\\
+            \begin{tabular}{llll}
+               prefer & V & \textul{DP}$_{exp}$ & CP[for]$_{theme}$ \\
+               & & Denis & for the understudy to bring him his socks \\
+            \end{tabular}
+
+            \item \textbf{The landlord took the candy from the baby.}\\
+            \begin{tabular}{lllll}
+               take & V & \textul{DP}$_{agent}$ & DP$_{theme}$ & PP$_{possessor/location}$ \\
+               & & the landlord & the candy & from the baby \\
+            \end{tabular}
+
+            Here it's plausible to accept either location or possessor for the PP.
+
+            \item \textbf {The office informed Mary that her visa had expired.}\\
+            \begin{tabular}{lllll}
+               inform & V & \textul{DP}$_{agent}$ & DP$_{goal}$ & CP[that]$_{theme}$ \\
+               & & the office & Mary & that her visa had expired \\
+            \end{tabular}
+
+\newpage
+            \item \textbf{Doris was pleased with the result of her sinister plan.}\\
+            \begin{tabular}{llll}
+               pleased & A & \textul{DP}$_{exp}$ & PP$_{cause}$ \\
+               & & Doris & with the result of her sinister plan \\
+            \end{tabular}
+
+            Note that \textit{pleased} is an adjective not a verb here. It would, however, be a verb in the sentence `The result of her sinister plan pleased Doris', although the theta roles would remain the same.
+
+            \item \textbf{Max returned every bicycle to its rightful owner.}\\
+            \begin{tabular}{lllll}
+               return & V & \textul{DP}$_{agent}$ & DP$_{theme}$ & PP$_{goal}$ \\
+               & & Max & every bicycle & to its rightful owner \\
+            \end{tabular}
+
+            \item \textbf{It turns out that Regis preferred the Merlot.}\\
+            \begin{tabular}{llll}
+               prefer & V & \textul{DP}$_{exp}$ & DP$_{theme}$ \\
+               & & Regis & the Merlot \\
+            \end{tabular}
+
+            \item \textbf{The officer gave Mary directions to the opera.}\\
+            \begin{tabular}{lllll}
+               give & V & \textul{DP}$_{agent}$ & DP$_{goal}$ & DP$_{theme}$ \\
+               & & the officer & Mary & directions to the opera \\
+            \end{tabular}
+
+            In English, \textit{give}, as a ditransitive verb, allows alternation in the order of its arguments. The one above is known as a \textbf{double object construction}, where both complements are DPs and occur in the order [V DP$_{goal}$ DP$_{theme}$]. The other order, e.g. \textit{gave a book to Mary} is known as the \textbf{prepositional dative construction}, which has the order [V DP$_{theme}$ PP$_{goal}$]. Note how the theme and goal switch positions from one construction to the next.
+
+        \end{enumerate}
+\end{enumerate}
+
+
+
+\end{document} 

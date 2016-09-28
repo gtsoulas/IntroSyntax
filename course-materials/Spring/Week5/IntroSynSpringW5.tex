@@ -1,0 +1,382 @@
+\input{../../slides-preamble.tex}
+
+
+\title{Selection, Locality, Movement}
+\date{Spring 2017}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../../../../graphics/logo}}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+  \frametitle{Locality and Selection}
+We have argued that locality of selection is a crucial aspect of accounting for sentence structure in general.  The reason is the following:
+
+
+\begin{itemize}
+\item Selection is local (i.e. a head can only select its sister).
+\item $\theta$-assignment is local. (i.e. a head can assign a $\theta$-role to something that it has selected.
+\item Heads merge first with their complements and then with their subjects.
+\item It follows that constituents will be contiguous.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  {A problem}
+This, however leads us to a paradox:
+
+\begin{itemize}
+\item One of the major tests for constituency was being able to move the substring that was being tested (call it X) around.
+\item If X is a part of a larger constituent Y, then moving X around breaks the required contiguity of Y.
+\item Not only that but also there is no way to make sure that X has a $\theta$-role.
+\item If that is true then the sentence will violate the $\theta$-criterion and will be ungrammatical. \pause
+\item  And yet, none of this is actually true.  So something else must be going on. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Some Examples}
+
+\ex.
+\a.
+\framebox{The picture of Bill}, she \framebox{put} on your desk
+\b.
+Mary \framebox{studie}-s \framebox{Swahili}
+\c.
+\framebox{Mary} studi \framebox{[$_T$ -ed]} Swahili
+\d.
+\framebox{Will} Mary \framebox{study Swahili}
+\e.
+\framebox{Which pictures of Bill} did she \framebox{put} on you desk?
+\f.
+\framebox{Time} seems to \framebox{elapse} slowly in the tropics
+\b.
+\framebox{Susan} wanted to \framebox{sleep}
+
+\end{frame}
+
+
+
+\begin{frame}
+{Topicalisation}
+
+An example of Topicalisation is the following:
+
+  \framebox{The picture of Bill}, she \framebox{put} on your desk
+
+
+
+The problem with this sentence is quite obvious, \textit{The picture of Bill} is really the direct object of \textit{put}. But it appears nowhere near \textit{put}, so how is it thematically related to \textit{put}?
+
+\end{frame}
+
+
+\begin{frame}
+To find a satisfactory solution to this problem, we need to consider the following:
+
+  \begin{block}
+
+For most cases, a sentence where the locality of selection is violated is possible if and only if there is another sentence with the same lexical items where the locality of selection is \textbf{not} violated. 
+    
+  \end{block}
+Note that to go from \textit{most cases} to \textit{all cases} requires a theoretical step that we cannot yet take.
+
+\end{frame}
+
+
+\begin{frame}
+The idea is that the Topicalised sentence is possible because we can have:
+
+\ex.
+She will put the picture of Bill on your desk
+
+
+in this case locality of selection is not violated.
+  
+\end{frame}
+
+\begin{frame}
+  The Topicalised sentence then is a \textit{transformation} of the non-topicalised one.  This means that a sentence where LoS is violated is \textit{derived} from the other.  This also means that for each sentence where LoS is violated there will be more than one structure, and therefore more than one Tree.
+ 
+\end{frame}
+
+
+
+
+\begin{frame}
+  \begin{itemize}
+  \item[S1:] She put [the picture of Bill] on your desk
+  \item[] \hspace*{1in} $\downarrow$
+  \item[S2:]  [The picture of Bill], she put \str{[the picture of Bill]} on your desk
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Move}
+
+What relates to the two sentences is a rule of displacement that we will call \textit{Move}. \textit{Move} maps S1 to S2.
+ 
+
+\end{frame}
+
+
+\begin{frame}
+  {Questions}
+Many questions arise from accepting the possibility of Movement:
+\begin{itemize}
+\item Where do moved items land?
+\item Can everything move?
+\item Can things that move end up pretty much anywhere?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  These questions are extremely complex and intensively debated in the literature.  What we will say represents one possible implementation of the idea of movement.  The question of where moved things land is very important.  We will not address this question much in what concerns topicalisation and some similar constructions.  For others we will. 
+
+For cases like topicalisation we will assume that the moved element is adjoined to TP or CP.
+
+\end{frame}
+
+
+\begin{frame}
+  {What can move?}
+
+
+In Xbar theory we distinguish three levels of projection:
+
+\begin{itemize}
+\item The minimal:  Head.
+\item Intermediate:  The bar level.
+\item Maximal:  The phrase level.
+\end{itemize}
+
+In principle, elements belonging to any of the three projection levels could move.  We have seen (very briefly) in the case of topicalisation that phrases can move. So we can have movement of maximal projections.  How about the others?  Let us look at Head first. 
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+  {Head Movement}
+Consider the distribution of tensed verbs in English:
+
+\ex.
+John eatS kale
+
+\ex.
+John studiED kale farming
+
+\ex.
+John WILL win the ``kale farmer of the year'' 2016 prize.
+
+
+\end{frame}
+
+
+\begin{frame}
+  Assuming now that all these sentences have, in the relevant respect the same structure, i.e.:
+
+
+  \begin{center}
+    \begin{forest}
+      [TP [T] [VP [V] [XP]]]
+    \end{forest}
+  \end{center}
+
+We can also safely assume that present tense S and past Tense ED are located initially in T.  So what is going on? We have two options:
+
+
+\begin{itemize}
+\item V raises to T
+\item T lowers to V
+\end{itemize}
+
+Can we choose?
+
+\end{frame}
+
+\begin{frame}
+
+
+  One way to check is if we insert some element between T and V (we need something that we know only goes there)   If the verb preceded the inserted element then that means the verb has moved to T, if the verb follows the inserted element then T has lowered to V.
+
+Fortunately, elements like these actually exist:  \textit{Manner Adverbs}
+
+
+\end{frame}
+
+
+\begin{frame}
+
+\ex.
+John carefully studied Kale farming
+
+\ex.
+* John studied carefully Kale farming
+
+
+this sort of example shows us that it is T that lowers onto V.  This sort of movement is called \textit{affix hopping}.
+
+Now, you may be asking:  fine, but if this happens all the time then it is hard to believe that this is not a genuine violation of LoS and we actually have movement.
+
+\end{frame}
+
+
+
+\begin{frame}
+  The answer to this question comes from tense markers like \textit{WILL}.  Consider:
+
+\ex.
+\a. * John carefully will study Kale farming.
+\b. * John carefully studywill Kale Farming.
+\c. John will carefully study Kale farming.
+
+\end{frame}
+
+
+\begin{frame}
+  However, affix hopping does not happen with all verbs.  It happens with main verbs (like study, eat, write, punch etc...) but it does not happen with auxiliary verbs like \textit{have}:
+
+\ex.  John has studied Kale farming
+
+
+In this case the auxiliary verb \textit{have} selects for a participle.   \textit{Have} then raises to T.  Now how can we be sure that this is what is going on? 
+
+
+\end{frame}
+
+
+
+
+\begin{frame}
+  {Negation}
+Negation does a funny thing:  When the negative element NOT is present in the structure the Tense is somehow prevented from \textit{hopping} on to the verb:
+
+\ex. * john not studied kale farming
+
+
+Instead, the dummy verb \textit{Do} is inserted in T to \textit{support the tense features} and we have:
+
+\ex.
+John DOES/DID  not study kale farming.
+
+
+This operation is called \textit{Do-support}.  We can use it to make the difference between main verbs and auxiliaries. 
+
+
+\end{frame}
+
+
+
+
+\begin{frame}
+  Consider:
+
+\ex.
+John does not have children  (Main verb HAVE = possess)
+
+\ex.
+John has not studied kale farming (Auxiliary have = Tense)
+
+\ex.
+* John does not have study kale farming (complete crap)
+
+
+
+\end{frame}
+
+\begin{frame}
+  So we can conclude that negation stops T from lowering to V but does not stop auxiliary Verbs from raising to T.
+\end{frame}
+
+\begin{frame}
+  {Another case of Head Movement: T to C}
+
+Yes/No questions involve also some sort of head movement.  In fact, in these questions T must move higher to C:
+
+\ex.
+Will you hold my hand?
+
+but if this right then T is prevented from lowering onto the verb.  If it is true then that all Yes/No questions involve movement of T to C, then we are led to the conclusion that with main verbs we will always have Do-support, since the features of Tense need to be supported and they cannot lower onto the verb.  This is exactly what we find:
+
+\ex.
+Did you study kale farming?
+
+\ex.
+* Studied you kale farming?
+
+
+\end{frame}
+
+\begin{frame}
+  {Head movement in DPs}
+
+Can the same sort of movement take place in other domains (i.e. not concerning the Verb, T and C?)
+
+In DPs  we have postulated a category NUMBER (Num), which hosts the number inflection (i.e. the plural s).  We also know that some determiners are sensitive to number, i.e. they select for singulars or plural nouns:
+
+\ex.
+Each book
+
+\ex.
+* Each Books
+
+\ex.
+Many Books
+
+\ex.
+* Many book
+
+It makes sense then to assume that the structure of DP is as follows.
+
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [DP [D[Many]] [NumP [Num [s]] [NP[book]]]] 
+    \end{forest}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  Again here we can ask the same question as about Tense and V.  Does book raise to Num or Num lower to N?  we can follow the same reasoning, if we insert something between Num and N where does N+Num appear:
+
+\ex.
+Many Interesting books
+
+\ex. 
+* Many books interesting
+
+\end{frame}
+
+
+\begin{frame}
+  Assuming that the adjective is an adjunct to NP then we must conclude that Num behaves like T does with main verbs, i.e. it lowers (hops) onto the noun below.  
+
+Unlike the case of T, however, there is no NUM support in English.
+\end{frame}
+
+
+\begin{frame}
+  {Conclusion}
+\begin{itemize}
+\item LoS violations are to be understood as the result of movement.
+\item Movement maps one structure to another by displacing one element to another position in the structure.
+\item Phrases and Heads can move
+\item We have not considered explicitly bar level categories but the general idea is that they do not move for various reasons, e.g. they are never selected.
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+\end{document}

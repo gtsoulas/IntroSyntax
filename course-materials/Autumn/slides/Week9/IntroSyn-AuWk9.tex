@@ -1,0 +1,401 @@
+\input{../../../../preambles/slides-preamble.tex}
+
+\title{The Model of Syntax  }
+\date{Autumn 2016}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../../../../graphics/logo}}
+
+\begin{document}
+
+\maketitle
+\begin{frame}
+  {The idea so far}
+
+We discussed Xbar theory and Merge as the main tools for building and representing structure.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Merge and Xbar}
+
+  \begin{itemize}
+\item    \texttt{Merge}:  is a procedural operation that tells us how to build the structure step by step.
+  \item \texttt{X-bar} is a representational constraint that tells us essentially whether the output of merge is correct.
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+
+  We also saw that there was evidence for:
+
+  \begin{itemize}
+  \item Silent heads which would explain that even in the absence of an overt head the Xbar format is maintained.
+  \end{itemize}
+
+But we identified a problem:  Subjects
+
+\end{frame}
+
+
+
+
+\begin{frame}
+  {Problem:  subjects}
+
+Ok, so there are heads everywhere, but what about the other predictions of the theory, namely that every projection will have a specifier/subject?  
+
+The following table shows that there appear to be serious differences between constituents in this respect.
+\end{frame}
+
+\begin{frame}
+
+\begin{tabular}{l|lllllll}\hline
+& C & T & D & P & A & V & N \\ \hline
+Subjects & ? & DP & DP & ?&?&?&? \\ \hline
+&&CP &&&&& \\ \hline
+ & TP&VP&NP&DP&PP&DP&PP\\  
+ &&&&PP&CP&PP&CP\\
+Complements & &&&CP&&CP& \\
+&&&&&&AP&\\
+&&&&&&mult&\\\hline
+&?&AdvP?&&AdvP&DegP&PP&PP\\
+adjuncts &&&&&&AdvP&AP\\
+&&&CP&&&&CP \\\hline
+\end{tabular}
+
+
+\end{frame}
+
+\begin{frame}
+  {And Yet....all is not lost}
+
+Consider the following sentences:
+
+\ex.
+\a. Mary prefers \underline{her ice-cream in a cone}
+\b. She considers \underline{John proud of his work}
+\c. Henry found \underline{Bill sad}
+\d.  They saw \underline{Bill leave}
+
+The question here is what is the category of the underlined string?
+
+Constituency tests show clearly that these are constituents.  So we can try some structures
+
+\end{frame}
+
+
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [VP [V [prefer]] [PP [DP [her ice cream, triangle]] [P' [in] [DP [a cone, triangle]]]]] 
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [VP [V [consider]] [AP [DP [John, triangle]] [A' [proud] [PP [of his work, triangle]]]]] 
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [VP [V [found]] [AP [DP [Bill, triangle]] [A' [sad]]]] 
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
+  \begin{center}
+    \begin{forest}
+      [VP [V [saw]] [VP [DP [Bill, triangle]] [V [leave,]]]] 
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+
+So we should revise the top row of our table as follows:
+\begin{center}
+  \begin{tabular}{l|lllllll}\hline
+         & C & T & D & P & A & V & N \\ \hline
+Subjects & ? & DP & DP & \textcolor{red}{DP} & \textcolor{red}{DP}& \textcolor{red}{DP}&? \\ \hline
+&&CP &&&&& \\ \hline
+\end{tabular}
+\end{center}
+Which looks a lot better.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Conclusions}
+So we can conclude that, while a small amount of discrepancy between categories remains the overwhelming weight of evidence favours the approach that we have been developing so far. 
+
+\end{frame}
+
+\begin{frame}
+  
+\end{frame}
+
+
+\begin{frame}
+  {Thinking about Merge}
+
+Merge does not build structure randomly.  In a way, it puts together only things that \textit{can} and \textit{should} be put together.  \pause
+
+But \textit{how does Merge know what can and should be put together?} \pause
+
+To answer this question we need to look into the information that is available to Merge, namely \textit{\textsl{\textbf{the lexical entry}}}.
+
+\end{frame}
+
+\begin{frame}
+  {Lexical Entries}
+We have already talked about lexical entries.    Let's complete the picture:
+\begin{itemize}
+\item Contents of a lexical entry, for an element LI (\textbf{L}exical \textbf{I}tem)
+  \begin{itemize}
+  \item The form of LI (is it pronounced, if yes how) pause
+  \item The number of arguments it takes (from 0 to about 4) \pause
+  \item The semantic relationship between the LI and its arguments. (More on this in a minute)
+  \item The phrasal category that realises these arguments
+  \item The syntactic configuration in which these arguments are realised (subject or complement)
+  \item Other morpho-phonological properties
+  \item Additional semantic information
+  \end{itemize}
+\end{itemize} 
+\end{frame}
+
+\begin{frame}
+  {Semantic Relations} 
+
+What we are concerned with here is the semantic relationships holding between a selecting head and its arguments.  These relations describe the status of the argument (or the individual denoted by the arguments) with respect to the action/event/state denoted by the verb.
+
+\ex.
+John ate an apple
+
+
+\begin{itemize}
+\item John is doing something $\rightarrow$ John is the \textsc{agent} of EAT.
+\item The apple is affected by the action $\rightarrow$ the apple is the \textsc{theme}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\ex.
+John loves Mary
+
+Here John is not \textit{doing} anything, rather he experiences the relevant feeling. $\rightarrow$ John is the \textsc{experiencer}.  
+
+\ex.
+Bill baked cookies for Sue
+
+Sue is the \textsc{beneficiary}.
+
+and so on...
+
+\end{frame}
+
+\begin{frame}
+  These relations are called \textit{Thematic} relations. (also $\theta$-relations).  In each such relations we have a thematic ($\theta$) assigner, which assigns a thematic ($\theta$) role to an argument.
+
+The verb EAT assigns the $\theta$-role \textsc{theme} to its object and the $\theta$-role \textsc{agent} to its subject.
+\end{frame}
+
+\begin{frame}
+  {$\theta$ Roles:  A list}
+
+  \begin{itemize}
+  \item Cause
+  \item Agent
+  \item Experiencer
+  \item Location
+  \item Goal
+  \item Beneficiary
+  \item Possessor
+  \item Possessee
+  \item Theme
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  {The $\theta$-criterion}
+
+\ex.
+The $\theta$-Criterion\\
+Every argument bears one and only one $\theta$-role
+
+\end{frame}
+
+
+\begin{frame}
+  {Back to Lexical Entries}
+
+With this in mind we can now give some examples of lexical entries:
+
+\ex.
+\textit{prefer} V  \underline{DP$_{exp}$} PP$_{theme}$
+
+\ex.
+\textit{Run} V  \underline{DP$_{agent}$}
+
+\ex.
+\textit{Eat} V  \underline{DP$_{exp}$} DP$_{theme}$
+
+
+\end{frame}
+
+
+
+\begin{frame}
+  {C-selection and S-selection}
+
+\begin{itemize}
+\item We have already encountered the notion of \underline{C-selection}.  This corresponds to the specification in the lexical entry that tells us what sort of phrase a head selects.  \pause
+\item But we just saw that we can look at selection in terms \textit{the role} that is being \textit{selected} (i.e. the verb EAT selects an agent and a theme).  This type of selection is called S(emantic)-selection. \pause
+\item S-selection and C-selection are not completely independent from each other.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {More Lexical Entries}
+  \begin{itemize}
+  \item SEND:  V \underline{DP$_{agent}$} DP$_{theme}$ (P (to) DP)$_{Goal}$
+  \item ELAPSE: V \underline{DP$_{theme}$}
+  \item EXAMINE: V \underline{DP$_{agent}$} DP$_{theme}$
+  \item THINK: V \underline{DP$_{agent}$} CP[that]$_{theme}$
+  \item WONDER: V \underline{DP$_{agent}$} CP[+q]$_{theme}$
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+  {Adjectives}
+
+  \begin{itemize}
+  \item PROUD: A (\underline{DP$_{exp}$}) (PP$_{of}$)
+  \item SAD: A  (\underline{DP$_{exp}$}) (PP$_{about}$)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Complementizers}
+  \begin{itemize}
+  \item THAT: C +tense TP[+tense]
+  \item IF: C +tense, +q TP[+tense]
+  \item FOR: C -tense TP[-tense]
+  \item WHETHER C +q TP
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  {Complementizers}
+Simplifying:
+  \begin{itemize}
+  \item THAT: C +tense 
+  \item IF: C +tense, +q
+  \item FOR: C -tense
+  \item WHETHER C +q
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Tense etc}
+  \begin{itemize}
+  \item WILL: T[+tense]  DP$_{nom}$/CP VP, meaning: Future
+  \item e: : T[+tense], bound, $\emptyset$, V,  DP$_{nom}$/CP VP, meaning: Present
+\item ed: : T[+tense], bound, V,  DP$_{nom}$/CP VP, meaning: Past  
+\item e: : T[-tense] VP, meaning: futurate
+\end{itemize}
+
+
+\end{frame}
+\begin{frame}
+  {Tense etc}
+  \begin{itemize}
+  \item WILL: T[+tense]  DP$_{nom}$/CP, meaning: Future
+  \item e: : T[+tense], bound, $\emptyset$, V,  DP$_{nom}$/CP, meaning: Present
+\item ed: : T[+tense], bound, V,  DP$_{nom}$/CP, meaning: Past  
+\item e: : T[-tense], meaning: futurate
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {The Projection Principle}
+
+\begin{block}
+{Definition}
+Properties of Lexical Items must be satisfied.  Or:  Syntactic structure is projected from the Lexicon.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+  {Satisfying lexical properties}
+Just like in morphology, lexical properties must be satisfied \textbf{Locally}.  Each head's requirements must be satisfied within its maximal projection. 
+\end{frame}
+\begin{frame}
+  \begin{block}
+    {Locality of Selection for Syntax}
+    \begin{itemize}
+    \item If $\alpha$ selects $\beta$ as complement, $\beta$ is a complement of $\alpha$.
+    \item If $\alpha$ selects $\beta$ as subject, $\beta$ is the subject of $\alpha$. Or the subject of the \textit{clause containing $\alpha$.}
+    \item If $\alpha$ selects $\beta$ as an adjunct, $\beta$ is an adjunct to $\alpha$.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  {To Conclude:  The Model of Syntax}
+  \begin{itemize}
+  \item The atoms of Syntax are the outputs of the morphological component
+  \item These Atoms can be represented into syntactic complexes that can be represented in syntactic labeled trees
+  \item The operation that combines these elements is called Merge, mapping a set of trees onto a new tree
+  \item Merge is a recursive operation
+  \item Well formed trees arise as a result of the following:
+    \begin{itemize}
+    \item Lexical properties of individual items determine the environments where they can occur
+    \item The \textbf{Projection Principle} which states that properties of lexical items must be satisfied
+    \item Locality of Selection:  Selecting elements are heads
+    \item n-ary branching:  Syntactic trees may have multiple branches.  In practice though, no more than 3 branches are found.
+    \item Xbar theory which constraints the shape of syntactic objects. 
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    E\textsc{nd} O\textsc{f} P\textsc{art} I
+  \end{center}
+\end{frame}
+
+
+
+Seminar Exercises:  Please prepare Exercises 2, and 5. 
+
+
+\end{document}
+

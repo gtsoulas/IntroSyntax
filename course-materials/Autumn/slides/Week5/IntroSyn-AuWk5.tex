@@ -1,0 +1,611 @@
+\input{../../../../slides-preamble.tex}
+
+\title{More on Constituency}
+\date{Autumn 2016}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../../../../graphics/logo}}
+
+\begin{document}
+
+\maketitle
+
+\section{More Constituency Tests}
+\begin{frame}
+{The Basic Concept again}
+
+In searching to determine the constituents of a sentence the basic idea is that we should find strings that can be manipulated as a single chunk.  If they are, they are a constituent.  
+
+\end{frame}
+
+\begin{frame}
+  {Many tests are better than one}
+
+Clearly, if we develop more than one test to check for constituency we are likely to get more reliable results.  The reason for this is that there may be extraneous factors that cloud the results of each test taken separately. E.g.  substitution might turn out not to be general and because of the kind of constituent that we have there is no other element that would work.  Gaps like this \textit{do exist} in languages.
+
+
+\end{frame}
+
+
+\begin{frame}
+  {BUT\ldots}
+At the same time, tests are just that \textit{Tests}.  So we need to be careful in the way we apply them. \pause
+
+In principle and \textit{a priori} we have no guarantee that every substring that behaves like a constituent for test $\alpha$ will also behave like a constituent for tests $\beta, \gamma, \delta$. 
+
+
+\end{frame}
+
+\begin{frame}
+{Understanding better the limitations of the tests}
+
+In practice, most tests designate the same units as constituents.  The point here is that if one or more of the tests fail to designate a particular substring as a constituent, this does not in itself mean that you do not have a constituent.  You should then check to see if there is a different reason why the test did not yield positive results.
+\end{frame}
+
+
+\begin{frame}
+  {Test 1: Substitution}
+
+
+  \begin{block}
+    {\terminology{Substitution}}
+  If we can replace a string of words by a single element that has no further internal structure (preferably but not necessarily a single mono-morphemic word) which fulfils the same function in the sentence and without significantly changing the meaning of the sentence then we can conclude that the original string is a \terminology{constituent}.
+  \end{block}
+
+We talked about this test last week.
+
+\end{frame}
+
+\begin{frame}
+  {Test 2: Ellipsis}
+
+We can think of ellipsis as a special case of substitution, namely a substitution where the element that we use is the null morpheme $\emptyset$.
+
+\pause
+
+Given that our substitutions need to preserve meaning, ellipsis is something that we can do under special conditions.
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Examples}
+
+\ex. 
+John didn't buy any books
+
+\ex.  But Susan did $\emptyset$
+
+\ex.
+Susan will not buy any books
+
+\ex.  But John will $\emptyset$
+
+\end{frame}
+
+
+\begin{frame}
+  {Examples cont'd}
+\ex.
+The engineer will have lunch with his colleagues in the canteen and the professor will[$\emptyset$] too
+
+\ex. 
+The prime minister should not meet bankers but the chancellor should [$\emptyset$]
+
+\ex. 
+The prime minister should meet bankers but the chancellor should not [$\emptyset$]
+
+and so on....
+
+\end{frame}
+
+
+\begin{frame}
+  {Test results....}
+
+The ellipsis test so far has picked up the following strings of words that could be replaced by  \emp:
+
+
+\begin{enumerate}
+\item  buy any books
+\item  have lunch with his colleagues in the canteen
+\item  meet bankers
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+  {The constituent identified by ellipsis}
+We can say that the relevant constituent has the following characteristics:
+\begin{enumerate}
+\item Includes the verb, its object and any other prepositional phrase like ``in the canteen''
+\item Excludes The subject
+\item Excludes negation
+\item Excludes auxiliaries like \textit{will, have, should}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  {Conclusion I}
+The conclusion here then is that there must be a constituent with those characteristics.  We will call this constituent the \terminology{Verb Phrase (VP)}
+\begin{center}
+\begin{forest}
+  [S[DP][VP [V] [OBJ] [PP]]]
+\end{forest}
+\end{center}
+But this cannot be quite correct.  Why?
+\end{frame}
+
+\begin{frame}
+  {T'}
+The previous structure cannot be correct because it leaves no space anywhere for the auxiliary verbs like \textit{will} and \textit{have}.  To accommodate these elements we will add another category which we will call T (for Tense).  And we will now revise our structure for the whole sentence in the following way:
+\begin{center}
+  \begin{forest}
+      [S[DP][T'[T] [VP [V] [OBJ] [PP]]]]
+  \end{forest}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  {How general is the ellipsis test?}
+
+\ex.
+*John will drink beer and Peter will drink \emp
+
+\ex.
+*George will talk to the syntax students and Brian will talk \emp
+
+\ex.
+Frank will drink two ice-cold beers and Martin will drink four \emp
+
+\end{frame}
+
+\begin{frame}
+  {Generality cont'd}
+It seems then that ellipsis picks up VPs and NPs as constituents but not PPs or DPs
+
+We therefore have a partial constituency test in the sense that it will only identify certain types of constituents.  
+
+\pause
+
+\textbf{Great stuff!!!}
+
+\end{frame}
+
+\begin{frame}
+    {Test 3: Coordination}
+When we \textit{coordinate} two elements A and B we join them with one of the \terminology{coordinating conjunctions}: \textit{and, but, or, nor, for, yet, so} 
+
+The main constraint on coordination is that the two coordinated elements must be of the same kind, so:
+
+\ex.
+\a. John and Mary 
+\b. Mary and her boyfriend
+\c. Her boyfriend or two sailors
+\d. Two sailors or the first husband of the late wife of the fifth president of Burundi.
+\e. etc...
+
+
+\end{frame}
+\begin{frame}
+  {But Not....}
+
+\ex.
+\a. * Mary and to the movies
+\b. * To the movies or should cook meat to 60 degrees
+\c. * In the garden and should cook meat to 60 degrees
+\d. etc..
+
+
+A useful thing that we can conclude here is that if we know independently (say from substitution and ellipsis) that one of the two coordinated elements is a constituent then we can conclude two things:
+\begin{itemize}
+\item That the other one could be a constituent on its own
+\item That the two coordinated elements can function as a single constituent
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+{Demonstration}
+
+Take the following example:
+
+\ex.
+ ``\textcolor{green}{The tall exquisitely dressed and extraordinarily bulky relative of mine who keeps turning up uninvited} \underline{and} \textcolor{red}{Bill}'' 
+
+We know that Bill is a constituent:
+
+\ex.
+Bill bought a cage for his cockroaches
+
+Substitute \textit{He} for \textit{Bill}
+
+\ex.
+He bought a cage for his cockroaches
+
+
+Therefore \textit{Bill} is a constituent.  We then predict that \textit{The tall exquisitely dressed and extraordinarily bulky relative of mine who keeps turning up uninvited} will also be able to function as a constituent.
+
+\end{frame}
+
+\begin{frame}
+  {Demonstration Cont'd}
+Which turns out to be true as:
+
+\ex.
+The tall exquisitely dressed and extraordinarily bulky relative of mine who keeps turning up uninvited \textcolor{red}{bought a cage for his cockroaches}
+
+And it can be replaced by \textit{He} or \textit{She}.  Therefore it is a constituent.  
+
+Let's now test for the second prediction.
+
+\end{frame}
+
+\begin{frame}
+  {Demonstration Cont'd}
+Given that we now know and have independent confirmation for the fact that \textit{Bill} and \textit{The tall exquisitely dressed and extraordinarily bulky relative of mine who keeps turning up uninvited} are constituents  what about the coordination of the two? It turns out that it works to:
+
+\ex.
+\textit{Bill} and \textit{The tall exquisitely dressed and extraordinarily bulky relative of mine who keeps turning up uninvited} bought a cage for their cockroaches.
+
+
+And the whole constituent can be replaced by \textit{They}
+
+\ex.
+They bought a cage for their cockroaches
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Definition of the Coordination Test}
+
+  \begin{block}
+   {Coordination: Definition (ISAT p. 62)}
+If we have two acceptable sentences of the form \textit{A B D} and \textit{A C D} - where A, B, C, and D represent (possibl[y] null) substrings - and the string A B \textit{and} C D is acceptable  with the same meaning as \textit{A B D} and \textit{A C D}, this is evidence that B and C are both constituents and constituents of the same kind. 
+  \end{block}
+
+
+\end{frame}
+
+\begin{frame}
+  {The power of the coordination test}
+As far as we know the coordination test is the most powerful test for constituency and we can safely assume that if the coordination test fails then either:
+
+\ex.
+\a. The two coordinated elements are not of the same kind
+\b.  One of the two (or both) are not constituents 
+
+
+\end{frame}
+
+\begin{frame}
+  {The Structure of Coordination}
+
+Given that coordination applies to elements of the same type and ``of the same level'' the tree structure that we will propose for coordination is one that involves three branches:
+
+\begin{center}
+\begin{forest}
+  [DP [DP [Bill]] [Conj [and]] [DP [Emma]]]
+\end{forest}
+\end{center}
+
+and so on for any other coordinated pair.
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Test 4:  Movement}
+
+
+What better way can we find in order to prove that a substring X behaves like a single chunk than being able to move it around ....the sentence?
+
+\pause
+Fortunately there are several grammatical processes which involve precisely that, i.e. moving a chunk around.
+\end{frame}
+
+
+\begin{frame}
+  {Topicalisation}
+
+
+Topicalisation is a syntactic process that takes a substring from the middle of the sentence and places at the front.  Topicalisation has two other characteristics.
+
+\begin{itemize}
+\item The fronted element is interpreted as the \textit{topic} of the sentence.  In other words, what the sentence is about.
+\item The fronted element displays a degree of prosodic independence from the rest of the sentence.  This means that most of the time there is a short pause after the fronted element.  Orthographically this is marked by a comma after that element.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Topicalisation Cont'd}
+
+The idea here is that Topicalisation is a test for constituency because it can only target \pause you guessed it \pause \textit{constituents}.
+\end{frame}
+
+\begin{frame}
+  {Examples}
+Let's take the following sentence:
+
+\ex.
+The lecturer with the eyepatch will deliver three lectures on eye-wear during the spring term.
+
+Now, as usual, we need to remember that Topicalisation will be a test for some but probably not all constituents, mostly for independent reasons. 
+\end{frame}
+
+
+
+\begin{frame}
+  {Examples cont'd}
+
+The following are OK:
+
+\ex.
+Three lectures on eyewear, the lecturer with the eyepatch will deliver during the spring term
+
+\pause
+
+\ex.
+During the spring term, the lecturer with the eyepatch will deliver three lectures on eyewear.
+
+\end{frame}
+
+\begin{frame}
+{Examples cont'd}
+
+
+\ex.
+Deliver three lectures on eyewear, the lecturer with the eyepatch will during the spring term
+
+\pause
+
+\ex.
+Deliver three lectures on eyewear during the spring term, the lecturer with the eyepatch will 
+
+
+\pause
+
+In these cases the constituent that has been moved is the VP, and thus sometimes it is referred to as \terminology{VP-preposing}.  Another (and more famous) example of VP-preposing is :
+
+\ex. 
+John wanted to pass the exam and pass the exam he did.
+
+\end{frame}
+\begin{frame}
+{Examples cont'd}
+
+These are also fine:
+
+\pause
+
+\ex.
+On eyewear, the lecturer with the eyepatch will deliver three lectures during the spring term.
+
+
+\pause
+
+\ex.
+Three lectures, the lecturer with the eyepatch will deliver on eyewear during the spring term.
+
+
+\end{frame}
+
+\begin{frame}
+  {Examples cont'd}
+The following are \textbf{\textit{not}} OK
+
+\pause
+
+\ex. 
+* Lecturer, the with the eyepatch will deliver on eyewear during the spring term
+
+
+\pause
+
+\ex.
+* Spring, the lecturer with the eyepatch will deliver three lectures on eyewear during the term.
+
+
+\pause
+
+\ex.
+* Spring term, the lecturer with the eyepatch will deliver three lectures on eyewear during the.
+
+\pause
+
+\ex.
+* Eyepatch will, the lecturer with deliver three lectures on eyewear during the spring term
+
+
+\pause
+
+\ex.
+* Three lectures on, The lecturer with the eyepatch will deliver eyewear during the spring term  
+
+
+\end{frame}
+
+
+\begin{frame}
+{Examples Cont'd}
+
+  You get the point....
+\end{frame}
+
+\begin{frame}
+{Topicalising clauses}
+
+You can also topicalise whole clauses:
+
+\ex.
+Jim told me that the lecturer with the eyepatch and the wooden leg will lecture on piracy.
+
+\ex.
+That the lecturer with the eyepatch and the wooden leg will lecture on piracy, Jim told me.
+
+So a whole clause is a constituent.  This should not come as a surprise but it is nice to see it in the wild.  
+
+\begin{block}
+  {Terminological note}
+The constituent that includes the whole clause will be called CP for reasons that we will see later.
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+{Conclusion on Topicalisation}
+  In English, unlike some other languages, topicalisation is a useful test only for the following types of constituents:
+
+  \begin{itemize}
+  \item VP
+  \item DP
+  \item PP
+  \item CP
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Cleft Constructions}
+Cleft constructions are used to emphasise or focus a particular constituent.  The general form of a cleft construction is the following:
+
+\ex.
+\textit{It is} \textcolor{red}{[CONSTITUENT]} \textit{that} [\textcolor{yellow}{SENTENCE where \textcolor{red}{CONSTITUENT} was moved from}]
+
+\end{frame}
+
+\begin{frame}
+  {Examples}
+
+\ex.
+It is \underline{John} that Mary met \str{John} yesterday
+
+\ex.
+It was \underline{an eyepatch} that the lecturer with the wooden leg bought \str{an eyepatch} from the store
+
+\ex.
+It was \underline{next to Frank} that the treasure was hidden \newline\str{next to Frank} 
+
+
+
+\end{frame}
+
+\begin{frame}
+  {Examples cont'd}
+Clefting works for DPs and PPs and also CPs:
+
+\ex.
+It was \underline{that you asked me to marry you} that\newline \str{that you asked me to marry you} bothered me
+
+
+\end{frame}
+
+\begin{frame}
+   {Examples cont'd}
+But with VPs it is not so reliable:
+
+\ex.
+* It is drink four glasses of rum that John will 
+
+You can maybe find cases where it is better, like when you switch will to did:
+
+\ex.
+ It was drink four glasses of rum that John did
+
+which for some speakers is much better. 
+\pause
+
+The moral is that we should be very careful with using clefts as a test for VP constituency.
+
+
+
+\end{frame}
+
+\begin{frame}
+  {Pseudoclefts}
+Pseudoclefts are also means to emphasise or focus some element of the sentence.  The general form of the pseudocleft construction looks like this:
+
+\ex.
+   WH-word [\textcolor{yellow}{SENTENCE with missing} \textcolor{red}{CONSTITUENT}] BE \textcolor{red}{CONSTITUENT}
+
+The \textcolor{red}{CONSTITUENT} is also called \textit{the focus} of the pseudocleft
+
+   \begin{block}
+     {WH-word}
+The interrogative words like \textit{who, where, what, when, which x, why, how} etc...
+   \end{block}
+\end{frame}
+
+
+\begin{frame}
+  {Examples}
+
+\ex.
+What the pirate wanted was \underline{to talk about eyepatches}
+
+\ex.
+What the lecturer had was \underline{a wooden leg}
+
+\ex.
+What the pirate became was \underline{afraid of sea monsters}
+
+
+
+Given the nature of the construction, there is again some variation on how good the results are with other wh-words apart from \textit{what}
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Some conclusions}
+
+  \begin{itemize}
+  \item Sentences of natural languages are structured hierarchically.
+  \item The elements that make up sentences are their constituents.
+  \item There is a variety of tests that we can use to determine whether any given substring of a sentence is a constituent.
+  \item Not all tests can identify every constituent type.
+  \item In fact, discovering which test is relevant for which constituent type is a major discovery.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Some Conclusions Cont'd}
+
+  \begin{itemize}
+  \item The basic tests are:
+    \begin{itemize}
+    \item Substitution
+    \item Ellipsis
+    \item Movement, including:
+      \begin{itemize}
+      \item Topicalisation
+      \item Wh Movement
+      \item Right node raising
+      \item Heavy constituent shift
+     \item Clefting
+      \item Pseudoclefting
+      \end{itemize}
+    \end{itemize}
+\item It is best to try and back up our decisions by more than one test.  But it is also important to point out when a particular type of constituent can be identified by only one test.
+  \end{itemize}
+
+
+
+\end{frame}
+\section{Seminar Exercises (Formative)}
+
+This chapter is one of the most important ones in the whole book so it is necessary to make sure that we understand it completely.  For this reason it is also important that you look at \textbf{all} the exercises.  We may take more than one seminar session with exercises from this chapter.  For this week, do the following exercises:
+
+\begin{itemize}
+\item Practice exercise on page 76.
+\item Exercises 1 and 2 from section 3.1.1.4 (Further Exercises, pages 80, 81)
+\end{itemize}
+
+
+\end{document}

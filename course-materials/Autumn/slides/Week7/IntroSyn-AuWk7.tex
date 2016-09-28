@@ -1,0 +1,515 @@
+\input{../../../../preambles/slides-preamble.tex}
+
+
+\title{Clauses etc...}
+\date{Autumn 2016}
+\author{George Tsoulas}
+\institute{Department of Language and Linguistic Science}
+ \titlegraphic{\hfill\includegraphics[height=1cm]{../stacckedinput{../../../../graphics/logo}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  {The story so far}
+
+  \begin{itemize}
+  \item Words and Sentences have hierarchical structure.
+  \item They are split into constituents.
+  \item We have tests to determine what is constituent and what not. 
+  \item We represent the structure of sentences in terms of tree structures   
+        (Directed Acyclic Graphs)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Some important notions}
+\begin{block}
+{\terminology{Selection}}
+One element can \terminology{select} a property of its sister and therefore determine what elements it can combine with.
+ 
+      \begin{center}
+        \begin{forest}
+          [A [\underline{B}, name=nodeb] [\underline{C}, name=nodea]]
+{\draw[->,dotted] (nodea) to[out=south,in=south] (nodeb);
+\draw[->,red] (nodeb) to[out=north,in=north]  (nodea);}
+        \end{forest}
+      \end{center}
+
+In principle, B can select C or C can select B.
+\end{block}
+
+\end{frame}
+\begin{frame}
+    {Some important notions}
+\begin{block}
+ {\terminology{Sister}} 
+A configurational notion defined on a tree structure:
+  
+      \begin{center}
+        \begin{forest}
+          [A [\underline{B}] [\underline{C}]]
+        \end{forest}
+      \end{center}
+\underline{B} and \underline{C} are \terminology{Sisters} 
+
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+      {Some important notions}
+
+\begin{block}
+{\terminology{Head}}  
+That element of a structure which determines the nature and category of the whole construction:
+
+\begin{center}
+    \begin{forest}
+      [\textbf{\textcolor{yellow}{N}}\textcolor{white}{P} [XXX] [\textbf{\textcolor{yellow}{N'}} [\textbf{\textcolor{yellow}{N}}] [XXX]]]
+    \end{forest}
+\end{center}
+\end{block}
+
+\begin{itemize}
+\item[] [XXX]=irrelevant for now.
+%\item Note here that words and phrases are \textit{different} in that %in phrases the RHHR \textbf{\textit{does not apply}}.
+
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  {More on Heads}
+
+The head (of a word or a phrase) determines category and distribution of that element.  In other words, in the case of phrases, whatever you decided to fill the XXX part with in the tree, it will not change the nature of the phrase:
+
+\begin{center}
+    \begin{forest}
+      [\textbf{\textcolor{yellow}{N}}\textcolor{white}{P} [XXX] [\textbf{\textcolor{yellow}{N'}} [\textbf{\textcolor{yellow}{N}}] [XXX]]]
+    \end{forest}
+\end{center}
+
+
+
+Let's check whether this works.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Heads}
+
+We have said in the past that a fairly good criterion for a noun is that it can be preceded by the Determiner \textit{The}.  If what we just said is true, then we should be able to have something like this:
+
+
+\begin{center}
+    \begin{forest}
+     [?P[D [The]] [\textbf{\textcolor{yellow}{N}}\textcolor{white}{P} [XXX] [\textbf{\textcolor{yellow}{N'}} [\textbf{\textcolor{yellow}{N}}] [XXX]]]]
+    \end{forest}
+\end{center}
+\pause
+And nothing would change whatever the XXX part is.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Heads}
+  \begin{itemize}
+  \item The green ball
+  \item The almost green ball
+  \item The almost entirely green ball in the garden
+  \item The almost entirely forest green ball in the garden  behind the shed
+  \item etc...
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Heads}
+However complex or long the parts surrounding the head of a phrase may be, this does not affect the phrase's identity or distribution which is always and solely determined by the head.
+
+\end{frame}
+
+\begin{frame}
+  {Heads and Selection}
+
+
+Given that we defined selection as something that happens between sisters a question arises in these configurations:
+
+\begin{center}
+  \begin{forest}
+    [XP [X] [YP [XXX] [Y' [Y] [XXX]]]]] 
+  \end{forest}
+\end{center}
+The question is whether X selects YP (including the XXX parts) or not.
+
+\end{frame}
+\begin{frame}
+  The answer to this question is that X will select one thing that has two properties:
+  \begin{itemize}
+  \item It is a phrase
+  \item It has as its head the category Y
+  \end{itemize}
+
+This means that in any case the XXX parts will not matter (again).  You can verify this easily by looking at the selectional requirements of the determiner \textit{The}.  It needs a phrase and that phrase must have N as its head.
+
+\end{frame}
+
+
+
+\begin{frame}
+  {Full Clauses are CPs}
+Here's some examples of full sentences:
+
+\ex.
+\a. Jack is bored
+\b. Frances will eat the cookies
+\c. Rowan will give a book to the library
+\d. The boy in the green shirt watched his favourite team lose the game.
+
+\end{frame}
+
+
+\begin{frame}
+  The structure of this sentences is some variation of this:
+
+  \begin{center}
+    \begin{forest}
+      [TP [Frances][T'[will][VP[V[eat]][DP[the] [NP [cookies]]]]]]
+    \end{forest}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  These sentences can be found as subordinate clauses too:
+
+\ex.
+\a. Sue said \textcolor{yellow}{[\textcolor{red}{\textbf{that}} Jack is bored]}
+\b. Bill wondered \textcolor{yellow}{[\textcolor{red}{\textbf{whether}} Frances will eat the cookies]}
+\c. Jim doesn't know \textcolor{yellow}{[\textcolor{red}{\textbf{if}} Rowan will give a book to the library]}
+\d. The president regrets \textcolor{yellow}{[\textcolor{red}{\textbf{that}} the boy in the green shirt watched his favourite team lose the game]}.
+
+
+Are the bracketed elements constituents?
+
+\end{frame}
+
+\begin{frame}
+
+\ex.
+\a. Sue said \textcolor{yellow}{that}
+\b. \textcolor{yellow}{[\textcolor{red}{\textbf{whether}} Frances will eat the cookies]} is an issue for Bill
+\c. Jim doesn't know \textcolor{yellow}{it}
+\d. What the The president regrets is \textcolor{yellow}{[\textcolor{red}{\textbf{that}} the boy in the green shirt watched his favourite team lose the game]}.
+  
+\pause
+
+It looks like they are. 
+\end{frame}
+
+\begin{frame}
+  {Conclusion}
+There are sentential type of constituents that can appear as sisters to certain verbs.
+The class of these verbs is restricted:
+\begin{itemize}
+\item \terminology{\textit{Say}-type} verbs: verbs that report what someone says.
+\item \terminology{\textit{Attitude verbs}}: believe, doubt, hope, affirm, deny etc... These are verbs that express someone's attitude towards the propositional content represented by the subordinate clause. 
+\end{itemize}
+
+Other verbs fail to combine with these sentential constituents:
+
+\ex.  
+\a. * John boiled that Mary is pregnant
+\b. * Sue decorated that John sings
+\c.  etc.  
+
+
+\end{frame}
+\begin{frame}
+  {Another combinatorial restriction}
+Not all verbs that do combine with sentential constituents can combine with any sentential constituent.  It depends on the word that introduces the subordinate clause:
+
+\ex.
+\a. John thinks that Mary left
+\b. *John thinks if Mary left
+
+\ex.  
+\a. Sue wonders whether Bill left
+\b. * Sue denied whether Bill left 
+
+Others do:
+
+\ex.
+Sue knows whether/that/if Mary left
+
+\end{frame}
+
+\begin{frame}
+  {Conclusion}
+
+So it seems that verbs that take sentential objects  \textit{select} the word that introduces those constituents.  Given what we said before we can conclude that:
+
+\begin{center}
+  \begin{forest}
+    [VP [V,name=nod] [?P [\begin{tabular}{r}that\\if\\whether\end{tabular},name=noda] [Sentence]]]
+{\draw[->,red] (nod) to[out=west,in=west] (noda);}
+  \end{forest}
+\end{center}
+\end{frame}
+\begin{frame}
+  What the \textit{Sentence} actually says does not matter (just like the XXX part earlier).  What matters for the Verb is that the thing it selects is a \textit{phrase} \textbf{and} ha as its head one of the words \textit{that, if, whether}.  We know independently that:
+
+\ex. 
+ \textit{that, if, whether} = \terminology{Complementizers}
+
+It follows that subordinate clauses are of category \textbf{\terminology{CP}}.
+
+
+\pause
+Let us now turn to the part of the clause that we designated as \textit{Sentence} 
+\end{frame}
+
+
+\begin{frame}
+  {Sentences as TPs}
+
+WE have already named sentences as TPs where T stands for \textit{Tense}. We now try to understand better what this means and motivate it appropriately.
+
+
+\end{frame}
+\begin{frame}
+  {Tense}
+
+Intuitively, Tense provides us with information about the time when  the event described by the sentence took place.  Thus the different tenses can be described as tenses of:
+
+\begin{itemize}
+\item The present (simple present, progressive, etc...)
+\item The past (simple past, past perfect,etc...)
+\item The future.
+\end{itemize}
+
+Some tenses are expressed with bound morphology and others with auxiliary verbs.
+
+\end{frame}
+
+\begin{frame}
+  The interesting thing about tenses that are expressed by auxiliaries like:
+
+\ex. John will move the furniture
+
+\ex. John has moved the furniture
+
+\ex. John had moved the furniture
+
+is that we can easily show that the auxiliary verb is not part of the same constituent as the verb and that in the absence of an auxiliary the verb remains in constituency with its object.
+
+
+\end{frame}
+
+\begin{frame}
+  We can of course show this with VP ellipsis:
+
+\ex.
+I will not eat pizza with anchovies but Bill will \newline [\str{eat pizza with anchovies}]
+
+Of course \textit{eat pizza with anchovies = VP}
+
+The same sort of test can be run with the other auxiliaries.
+
+
+\end{frame}
+
+
+\begin{frame}
+  So there is a position outside the VP that hosts the auxiliaries.  Given that auxiliaries carry time-related information (this is not 100\% accurate but will do for now) then it makes sense to suggest that just like nouns are in N and verbs in V that these elements will be in the position that encodes their most prominent feature, namely Tense.  They are therefore heading TP.
+\end{frame}
+
+\begin{frame}
+  For untensed sentences, i.e. infinitives, English has a special marking in Tense, namely: \textit{to} as in:
+
+\ex.
+Joseph want \textbf{to} win
+
+If we do the VP-ellipsis test we see that \textit{to} is above VP in the same position as auxiliaries:
+
+\ex.
+I am always told I have to win but I don't want to [\str{win]}]
+
+
+So we will also assume that infinitival \textit{to} is located under T.
+Sentences with specified Tense are called \terminology{Finite} and those which are not finite are called \terminology{Non-Finite} 
+
+
+
+\end{frame}
+
+
+\begin{frame}
+  {Selecting T}
+
+More evidence for out T and TP positions comes from the fact that different Complementizers (Cs) select different T/TPs, so:
+
+\ex.
+\a. \textit{That} selects finite T
+
+\ex. John knows that Mary is/was/will be pregnant
+
+\ex. * John knows that Mary to be pregnant
+
+
+
+
+\end{frame}
+\begin{frame}
+  {If}
+
+\ex.
+\a. \textit{If} selects finite T
+
+\ex. John knows if Mary is/was/will be pregnant
+
+\ex. * John knows if Mary to be pregnant
+
+\end{frame}
+
+\begin{frame}
+  {Whether}
+\ex.
+\a. \textit{Whether} is compatible with both finite and non-finite T
+
+\ex. John wonders whether Mary is/was/will be pregnant
+
+\ex. John wonders whether to be pregnant during the summer is an issue that preoccupies Mary 
+
+\end{frame}
+
+\begin{frame}
+  {For}
+
+A complementizer that we have not so far encountered is \textit{For}
+
+
+\ex.
+\a. \textit{For} selects non-finite T
+
+\ex. * John prefers for Mary is/was/will be pregnant
+
+\ex.  John prefers for Mary to be pregnant during the winter months
+
+
+\end{frame}
+
+\begin{frame}
+  We thus have important evidence for the category T.  The sister of T is the VP:
+
+  \begin{center}
+    \begin{forest}
+      [T' [T][VP]]
+    \end{forest}
+  \end{center}
+
+The T that dominates the head T and VP is called T' (T bar).
+
+\end{frame}
+
+\begin{frame}
+{The sister of T'}
+
+The sister of this constituent (T') is the subject of the sentence. 
+
+\begin{center}
+  \begin{forest}
+    [TP [DP/CP$_{Subject}$] [T'[T] [VP]]] 
+  \end{forest}
+\end{center}
+
+Note here that by \terminology{Subject} we will understand \textit{the left sister of the T'}.  This is a technical and configurational definition of the notion of subject.
+\end{frame}
+
+
+\begin{frame}
+{Some Conclusions and Generalisations}
+
+We can draw a number of conclusions here and also try to generalise the approach that we have seen to be successful to other cases (this will only be a conjecture for now).  So The conclusions first.
+
+
+
+\end{frame}
+
+\begin{frame}
+  {Conclusions}
+
+  \begin{itemize}
+  \item Clauses are CPs
+  \item CPs are headed by C(complementizers)
+  \item C selects TP
+  \item TP is a constituent headed by T(ense)
+  \item The element that dominates a Head and its sister is referred to as a bar level category.
+  \item The left sister of the bar level category is the \textit{configurational} subject.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Generalising and tidying up}
+  \begin{block}
+  {HEADS}
+    \begin{itemize}
+    \item They are word level categories
+    \item If an element is the head of a string, the maximal string whose distribution is controlled by this element is a constituent (this is the Head plus the XXX bits)
+    \item There is only one head per constituent
+    \item Every constituent has a unique head
+    \item Since Constituents are continuous strings, the maximal string under the distributional control of a head must be a continuous string.
+    \end{itemize}
+
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  {Some terminology}
+
+  \begin{itemize}
+  \item A Head is called a zero-level category
+  \item The maximal string controlled by the head is called a \terminology{maximal} or \terminology{phrasal} \terminology{projection} of the head 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+{Generalising}
+
+The idea here is that this format is valid for \textit{\textbf{ALL}} phrases.  So, every phrase is the projection of a head and has this shape.
+
+  \begin{center}
+    \begin{forest}
+      [XP/X$^{max}$ [YP] [X' [X$^0$] [ZP]]] 
+    \end{forest}
+  \end{center}
+
+YP is also called the \terminology{specifier} or the \terminology{subject} of the Phrase and the ZP the \terminology{complement}.
+\end{frame}
+
+\begin{frame}
+  {In Sum}
+
+  \begin{center}
+\begin{tabular}{lp{1in}l}
+    \begin{forest}
+      [Phrase/{Maximal Projection} [Specifier] [Bar-level [HEAD] [Complement]]] 
+    \end{forest} & \pause &  \begin{forest}
+      [XP/X$^{max}$ [YP] [X' [X$^0$] [ZP]]] 
+    \end{forest}
+\end{tabular}
+  \end{center}
+
+
+
+\end{frame}
+
+
+
+\end{document}

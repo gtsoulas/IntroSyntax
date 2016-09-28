@@ -1,0 +1,208 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 8, part 1}\par
+
+\vspace{1em}
+\begin{enumerate}
+	\item[2.]\textbf{Tree drawing: \textit{if} clauses and \textit{-ing}}\\
+      Here we have a large tree, but what's important to note is that no matter how large the tree is, it follows the same principles. Even if you didn't think of adjoining the \textit{if}-clause to the clause after the comma, you should at least observed that there are two clauses here. Several other points to note:
+      \begin{itemize}
+         \item Note how the leftmost auxiliary is in T, i.e. \textit{have} raises from V to T. Modals, however, start in T.
+         \item It doesn't matter if you put \textsc{past} or \textit{-ed} in T.
+         \item Note how the perfect auxiliary \textit{have} selects for a past participle verb.
+         \item We've assumed that \textit{thought of} is a phrasal verb, but we'd have accepted a tree with \textit{thought} taking a PP-complement, although it's hard to show that the PP \textit{of bringing her the groceries} is a constituent.
+         \item The gerund \textit{bringing} was also tricky. We noted `gerund' down in the tree, but it would have been perfectly ok if you just classed it as a verb.
+      \end{itemize}
+         
+    	\ex.If you had just thought of bringing her the groceries, she would have been delighted.
+
+      \begin{forest} baseline
+         [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+         [CP [C[if]] [TP [DP[you]] [T' [T [V[have]] [T[\textsc{past}/-ed]] ] [VP [V[\textst{have}]] [VP(past part) [AdvP[just]] [VP(past part) [V(past part)[thought-of]] [VP(gerund) [V(gerund)[bringing]] [DP[her]] [DP [D[the]] [NP[groceries]]]]]]]]] ]
+         [TP [DP[she]] [T$'$ [T[would]] [VP [V[have]] [VP(past part) [V(past part)[been]] [AP[delighted]]]]]]]
+         ]
+      \end{forest}
+
+      \begin{enumerate}[label=(\roman*)]
+
+         \item The sentence includes two clauses, so each clause should be a constituent. The clause [she would have been delighted] is a tensed clause, so it must be a TP. The \textit{if} clause consists of a complementiser \textit{if} and a tensed clause, so the \textit{if} clause should be a CP headed by \textit{if}, whose complement is the TP [you had just...groceries].
+
+             You had just thought of bringing her the groceries, and he had \textst{just thought of bringing her the groceries} too. \textbf{\textit{just thought of bringing her the groceries} is a VP}
+
+             For the smaller VPs, pure VP ellipsis test doesn't seem particularly natural here, so the easiest way to show the constituency is to appeal to VP ellipsis in combination to answering a question (p193); you can also do the same with conjunction (p196):
+                         
+             Would she have been delighted? She would \textst{have been delighted}.
+             
+             Would she have been delighted? She would have\textst{been delighted}.
+             
+             Would she have been delighted? She would have been \textst{delighted}.
+             
+             \textit{Delighted} isn't really a VP, but it's the main predicate, so it works with ellipsis too.
+
+         \item Determine what each example shows.
+
+         \ex.My grandmother said that if you had thought of just bringing her the groceries,\ldots
+
+         There is a very important but not very obvious observation to be made here. The original sentence is embedded under a \textit{that} clause because we know that the complementiser \textit{that} selects a TP as its complement. However, we know that \textit{if} heads a CP.
+         
+         The logical leap you need here is as follows: let's call \textit{if you had thought of just bringing her the groceries} constituent A, and \textit{she would have been delighted} constituent B. We know that A is a CP and B a TP. So, if \textit{that} selects a TP, this must mean that the entire sentence A+B is a TP, which means that A must be adjoined to B, projecting a TP.
+
+         \ex.\a.Bringing her the groceries is important \\
+         This sentence suggests that \textit{bringing her the groceries} is a DP. Given what we have learnt, only DP and CP can be in the specifier of TP, but \textit{bringing her the groceries} cannot be a CP, so it should be a DP. (note that we called it a VP above; see below)
+         \b.Quickly bringing her the groceries is important\\
+         \textit{quickly} is an AdvP which must be an adjunct to VP. From this perspective, it seems \textit{bringing her the groceries} is a VP.
+         \b.To bring her the groceries is important\\
+        This sentence shows that a infinitival TP can be in the specifier of TP as well. \textit{to} is an infinitive T which selects a VP as its complement.  This sentence suggests that \textit{bring her the groceries} is a VP.
+         \b.That you bring her the groceries is important\\
+         \textit{That} is a complementiser which selects a TP. \textit{you} is the subject of this TP, and there is a null T between \textit{you} and \textit{bring}. T selects a VP, so \textit{bring her the groceries} is a VP.
+         \b.*The bringing her the groceries is important
+         \b.*The quick bringing her the groceries is important\\
+         The stared sentences show that \textit{bringing her the groceries} cannot be an NP because they are bad after the determiner \textit{the} which is supposed to select an NP. Similarly, the AP \textit{quick} should be an adjunct to an NP, but even if we remove the determiner \textit{the} in (f), the sentence is still bad, which shows that \textit{bringing her the groceries} is not an NP.
+
+         To sum up, from the evidence given in this exercise, we see more eveidence showing that the gerund phrase is a VP. So we will treat it as a special VP, noted as VP[gerund], selected by the phrasal verb \textit{thought of}.
+
+         \item List two adjuncts, complements and heads.
+
+The adjuncts are the CP [if\ldots groceries] and the AdvP [just].
+
+Heads are: C \textit{if}, V \textit{have}, T \textit{ed}, Adv \textit{just}, V[past part] \textit{thought of}, V[gerund] \textit{bringing}, T \textit{would}, V \textit{have}, V[past part] \textit{been}, A \textit{delighted}
+
+Complements are the sisters of the heads, for example [\lbl{DP} her] [\lbl{DP} the groceries] are the complements of \textit{bringing}; [\lbl{VP[gerund]} bringing her the groceries] is the complement of \textit{thought of};[\lbl{VP} have been delighted] is the complement of \textit{would}, etc.
+      \end{enumerate}
+
+   \item[5.]\textbf{French and English}\\
+    \noindent\textbf{Note:} \textsc{inf} = infinitive; \textsc{part} = participle
+    \setcounter{ExNo}{0}
+
+    	\ex.\ag.Il devient parfois grognon\\
+              he becomes sometimes cranky\\
+              \trans{`He sometimes gets cranky.'}
+          \bg.Il peut parfois devenir grognon\\
+              he can sometimes become.\textsc{inf} cranky\\
+              \trans{`He can sometimes get cranky.'}
+          \bg.Il est parfois devenu grognon\\
+              he is sometimes become.\textsc{part} cranky\\
+              \trans{`He sometimes got cranky.'}
+          \bg.Il a parfois pu devenir grognon\\
+              he has sometimes can.\textsc{part} become.\textsc{inf} cranky\\
+              \trans{`He could sometimes get cranky.'}
+          \bg.Il n'est pas souvent devenu grognon\\
+              he \textsc{neg}'is \textit{pas} often become.\textsc{part} cranky\\
+              \trans{`He did not often get cranky.'}
+          \bg.Il ne devient pas souvent grognon\\
+              he \textsc{neg} becomes \textit{pas} often cranky\\
+              \trans{`He doesn't often get cranky.'}
+          \bg.de ne pas souvent devenir grognon est important\\
+              to \textsc{neg} \textit{pas} often become.\textsc{inf} cranky is important\\
+              \trans{`It is important to not get cranky often.'}
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item Give trees for (1a), (1b), (1c) and (1f); show how to get to French from the trees. You weren't asked to provide the French trees, but we did so anyway, so you can see that while affixes lower to the main verb from T to V in English, main verbs raise from V to T in French.    
+      
+      (1a)\begin{forest} baseline
+               [TP (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[he]] [T$'$ [T[\textst{-s}]] [VP [AdvP[sometimes]] [VP [V[V[get]] [T[-s]]] [AP[cranky]]]]]]
+            \end{forest}
+     \begin{forest} baseline
+               [TP (French), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[il]] [T$'$ [T[V[devenir]] [T[-t]]] [VP [AdvP[parfois]] [VP [V[\textst{devenir}]][AP[grognon]]]]]]             ]
+           \end{forest}
+    
+    In French, the main verb \textit{devient} preceeds the adverb, suggesting that    \textit{devinir} moves from V and adjoins to T.
+    
+    (1b)\begin{forest} baseline
+               [TP (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[he]] [T$'$ [T[can]] [VP [AdvP[sometimes]] [VP [V[become]] [AP[cranky]]]]]]
+            \end{forest}
+         \begin{forest} baseline
+               [TP (French), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[il]] [T$'$ [T[peut]] [VP [AdvP[parfois]] [VP [V[devenir]] [AP[grognon]]]]]]
+            \end{forest}
+
+      The surface word order of French is the same as that of English.
+
+    (1c)\begin{forest} baseline
+               [TP (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[he]] [T$'$ [T[\textst{-ed}]] [VP [AdvP[sometimes]] [VP [T[V[get]] [T[-ed]]] [AP[cranky]]]]]]
+            \end{forest}             
+         \begin{forest} baseline
+               [TP (French), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[il]] [T$'$ [T[V[\^etre] ][T [-t]]] [VP [AdvP[parfois]] [VP [V [\textst{etre}]] [VP (past part) [V (past part) [devenu]]  [AP[grognon]]]]]]]
+           \end{forest}
+
+The auxiliary verb \textit{\^etre} moves to T, which allows \textit{est} [\^etre-t] to preceed \textit{parfois}.\
+
+         (1f)\begin{forest} baseline
+               [TP (English), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[he]] [T$'$ [T [V [do]] [T[\textst{-s}]] ] [VP [Neg [not]] [VP [AdvP[often]] [VP [V[get]]  [AP[cranky]]]]]]]]
+            \end{forest}
+        \begin{forest} baseline
+               [TP (French), for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [DP[il]] [T' [T [V[devinir]] [T[-s]]] [VP[Neg[pas]] [VP [AdvP [souvent]] [VP [V [\textst{devinir}]] [AP [grognon]]] ]]]]
+               ]
+            \end{forest}
+
+         Note first the insertion of \textit{do} into T (do-support). Ignoring the particle \textit{ne}, in French, the main verb \textit{devient} precedes both negation \textit{pas} and the adverb \textit{souvent}. By contrast, English require the main verb to follow negation and adverb. Therefore, we can conclude that in French, main verbs are outside the VP, whereas in English main verbs are inside the VP.
+
+         \item In French, main verbs raise to T, whereas in English the tense affix lowers from T to V.
+             
+         \item There are other differences between French and English that we don't discuss here. First, the two part negation \textit{ne\ldots pas} in French. Generally, it is common to assume that \textit{pas} is the equivalent of English \textit{not}. As part of ongoing historical change, \textit{ne} is losing (has lost?) it's negatory force is mostly optional in colloquial speech.
+             
+             Second, modal verbs in French, e.g. \textit{pouvoir} `can', are not comparable to modal auxiliaries in English: they allow can appear in the infinitive, and conjugate like normal verbs, which suggests that they are main verbs that undergo V-to-T raising like all other French main verbs. By contrast, English modal auxiliaries are merged directly in T.
+      \end{enumerate}
+ 
+\newpage
+    \item[6.]\textbf{Benglish problem: phrase structure and head movement}\\
+    Even though the question didn't ask for it, we've provided the trees here for maximum clarity.
+    \setcounter{ExNo}{0}
+
+      \ex.John often reads new books.
+
+      \item Krenglish has V-to-T and N-to-Num movement. Translate (1) into Krenglish.
+
+      \begin{forest} baseline
+         [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+         [DP[John]] [T$'$ [T[V[read]][T[-s]]] [VP[AdvP[often]] [VP[V[\textst{read}]] [DP[D[$e$]] [NumP [Num [N[book]][Num[-s]]] [NP[AP[new]] [NP[N[\textst{book}]]]]]]]]]]
+      \end{forest}
+
+  In Krenglish, a main verb needs to move to T, so the verb \textit{read} moves to T, preceding the adverb \textit{often}. Ns have to move to Num, so the N \textit{book} moves to Num, preceding the AP \textit{new}. This results in \textit{John reads often books new}.
+
+\newpage
+      \item Xenglish has a T that doesn't select a subject. Transate (1) into Xenglish.
+
+      \begin{forest} baseline
+         [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+         [T[\textst{-s}]] [VP[AdvP[often]] [VP[DP[John]] [V$'$[T[V[read]][T[-s]]] [DP [D[$e$]] [NumP [Num[\textst{-s}]] [NP[AP[new]] [NP[Num[N[book]][Num[-s]]] ]]]]]]]]
+      \end{forest}
+
+    Depending on where you're at in the chapter, you may have a different answer to the question. In Xenglish, T never selects a subject, but everything else applies, i.e. affix hopping and Num-to-N lowering. If you read up to 8.5.3, then you'd have read about the VP-internal subject hypothesis, and so the subject is in the specifier position of VP. If not, then you should have noticed that there's a problem with situating the subject. The final, correct answer here is \textit{Often John reads new books}.
+
+\newpage
+      \item Menglish specifiers follow X$'$. Translate (1) into Menglish.
+
+      \begin{forest} baseline
+         [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+         [T$'$ [T[\textst{-s}]] [VP[AdvP[often]] [VP [T[V[read]][T[-s]]] [DP [D[$e$]] [NumP [Num[\textst{-s}]] [NP[AP[new]] [NP[Num[N[book]][Num[-s]]] ]]]]]]][DP[John]] ]
+      \end{forest}
+
+In Menglish, specifiers follow X$'$, so the subject appears in a sentence final position to get \textit{Often reads new books John}.
+
+\end{enumerate}
+
+\end{document} 

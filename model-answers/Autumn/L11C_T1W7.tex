@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 4}\par
+
+\vspace{1em}
+\begin{enumerate}
+   \item No student should forget that some phrases will be complicated.
+
+      \begin{enumerate}[label=(\roman*)]
+         \item \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+            [DP [D [no]] [NP [student]]] [T' [T [should]] [VP [V [forget]] [CP [C [that]] [TP [DP [D [some]][NP [phrases]]] [T' [T [will]] [VP [V [be]] [AP [complicated]]]]]]]]]
+         \end{forest}
+
+         \item Coordinating T\\
+            \textbf{should}\\
+            No student [should and would] forget that some phrases will be complicated. \\
+            \textbf{will}\\
+            No student should forget that some phrases [will and can] be complicated.
+
+         \item Coordinating VP\\
+         	\textbf{forget that some phrases will be complicated}\\
+            No student should [forget that some phrases will be complicated] and [say that syntax is easy].\\
+         	\textbf{be complicated}\\
+            No student should forget that some phrases will [be complicated] and [look difficult].
+
+         \item Eliding VP\\
+            \textbf{forget that some phrases will be complicated}\\
+            No student should [forget that some phrases will be complicated], but most of them will \textst{forget that some phrases will be complicated}. \\
+            \textbf{be complicated}\\
+            No student should forget that some phrases will [be complicated] but most of them won't \textst{be complicated}.
+
+         \item Constituency of CP
+            \begin{enumerate}[label=(\alph*)]
+               \item topicalisation\\
+               {}[That some phrases will be complicated], no student should forget.
+
+               \item clefting (some of you may not like this)\\
+               ?It is [that some phrases will be complicated] that no students should forget.
+
+               \item pseudoclefting\\
+               What no student should forget is [that some phrases will be complicated].
+            \end{enumerate}
+
+         \item We cannot coordinate infinitival \textit{to} with any other T element (i.e. *No student [should and to] forget that some phrases [to and will] be complicated). This shows that infinitival \textit{to} is a different type of T from other T elements such as \textit{should}, \textit{may}, and \textit{will}. See p100.
+
+      \end{enumerate}
+
+   \item For you to succeed will be no surprise.
+
+      \begin{enumerate}[label=(\roman*)]
+         \item \begin{forest} baseline
+            [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+               [CP
+                  [C [for]] [TP
+                  [DP [you]] [T$'$
+                  [T [to]] [VP [succeed]]
+               ]]]
+               [T$'$
+               [T [will]] [VP
+               [V [be]] [DP
+               [D [no]] [NP [surprise]]
+            ]]]]
+         \end{forest}
+
+         \item Coordinating TP\\
+            \textbf{you to succeed}\\
+            For [you to succeed] and [Jane to fail] will be no surprise.\\
+            \textbf{for you to succeed will be no surprise}\\
+            {}[For you to succeed will be no surprise] but [for Jane to pass the exam will be astonishing].
+
+         \item Coordinating T$'$ (typo in the textbook's exercise)\\
+            \textbf{to succeed}\\
+            For you [to succeed] and [to win]  will be no surprise.\\
+            \textbf{will be no surprise}\\
+            For you to succeed [must be expected] and [will be no surprise].
+
+         \item Coordinating VP\\
+            \textbf{succeed}\\
+            For you to [succeed] and [become famous] will be no surprise.\\	
+            \textbf{be no surprise}\\
+            For you to succeed will [be no surprise] and [be a great news to your family].
+
+      \end{enumerate}
+
+   \item Trees. Assuming that the auxiliaries are in complementary distribution with \textit{will} means that they are in T. Some of you may have also thought about multiple auxiliaries; as we progress, we'll see that only one thing can be in T, so only the leftmost auxiliary is in T. I've also included the selection features on C, i.e. [$\pm$tense,$\pm$q], for maximum clarity. It's not essential that you do this.
+
+\newpage
+      \begin{enumerate}[label=(\alph*)]
+         \item I would hate for the movie to be boring.
+
+            \small
+            \begin{forest} baseline
+               [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                  [DP [I]] [T$'$
+                  [T [would]] [VP
+                  [V [hate]] [CP
+                  [C [for \\ {[$-$tense,$-$q]}]] [TP
+                  [DP [D [the]] [NP [movie]]] [T$'$
+                  [T [to]] [VP
+                  [V [be]] [AP [boring]]
+               ]]]]]]]
+            \end{forest}
+            \normalsize
+
+         \item Bill may ask you if you could put this book on the shelf.
+
+            \small
+            \begin{forest} baseline
+               [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                  [DP [Bill]] [T$'$
+                  [T [may]] [VP
+                  [V [ask]] [DP [you]] [CP
+                  [C [if \\ {[$+$tense,$+$q]}]] [TP
+                  [DP [you]] [T$'$
+                  [T [could]] [VP
+                  [V [put]] [DP [D [this]] [NP [book]]] [PP [P [on]] [DP [D [the]] [NP [shelf]]]
+               ]]]]]]]]
+            \end{forest}
+            \normalsize
+
+\newpage
+         \item Anne wondered whether Bill would read the book.\\
+         \textbf{note:} Here, we encounter a tensed verb \textit{wondered} with no obvious element that sits in T. However, since we've established that T is the source of tense information, we can conclude that past tense information is somehow encoded in T, which then surfaces as the \textit{-ed} morpheme. So for now, we'll just put [$+$past] in T to show that the sentence requires past inflection on the verb. We will have a full solution for this only after we have introduced movement, but you can jump ahead to p193 if you want to see what happens---basically, the \textit{-ed} starts in T then moves down to V in a process called \textsc{affix hopping}.
+
+            \hspace{-1em}\begin{forest} baseline
+               [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                  [DP [Anne]] [T$'$
+                  [T [{[$+$past]}]] [VP
+                  [V [wondered]] [CP
+                  [C [whether \\ {[$+$q]}]] [TP
+                  [DP [Bill]] [T$'$
+                  [T [would]] [VP
+                  [V [read]] [DP [D [the]] [NP [book]]]
+               ]]]]]]]
+            \end{forest}
+
+      \end{enumerate}
+\end{enumerate}
+
+\end{document} 

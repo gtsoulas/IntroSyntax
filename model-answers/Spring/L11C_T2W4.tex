@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 7, part 2}\par
+
+\vspace{1em}
+\begin{enumerate}
+	\item[3.]\textbf{Binding}\\
+            In the trees here, I've used $e$'s under T to be consistent with the book and to preview what's going to happen in the next chapter.
+
+    	\ex.John$_k$'s younger brother thinks he$_k$ should leave
+
+        \begin{enumerate}[label=(\roman*)]
+        \item \begin{forest} baseline
+                [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [DP [DP [John$_k$]] [D$'$ [D ['s] ] [NP [AP [younger]] [NP [brother] ] ] ] ]
+                [T$'$ [T [$e$]] [VP [V [thinks]] [CP [C [$e$]] [TP [DP [he$_k$]] [T' [T [should]] [VP [leave]]] ]]]]
+                ]
+              \end{forest}
+
+         \item The sentence is grammatical.
+
+         \item Binding Principles B and C correctly predict the grammaticality. \textit{John} is an R-expression, which cannot be bound according to Principle C. In this tree, there is no c-commanding DP that is coindexed with \textit{John}, so \textit{John} is not bound, hence satisfying Principle C.
+
+            \textit{He} is a pronoun and subject to principle B, meaning that \textit{he} cannot be bound in its domain, which in this case is [\lbl{TP} he should leave]. In this domain, there is no c-commanding DP that is coindexed with \textit{he}, hence satisfying Principle B.
+
+        \end{enumerate}
+
+        \newpage
+        \ex.*Mary$_k$ declared that herself$_k$ would go to the Castle on Sunday
+
+        \begin{enumerate}[label=(\roman*)]
+         \item \begin{forest} baseline
+                [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [DP [Mary$_k$]] [T$'$ [T [$e$]] [VP [V [declared]] [CP [C [that]] [TP [DP [herself$_k$]] [T' [T [would]] [VP [VP [V [go]] [PP [P [to]] [DP [D [the]] [NP [castle]] ] ]] [PP [P [on]] [DP [Sunday]]]]] ]]]]]
+                ]
+              \end{forest}
+         \item Principle A does not explain why this sentence is ungrammatical.
+
+         \item \textit{Mary} is not bound, and is predicted to be grammatical by Principle C. The problem lies with the reflexive \textit{herself} and Principle A. According to Principle A, an anaphor must be bound in its domain, which is the smallest XP that has a subject and that has a DP c-commanding the anaphor. In this case, it is the higher [\lbl{TP} Mary declared that herself would go to the castle on Sunday]. In this domain, \textit{Mary} c-commands \textit{herself} and they share the same index, in other words, \textit{Mary} binds \textit{herself}. Therefore the distribution of \textit{herself} actually satisfies Principle A. This means that the Principle A, as it stands now, cannot correctly predict the ungrammaticality of this example. This problem will be solved only until Chapter 13.3, but it's important that you understand why Principle A makes the wrong predictions here.
+
+        \end{enumerate}
+
+\newpage
+        \ex.*They$_k$ saw Mary look at each other$_k$
+
+        \begin{enumerate}[label=(\roman*)]
+        \item Draw trees.\\
+        \begin{forest} baseline
+                [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [DP [they$_k$]]
+                [T$'$ [T [$e$]] [VP [V [saw]] [VP [DP [Mary]] [V' [V [look]] [PP [P [at]] [DP$_k$ [each other, triangle]]]]]]]
+                ]
+              \end{forest}
+         \item Principles B and C are satisfied, and Principle A correctly predicts the ungrammaticality.
+
+        \item \textit{They} is a pronoun. According to Principle B, \textit{they} cannot be bound in its domain, which in this case is the whole TP. There is no c-commanding antecedent for \textit{they}, hence Principle B is satisfied.
+
+            \textit{Mary} is an R-expression and does not share an index with any other DP, so it is not bound, satisfying Principle C.
+
+            \textit{Each other} is an anaphor. According to Principle A, \textit{each other} must be bound in its domain, which in this case is the VP small cause [\lbl{VP} Mary look at each other]. But in this domain \textit{each other} is not bound by any DP. The only DP in this domain, namely \textit{Mary}, c-commands \textit{each other} but does not have the same index, so Mary does not bind \textit{each other}. The real antecedent of \textit{each other}, namely \textit{they}, does bind \textit{each other}, but it is outside the domain of \textit{each other}. Therefore, Principle A is violated, which results in ungrammaticality.
+
+        \end{enumerate}
+
+\newpage
+        \ex.*He$_k$ does not accept the fact that Susan admires the teacher$_k$
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item Draw trees.\\
+             \begin{forest} baseline
+                [TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+                [DP [he$_k$]]
+                [T$'$ [T [does]] [VP [Neg [not]] [VP [V [accept]] [DP [D [the]] [NP [NP [fact]] [CP [C [that]] [TP [DP [Susan]] [T' [T [$e$]] [VP [V [admires]] [DP$_k$ [D [the]] [NP [teacher]]]]]]]] ]]]]
+                ]
+              \end{forest}
+
+            \item Principle B is satisfied; Principle C is satisfied for Susan, but Principle C is violated for \textit{the teacher}, predicting ungrammaticality.
+
+            \item \textit{He} is a pronoun. According to Principle B, \textit{he} cannot be bound in its domain, which in this case is the higher TP, i.e. [\lbl{TP} he does not...the teacher]. There is no c-commanding antecedent for \textit{he} in this domain, so Principle B is satisfied.
+
+            \textit{The teacher} is an R-expression. According to Principle C, it should not be bound. However, in this tree, we see \textit{he} c-commands \textit{the teacher} and corefers with it, so \textit{he} binds \textit{the teacher}, which violates Principle C. Hence, the sentence is ungrammatical.
+
+		\end{enumerate}
+
+\newpage	
+    \item[7.]\textbf{Binding (Yodish)}
+    \setcounter{ExNo}{0}
+
+    	\ex.[(1) Yodish: ]\a. Talk to each other they should
+        	\b. Talk to each other who should
+
+        \ex.[(2) English: ] Which book about himself should he read?
+    	
+    	\begin{enumerate}[label=(\roman*)]
+        	\item Assuming that the Yodish sentences are grammatical, the problem lies in the fact that the anaphor \textit{each other} is not bound by its antecedent \textit{they} and \textit{who}, because the antecedents do not c-command \textit{each other}. This should predict the examples in (1) to be ungrammatical since Principle A says an anaphor must be bound by its antecedent in its domain. Thus, Principle A does not make the right prediction here.
+
+        Similarly, in (2), the anaphor \textit{himself} is not bound by its antecedent \textit{he}. This should predict (2) to be ungrammatical since Principle A says an anaphor must be bound by its antecedent in its domain. However, (2) is grammatical.
+
+        \item To solve this problem, you must first observe that (1) involves topiclisation (movement to the front of a sentence) of the VP [talk to each other], and (2) involves wh-movement of [which book about himself]. If we then say that just as long Principle A is satisfied before movement, we can predict the grammaticality of (1) and (2). This is an oversimplification, of course, the precise reasons why anaphors are sometimes exempt from Principle A is an active area of research.
+            % Too complicated, they don't know this yet.
+            % If the antecedent of an anaphor is allowed to bind a trace of the anaphor, binding theory can be satisfied. (i.e. A trace of the anaphor, \textit{each other} is bound by its antecedent \textit{they} in its domain. Similarly, a trace of the anaphor, \textit{himself} is bound by its antecedent \textit{he} in its domain. These obey Principle A and predict (1) and (2) to be grammatical. )
+        \end{enumerate}
+
+    \item[8.]\textbf{Benglish problem: binding theory}
+    \setcounter{ExNo}{0}
+    	
+		\textit{Principle A (Senglish version):}\\
+        An anaphor must have \textbf{a c-commanding subject antecedent} within domain D (where domain D is defined as the smallest TP that contains the anaphor and a subject in [Spec,TP]).
+
+      What the Senglish version of Principle A states is that the antecedent of an anaphor must 1) c-command the anaphor; 2) be in a subject (specifier) position; 3) be in the same clause as the anaphor. So, this allows both the subject in TP and the subject in DP to be an antecedent, without having the DP subject block binding. So, unlike English, you get the following coreference possibilities in Senglish: \textit{John$_i$ likes Bill$_j$'s stories about himself$_{i/j}$}.
+		
+        \ex.\a.They write stories about themselves
+        	\b.I told them stories about themselves
+            \b.They told me stories about themselves
+            \b.I listened to their stories about themselves
+            \b.They like my stories about themselves
+            \b.They said that I liked themselves
+            \b.After they left I saw themselves
+
+    	\begin{enumerate}[label=(\roman*)]
+        	\item Discuss the grammaticality of the above sentences in Senglish.
+
+         \begin{enumerate}[label=(\alph*)]
+            \item This sentence is predicted to be grammatical, because the anaphor \textit{themselves} has a c-commanding subject \textit{they}, and this antecedent is within domain D which is the TP.
+
+            \item Unlike English, this sentence is predicted to be ungrammatical in Senglish, because the only c-commanding subject within domain D (TP) is \textit{I}, which does not match in person and number with \textit{themselves} and cannot be coreferential with it. In other words, \textit{I} is the only eligible antecedent, but it cannot be.
+
+            \item This sentence is predicted to be grammatical, because the anaphor \textit{themselves} has a c-commanding subject \textit{they}, and this antecedent is within domain D which is the TP.
+
+            \item This sentence is predicted to be grammatical, because \textit{their} c-commands the anaphor \textit{themselves} and is in the same TP.
+
+            \item Unlike English, this sentence is predicted to be grammatical, because \textit{they} c-commands \textit{themselves} and is in the same TP.
+
+            \item This sentence is predicted to be ungrammatical, because although the anaphor \textit{themselves} has a c-commanding subject \textit{they}, this antecedent is not in the same TP as the reflexive. The reflexive is, therefore, not bound within domain D. Domain D of the anaphor \textit{themselves} should be the embedded, lower TP, whose subject is \textit{I}, which is not an eligible antecedent for \textit{themselves}.
+
+            \item  This sentence is predicted to be ungrammatical, because the anaphor \textit{themselves} does not have a c-commanding subject within domain D that can be an antecedent. \textit{I} c-commands \textit{themselves}, and they are in the same clause, but \textit{I} cannot be an antecedent of \textit{themselves} because of the person and number mismatch
+            . \textit{They} is embedded inside the PP \textit{after they left} and does not c-command \textit{themselves}.
+            \end{enumerate}
+        \end{enumerate}
+\end{enumerate}
+
+\end{document} 

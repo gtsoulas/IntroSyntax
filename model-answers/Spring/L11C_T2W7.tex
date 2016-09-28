@@ -1,0 +1,169 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=20mm]{geometry}
+
+% Fonts
+\usepackage{libertine}
+\usepackage{amsmath}
+
+% Packages
+\usepackage[linguistics]{forest}
+\usepackage{linguex}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\newcommand{\lbl}[1]{\ensuremath{_{\scriptstyle\mathrm{#1}}}}
+\renewcommand{\firstrefdash}{}
+
+\begin{document}
+\noindent\textbf{Introduction to Syntax: Chapter 8, part 2}\par
+
+\vspace{1em}
+\begin{enumerate}
+    \item[8.]
+    	\ex.For the Lakers to win would great please several students.
+
+
+
+
+
+        \ex.The tropical storm covered the mountains with snow on Saturday.
+
+        \ex.When had he heard Bill sing?
+
+        \ex.The governor's report on the situation is truly frightening.
+
+	\begin{enumerate}[label=(\roman*)]
+    	\item Draw trees.\\
+
+
+ {\small\begin{forest} baseline
+            [CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+[C] [TP [CP$_i$ [C[for]] [TP[DP [D[the]] [NumP [Num [t$_l$]] [NP [Num [N [laker]] [Num[-s$_l$]]]]]] [T' [T[to]] [VP [win]]]]]
+[T' [T[would]] [VP [AdvP [greatly]] [VP [CP [t$_i$]] [V'[V [please]]
+[DP [D[e]] [NumP [AdjP [several]] [NumP [Num [t$_j$]] [NP [Num [N [student]] [Num [-s$_j$ ]]]]]]]]]]]]  ] ]
+]
+          \end{forest}}
+
+{\small\begin{forest} baseline
+            [CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+[C] [TP [DP$_i$ [D[the]] [NP [AdjP [tropical]] [NP [storm]]]] [T' [T [t $_j$]] [VP [VP
+[VP [DP [t$_i$]]  [V'  [T [V[cover$_j$]]
+ [T[-ed$_j$ ]]]  [DP [D[the]] [NP [mountain]]] ] ]
+ [PP [P[with]] [DP [D[the]]  [NP [snow]]]] ]
+ [PP [P [on]] [DP [Saturday ]]]]]]] ] ]
+]
+          \end{forest}}
+
+  {\small\begin{forest} baseline
+            [CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+[AdvP[when$_m$]]  [C'[C [had$_J$$_k$ ]] [TP [DP [he$_i$]]
+[T' [T [V [t$_j$]] [T[t$_k$] ]] [VP [VP [V [t$_j$]] [VP [DP [t$_i$]] [V'(past part) [V (past part)[heard]] [VP [DP [Bill]]
+[V' [V [sing]]]]]]]  [AdvP [t$_m$]]]]]]] ]
+]
+             \end{forest}}
+
+\begin{forest} baseline
+            [CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+[C][TP [DP$_i$ [DP [D[the]] [NP[government]]] [D' [D[s']] [NP [NP [report]][PP [P [on]]
+[DP [D [the]] [NP [situation]]]]]] ] [T' [T [V [be$_j$]][T [-s]] ]
+[VP [AdjP [truly]] [VP [V [t$_j$]] [AP [DP[t$_i$]] [A' [A [frighting]]]]]]]] ]
+ ]
+             \end{forest}
+
+
+
+
+
+
+
+
+
+		\item
+          \begin{enumerate}[label=\alph*.]
+              \item Is \textit{with snow} a complement or adjunct?
+
+              \textit{With snow} is an adjunct.
+
+              \item Justify your answer.
+
+              First, it is optional, as we can leave it out and (1b) is still grammatical: \textit{The tropical storm covered the mountains on Saturday}. Second, \textit{with snow} answers the question \textit{with what}. Since a complement answers the question \textit{what} or \textit{who}, \textit{with snow} cannot be a complement, and it must be an adjunct. Third, adjuncts are more mobile than complements, so we can (normally) move adjuncts around, but not complements. Although if we move with snow to the beginning of the sentence, \textit{With snow, the tropical storm covered the mountains on Saturday} sounds a bit odd, moving the complement the mountains will definitely generate a bad sentence *The mountains the tropical storm covered with snow on Saturday. Note that moving anther adjunct on Saturday is natural: \textit{On Saturday, the tropical storm covered the mountains with snow}. Fourth, adjuncts are recursive. In (1b) there are two adjuncts \textit{with snow} and \textit{on Saturday}, but there is only one complement for the mono-transitive verb cover.
+
+              \item Is \textit{on the situation} a complement or adjunct.
+
+              \textit{On the situation} is an adjunct, but different from \textit{with snow} in (1b) which is a sentential adjunct, \textit{on the situation} is an adjunct within the subject.
+
+              \item Justify your answer.
+
+              First, it is optional, as we can leave it out and (1d) is still grammatical: \textit{The governor's report is truly frightening}. Second, on the situation answers the question \textit{on what}. Since a complement answers the question \textit{what} or \textit{who}, \textit{on the situation} cannot be a complement, and it must be an adjunct. Since \textit{on the situation} is not a sentential adjunct, we cannot use the mobility test as in (iib), because on the situation is not at sentence level.
+
+          \end{enumerate}
+	\end{enumerate}
+
+	\item[10.]\setcounter{ExNo}{0}
+    	\ex.The director's sister has decorated the three large tables adjacent to the leftmost door.
+
+        \ex.It did not seem to the soldiers that they had a good strategy.
+
+        \ex.Has Mary indeed shown you the reviews of her movie?
+
+        \ex.John didn't climb these six high mountains yet, did he?
+
+        \ex.*Mary has been reading but Sophie did not.
+
+        \ex.*You did not have eaten the soup.
+
+		\begin{enumerate}[label=(\roman*)]
+        	\item Draw trees\\
+        
+            {\scriptsize\hspace{-7em}\begin{forest}
+				[CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom, l sep=0em, s sep=0em}
+    	        [C] [TP [DP [DP [D [the]] [NumP [Num [\st{e}]] [NP [Num [N [director]] [Num [e]]]]]] [D' [D ['s]] [NumP [Num [\st{e}]] [NP [NumP [N [sister]] [Num [e]]]]]]] [T' [T [V[have]][T [-s]]] [VP [DP [\st{the director's sister},roof]] [V' [V [\st{have}]] [VP(past part) [V(past part) [decorated]] [DP [D [the]] [?? [Numeral [three]] [NumP [Num [\st{-s}]] [NP [AP [large]] [NP [NP [Num [N[table]] [Num [-s]]]] [AP [A [adjacent]] [PP [P [to]] [DP [D [the]] [NumP [Num [\st{e}]] [NP [AP [leftmost]] [NP [Num [N [door]] [Num [e]]]]]]]]]]]]]]]]]]]
+                ]
+            \end{forest}}
+
+           {\small\hspace{-3em}\begin{forest}
+				[CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom, l sep=0em, s sep=0em}
+    	        [C] [TP [DP [it]] [T' [T [V[do]][T[-ed]]] [VP [Neg [not]]  [VP [V [seem]] [PP [P[to]] [DP [D[the]] [NumP [Num[\st{-s}]] [NP [Num [N [soldier]] [Num[-s]]]]]]] [CP [C[that]] [TP [DP[they]] [T' [T[\st{-ed}]] [VP [DP[\st{they}]] [V' [T [V[have]] [T[-ed]]] [DP [D[a]] [NumP [Num[\st{e}]] [NP [AP[good]] [NP [Num [N[strategy]] [Num[e]]]]]]]]]]]]]]]]
+                ]
+            \end{forest}}
+
+
+
+            {\small\hspace{-3em}\begin{forest}
+				[CP$_q$, for tree={parent anchor=south, child anchor=north, align=center, base=bottom, l sep=0em, s sep=0em}
+    	        [C$_q$ [T [V[have]] [T[-s]]] [C$_q$ [e]]]
+                [TP [DP[Mary]] [T' [T [V[\st{have}]] [T[\st{-s}]]] [VP  [V[\st{have}]] [VP(past part) [AdvP [indeed]] [VP(past part) [DP[\st{Mary}]] [V'(past part) [V(past part)[shown]] [DP[you]] [DP [D[the]] [NumP [Num[\st{-s}]] [NP [Num [N[review]] [Num[-s]]] [PP [P[of]]  [DP [DP[her]] [D' [D['s]] [NumP [Num[\st{e}]] [NP [Num [N[movie]] [Num[e]]]]]]]]]]]]]]]]]
+                ]
+            \end{forest} }
+
+
+             \begin{forest}
+				[CP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+    	       [CP [C] [TP [DP[John]] [T' [T [V[do]] [T[-ed]]] [VP [Neg[n't]] [VP [VP [DP[\st{John}]] [V' [V[climb]] [DP [D[these]] [?? [Numeral [six]] [NumP [Num[\st{-s}]] [NP [AP[high]] [NP [Num [N [mountain]] [Num[-s]]]]]]]]]] [AdvP[yet]]]]]]]
+               [CP$_q$ [C$_q$ [T [V[do]] [T[-ed]]] [C$_q$ [e]]] [TP [DP[he]] [T' [T [V[\st{do}]] [T[\st{-ed}]]] [VP [e,roof]]]]] ]
+            \end{forest}
+
+
+
+            \item Explain by (5) and (6) are bad.
+
+          \begin{forest}
+				[TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+    	        [DP[Mary]][T'[T[V[have]][T[-ed]]][VP[DP[\st{Mary}]][V'[V[\st{have}]][VP (past part)[V[been]][VP[reading]]]]]]]
+            \end{forest}
+
+      In the first conjunct, there are three verbs, namely the auxiliary verbs \textit{have} and \textit{been}, and the lexical verb \textit{reading}. So there are three VPs in total. If we apply VP ellipsis to the first conjunct, we should delete from the highest VP, which means there should not be any verb left in the conjunct. However, we have moved the auxiliary verb have from the highest VP into T, so in the remaining of the first conjunct, we have the subject and have. If we apply VP ellipsis to the second conjunct, we should get the same result. Therefore, the second conjunct should be \textit{Sophie had not}, instead of *Sophie did not.
+
+\begin{forest}
+				[TP, for tree={parent anchor=south, child anchor=north, align=center, base=bottom}
+    	        [DP[you]][T'[T[V[have]][T[PRES]]][VP[Neg[not]][VP[DP[\st{you}]][V'[V[\st{have}]][VP (past part)[V[eaten]][DP[D[the]][NP[soup]]]]]]]]]
+            \end{forest}
+
+            Do-support should target T. However, in (6) the T is already occupied by the auxiliary verb \textit{have} that is base-generated in V and has moved to T. Therefore, do-support is unnecessary in this case, and inserting the dummy \textit{do} generates an ungrammatical sentence.
+
+        \end{enumerate}
+
+\end{enumerate}
+
+\end{document} 
